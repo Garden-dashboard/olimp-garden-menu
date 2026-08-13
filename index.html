@@ -119,6 +119,11 @@ img{ max-width:100%; display:block; }
 .hero{
   position:relative; overflow:hidden; border-bottom:1px solid var(--line);
 }
+@keyframes shimmer{ 0%{ background-position:200% 0; } 100%{ background-position:-200% 0; } }
+.shimmer-bg{
+  background-image:linear-gradient(100deg, var(--surface-2) 30%, var(--surface-3) 50%, var(--surface-2) 70%);
+  background-size:220% 100%; animation:shimmer 1.8s ease-in-out infinite;
+}
 .hero-cover{ height:0; padding-bottom:34%; max-height:230px; position:relative; background:var(--surface-2); }
 .hero-cover img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
 .hero-cover::after{ content:''; position:absolute; inset:0; background:linear-gradient(to bottom, rgba(16,29,25,0) 45%, rgba(16,29,25,.55) 100%); }
@@ -323,8 +328,6 @@ img{ max-width:100%; display:block; }
   const searchEmptyEl = document.getElementById('searchEmpty');
   const searchInput = document.getElementById('searchInput');
 
-  const PLACEHOLDER = '\u{1F37D}️';
-
   function fmt(p){ return Math.round(p).toLocaleString('ru-RU'); }
 
   function isOpenNow(hours){
@@ -349,13 +352,17 @@ img{ max-width:100%; display:block; }
   }
 
   /* ---------- item card ---------- */
+  // e'tibor: SVG atributlari BITTA tirnoq bilan — bu butun belgi keyinroq HTML onerror="..."
+  // atributi ichiga joylashtiriladi, juft tirnoq atributni muddatidan oldin yopib qo'yardi.
+  const PLATE_SVG = "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' width='30' height='30'><circle cx='12' cy='12' r='8.5'/><circle cx='12' cy='12' r='3.2'/></svg>";
+
   function cardHtml(item, catLabel){
     const badge = item.new ? '<span class="pcard-badge new">Yangi</span>' : (item.pop ? '<span class="pcard-badge pop">Sevimli</span>' : '');
     const img = item.img
-      ? `<img src="${item.img}" alt="" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph',textContent:'${PLACEHOLDER}'}))">`
-      : `<div class="ph">${PLACEHOLDER}</div>`;
+      ? `<img src="${item.img}" alt="" loading="lazy" decoding="async" onload="this.parentElement.classList.remove('shimmer-bg')" onerror="const p=this.parentElement;this.remove();p.classList.remove('shimmer-bg');p.insertAdjacentHTML('afterbegin','<div class=&quot;ph&quot;>${PLATE_SVG}</div>')">`
+      : `<div class="ph">${PLATE_SVG}</div>`;
     return `<div class="pcard" data-id="${item.id}">
-      <div class="pcard-img">${img}${badge}</div>
+      <div class="pcard-img shimmer-bg">${img}${badge}</div>
       <div class="pcard-body">
         <div class="pcard-name">${item.n}</div>
         <div class="pcard-price">${fmt(item.p)}</div>
@@ -378,7 +385,7 @@ img{ max-width:100%; display:block; }
 
     html += `<div class="hero">`;
     if(R.cover){
-      html += `<div class="hero-cover"><img src="${R.cover}" alt="" onerror="this.parentElement.style.display='none'"></div>`;
+      html += `<div class="hero-cover shimmer-bg"><img src="${R.cover}" alt="" onload="this.parentElement.classList.remove('shimmer-bg')" onerror="this.parentElement.style.display='none'"></div>`;
     }
     html += `<div class="hero-meta">
       <span>${R.hours}</span>
@@ -399,9 +406,9 @@ img{ max-width:100%; display:block; }
     html += `<div class="cat-grid">`;
     DATA.categories.forEach(c => {
       const img = c.image
-        ? `<img src="${c.image}" alt="" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph',textContent:'${PLACEHOLDER}'}))">`
-        : `<div class="ph">${PLACEHOLDER}</div>`;
-      html += `<div class="cat-tile" data-id="${c.id}">
+        ? `<img src="${c.image}" alt="" loading="lazy" decoding="async" onload="this.parentElement.classList.remove('shimmer-bg')" onerror="const p=this.parentElement;this.remove();p.classList.remove('shimmer-bg');p.insertAdjacentHTML('afterbegin','<div class=&quot;ph&quot;>${PLATE_SVG}</div>')">`
+        : `<div class="ph">${PLATE_SVG}</div>`;
+      html += `<div class="cat-tile shimmer-bg" data-id="${c.id}">
         ${img}
         <div class="lbl"><span class="lbl-name">${c.label}</span><span class="lbl-count">${c.items.length}</span></div>
       </div>`;
@@ -466,10 +473,11 @@ img{ max-width:100%; display:block; }
 
   function openDetail(item){
     if(!item) return;
+    modalImgWrap.className = 'modal-img shimmer-bg';
     modalImgWrap.innerHTML = document.getElementById('modalClose').outerHTML +
       (item.img
-        ? `<img src="${item.img}" alt="" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph',textContent:'${PLACEHOLDER}'}))">`
-        : `<div class="ph">${PLACEHOLDER}</div>`);
+        ? `<img src="${item.img}" alt="" onload="this.parentElement.classList.remove('shimmer-bg')" onerror="const p=this.parentElement;this.remove();p.classList.remove('shimmer-bg');p.insertAdjacentHTML('beforeend','<div class=&quot;ph&quot;>${PLATE_SVG}</div>')">`
+        : `<div class="ph">${PLATE_SVG}</div>`);
     document.getElementById('modalClose').addEventListener('click', closeDetail);
 
     const badges = [
