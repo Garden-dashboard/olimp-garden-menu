@@ -530,8 +530,22 @@ img{ max-width:100%; display:block; }
     navigator.serviceWorker.register('sw.js').catch(()=>{});
   }
 
+  /* ---------- barcha suratlarni fonda oldindan yuklab, keshga solish ----------
+     Shunda internet keyinroq uzilib qolsa ham hali ko'rilmagan taomlarning
+     suratlari ham ko'rinadi (Service Worker ularni avtomatik keshlaydi). */
+  function prefetchAllImages(){
+    if(!navigator.onLine) return;
+    const urls = new Set();
+    if(R.logo) urls.add(R.logo);
+    if(R.cover) urls.add(R.cover);
+    DATA.categories.forEach(c => { if(c.image) urls.add(c.image); });
+    Object.values(itemIndex).forEach(i => { if(i.img) urls.add(i.img); });
+    urls.forEach(u => { fetch(u).catch(()=>{}); });
+  }
+
   renderBrand();
   renderHome();
+  setTimeout(prefetchAllImages, 1500);
 })();
 </script>
 </body>
