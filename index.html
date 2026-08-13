@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no">
+<title>Olimp Garden — Menyu</title>
+<meta name="theme-color" content="#0E6B63">
+<meta name="description" content="Olimp Garden restoranining to'liq menyusi">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-48.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Olimp Garden">
+<meta name="mobile-web-app-capable" content="yes">
+<style>
+@font-face {
+  font-family: 'Menu UI';
+  src: local('Segoe UI');
+}
+:root{
+  --ground:#F1ECDD; --surface:#FBF8F1; --surface-2:#E8E1CC;
+  --ink:#23291F; --ink-soft:#5B6252; --ink-faint:#8B9080;
+  --teal:#0E6B63; --teal-deep:#0A4D47; --teal-tint:#DCE9E3;
+  --clay:#B5581F; --gold:#93702E;
+  --line:rgba(35,41,31,.16); --line-strong:rgba(35,41,31,.30);
+  --shadow:0 12px 32px rgba(35,29,16,.10);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#101D19; --surface:#16241F; --surface-2:#1D2F28;
+    --ink:#EFE9DA; --ink-soft:#AEB8A5; --ink-faint:#748071;
+    --teal:#57C9BE; --teal-deep:#8FE0D6; --teal-tint:rgba(87,201,190,.14);
+    --clay:#E58B52; --gold:#D8AD68;
+    --line:rgba(239,233,218,.16); --line-strong:rgba(239,233,218,.30);
+    --shadow:0 12px 32px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#101D19; --surface:#16241F; --surface-2:#1D2F28;
+  --ink:#EFE9DA; --ink-soft:#AEB8A5; --ink-faint:#748071;
+  --teal:#57C9BE; --teal-deep:#8FE0D6; --teal-tint:rgba(87,201,190,.14);
+  --clay:#E58B52; --gold:#D8AD68;
+  --line:rgba(239,233,218,.16); --line-strong:rgba(239,233,218,.30);
+  --shadow:0 12px 32px rgba(0,0,0,.35);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:'Menu UI','Segoe UI','PT Sans','Noto Sans',system-ui,-apple-system,sans-serif;
+  font-size:15.5px; line-height:1.5; -webkit-font-smoothing:antialiased;
+}
+.serif{ font-family:Georgia,'PT Serif','Noto Serif','Times New Roman',serif; }
+::selection{ background:var(--teal); color:var(--surface); }
+@media (prefers-reduced-motion: reduce){
+  *{ animation-duration:.001ms !important; transition-duration:.001ms !important; scroll-behavior:auto !important; }
+}
+.tile-motif{
+  position:absolute; inset:0; pointer-events:none; opacity:.5;
+  background-image:linear-gradient(45deg, var(--line) 1px, transparent 1px),
+                    linear-gradient(-45deg, var(--line) 1px, transparent 1px);
+  background-size:34px 34px;
+  mask-image:linear-gradient(180deg, black, transparent 92%);
+  -webkit-mask-image:linear-gradient(180deg, black, transparent 92%);
+}
+header{ position:relative; overflow:hidden; padding:56px 24px 40px; border-bottom:1px solid var(--line); background:var(--surface); }
+.header-inner{ position:relative; z-index:1; max-width:920px; margin:0 auto; text-align:center; }
+.eyebrow{ font-size:11.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--teal); font-weight:600; }
+h1{ font-family:Georgia,'PT Serif','Noto Serif',serif; font-weight:400; font-style:italic; font-size:clamp(38px,7vw,60px); margin:10px 0 6px; text-wrap:balance; letter-spacing:.01em; }
+.tagline{ color:var(--ink-soft); font-size:15px; margin-bottom:22px; }
+.meta-row{ display:flex; flex-wrap:wrap; justify-content:center; gap:10px 22px; font-size:13.5px; color:var(--ink-soft); }
+.meta-row span{ display:inline-flex; align-items:center; gap:7px; white-space:nowrap; }
+.meta-row a{ color:var(--ink-soft); text-decoration:none; border-bottom:1px solid var(--line-strong); }
+.meta-row a:hover{ color:var(--teal); border-color:var(--teal); }
+.dot{ width:4px; height:4px; border-radius:50%; background:var(--gold); flex:none; }
+.controls{ position:sticky; top:0; z-index:5; background:var(--ground); border-bottom:1px solid var(--line); padding:12px 0; }
+.controls-inner{ max-width:1040px; margin:0 auto; padding:0 20px; display:flex; align-items:center; gap:14px; }
+.search-wrap{ position:relative; flex:0 0 auto; width:220px; }
+.search-wrap input{ width:100%; font-family:inherit; font-size:14px; padding:9px 14px 9px 32px; border-radius:999px; border:1px solid var(--line-strong); background:var(--surface); color:var(--ink); outline:none; }
+.search-wrap input:focus{ border-color:var(--teal); box-shadow:0 0 0 3px var(--teal-tint); }
+.search-wrap svg{ position:absolute; left:11px; top:50%; transform:translateY(-50%); width:14px; height:14px; stroke:var(--ink-faint); pointer-events:none; }
+.search-wrap input::placeholder{ color:var(--ink-faint); }
+nav{ flex:1 1 auto; display:flex; gap:6px; overflow-x:auto; scrollbar-width:none; }
+nav::-webkit-scrollbar{ display:none; }
+nav button{ flex:none; font-family:inherit; font-size:13px; font-weight:600; color:var(--ink-soft); background:transparent; border:1px solid transparent; border-radius:999px; padding:7px 14px; cursor:pointer; white-space:nowrap; transition:color .15s, background .15s, border-color .15s; }
+nav button:hover{ color:var(--ink); background:var(--surface-2); }
+nav button.active{ color:var(--teal-deep); background:var(--teal-tint); border-color:var(--teal); }
+nav button:focus-visible, .search-wrap input:focus-visible, .btn-top:focus-visible{ outline:2px solid var(--teal); outline-offset:2px; }
+main{ max-width:1040px; margin:0 auto; padding:44px 20px 80px; }
+.category{ padding-top:8px; margin-bottom:52px; scroll-margin-top:78px; opacity:0; transform:translateY(14px); transition:opacity .5s ease, transform .5s ease; }
+.category.in-view{ opacity:1; transform:none; }
+.cat-head{ display:flex; align-items:baseline; gap:14px; margin-bottom:4px; }
+.cat-head h2{ font-family:Georgia,'PT Serif','Noto Serif',serif; font-weight:400; font-size:29px; margin:0; }
+.cat-count{ font-size:12px; color:var(--ink-faint); letter-spacing:.04em; }
+.cat-rule{ height:2px; margin:10px 0 22px; border:none; background:linear-gradient(90deg, var(--gold), transparent 60%); }
+.items{ display:grid; grid-template-columns:1fr; gap:0 40px; }
+@media (min-width:680px){ .items{ grid-template-columns:1fr 1fr; } }
+.item{ display:flex; align-items:baseline; gap:8px; padding:10px 0; border-bottom:1px dashed var(--line); }
+.item .name{ color:var(--ink); font-size:14.5px; }
+.item .marker{ display:inline-block; width:6px; height:6px; border-radius:1px; background:var(--clay); transform:rotate(45deg); margin-right:7px; flex:none; position:relative; top:-1px; }
+.item .tagtxt{ font-size:10.5px; color:var(--clay); font-weight:700; letter-spacing:.05em; margin-left:6px; text-transform:uppercase; }
+.item .leader{ flex:1 1 auto; border-bottom:1px dotted var(--line-strong); height:0; transform:translateY(-4px); min-width:14px; }
+.item .price{ font-variant-numeric:tabular-nums; font-weight:600; font-size:14.5px; color:var(--ink); white-space:nowrap; }
+.item .price::after{ content:" so’m"; font-weight:400; color:var(--ink-faint); font-size:12px; }
+.empty-state{ text-align:center; color:var(--ink-faint); padding:60px 20px; font-size:15px; }
+footer{ border-top:1px solid var(--line); background:var(--surface); padding:34px 20px 40px; text-align:center; color:var(--ink-soft); font-size:13px; }
+footer .fname{ font-family:Georgia,'PT Serif',serif; font-style:italic; font-size:17px; color:var(--ink); margin-bottom:6px; }
+footer a{ color:var(--teal-deep); text-decoration:none; border-bottom:1px solid var(--line-strong); }
+.btn-top{ position:fixed; right:18px; bottom:18px; z-index:6; width:40px; height:40px; border-radius:50%; background:var(--surface); border:1px solid var(--line-strong); color:var(--ink-soft); cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow:var(--shadow); opacity:0; pointer-events:none; transition:opacity .2s, transform .15s; }
+.btn-top.show{ opacity:1; pointer-events:auto; }
+.btn-top:hover{ color:var(--teal); transform:translateY(-2px); }
+.offline-banner{ display:none; background:var(--clay); color:#fff; text-align:center; font-size:12.5px; padding:6px; }
+.offline-banner.show{ display:block; }
+</style>
+</head>
+<body>
+
+<div class="offline-banner" id="offlineBanner">Internet aloqasi yo&#39;q &mdash; oxirgi saqlangan menyu ko&#39;rsatilmoqda</div>
+
+<header>
+  <div class="tile-motif" aria-hidden="true"></div>
+  <div class="header-inner">
+    <div class="eyebrow">Urganch, Xorazm</div>
+    <h1>Olimp Garden</h1>
+    <p class="tagline">To&#39;liq menyu &mdash; taomlar va narxlar</p>
+    <div class="meta-row">
+      <span>Dushanba-Yakshanba: 11:00 - 00:00</span>
+      <span class="dot" aria-hidden="true"></span>
+      <span><a href="tel:+998991234567">+998991234567</a></span>
+      <span class="dot" aria-hidden="true"></span>
+      <span><a href="https://maps.app.goo.gl/W8scXCyc3vF9nv7D8" target="_blank" rel="noopener">Xaritada ko&#39;rish</a></span>
+    </div>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="controls-inner">
+    <div class="search-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="search" type="text" placeholder="Taom qidirish..." autocomplete="off">
+    </div>
+    <nav id="catnav" aria-label="Bo&#39;limlar"></nav>
+  </div>
+</div>
+
+<main id="main">
+  <div id="empty" class="empty-state" hidden>Hech narsa topilmadi.</div>
+</main>
+
+<footer>
+  <div class="fname">Olimp Garden</div>
+  <div>Urganch, Xorazm &middot; Dushanba-Yakshanba: 11:00 - 00:00 &middot; <a href="tel:+998991234567">+998991234567</a></div>
+</footer>
+
+<button class="btn-top" id="toTop" aria-label="Yuqoriga">&uarr;</button>
+
+<script id="menu-data" type="application/json">[{"cat":"Salat","items":[{"n":"Aччиқ чучук 1 порц","p":18000.0,"pop":false,"new":false},{"n":"Cолений ассорти 1 порц","p":35000.0,"pop":false,"new":false},{"n":"Ананас салат 1 порц","p":40000.0,"pop":false,"new":false},{"n":"Баклажан рулет 1 порц","p":45000.0,"pop":false,"new":false},{"n":"Баклажон салат 1 порц","p":35000.0,"pop":false,"new":false},{"n":"Венигрет салат 1 порц","p":25000.0,"pop":false,"new":false},{"n":"Витаминка 1 порц","p":25000.0,"pop":false,"new":false},{"n":"Гречиский салат 1 порц","p":35000.0,"pop":false,"new":false},{"n":"Грибной салат 1 порц","p":43000.0,"pop":false,"new":false},{"n":"Гулшан салат 1 порц","p":52000.0,"pop":false,"new":false},{"n":"Королевский Салат 1 порц","p":45000.0,"pop":false,"new":false},{"n":"Лаваш рулет 1 порц","p":35000.0,"pop":false,"new":false},{"n":"Мимоза салат 1 порц","p":35000.0,"pop":false,"new":false},{"n":"Мужской каприз 1 порц","p":45000.0,"pop":false,"new":false},{"n":"Норин 1 порц","p":50000.0,"pop":false,"new":false},{"n":"Овашной 1 порц","p":58000.0,"pop":false,"new":false},{"n":"Окрошка (гуштли) 1 порц","p":25000.0,"pop":false,"new":false},{"n":"Окрошка 1 порц","p":20000.0,"pop":false,"new":false},{"n":"Оливъе (гуштли) салат 1 порц","p":40000.0,"pop":false,"new":false},{"n":"Оливъе салат 1 порц","p":35000.0,"pop":false,"new":false},{"n":"Олимп салат 1 порц","p":63000.0,"pop":false,"new":false},{"n":"Свежий салат 1 порц","p":23000.0,"pop":false,"new":false},{"n":"Соленый бодринг 1 порц","p":10000.0,"pop":false,"new":false},{"n":"Солённи помидор 1 шт","p":15000.0,"pop":false,"new":false},{"n":"Соусли баклажон 1 порц","p":35000.0,"pop":false,"new":false},{"n":"Султан салат 1 порц","p":48000.0,"pop":false,"new":false},{"n":"Сырни ассарти 1 порц","p":75000.0,"pop":false,"new":false},{"n":"Франсузкий 1 порц","p":43000.0,"pop":false,"new":false},{"n":"Хрустящие баклажан 1 порц","p":50000.0,"pop":false,"new":false},{"n":"Цезарь салат 1 порц","p":45000.0,"pop":false,"new":false},{"n":"Шаркона салат 1 порц","p":45000.0,"pop":false,"new":false},{"n":"Японский салат 1 порц","p":49000.0,"pop":false,"new":false}]},{"cat":"1-taomlar","items":[{"n":"Чозма лағмон","p":40000.0,"pop":false,"new":false},{"n":"Бедана шурва","p":55000.0,"pop":false,"new":false},{"n":"Борш  0.5","p":27000.0,"pop":false,"new":false},{"n":"Борш 1 порси","p":35000.0,"pop":false,"new":false},{"n":"Гарден Бургер","p":47000.0,"pop":false,"new":false},{"n":"Гарден Бургер","p":47000.0,"pop":false,"new":false},{"n":"Гарден спеcиал","p":300000.0,"pop":false,"new":false},{"n":"Гумма кофте","p":50000.0,"pop":false,"new":false},{"n":"Кади манти","p":24998.0,"pop":false,"new":false},{"n":"Картошка  фри","p":20000.0,"pop":false,"new":false},{"n":"Киевский котлет","p":30000.0,"pop":false,"new":false},{"n":"Ковурма лагмон","p":40000.0,"pop":false,"new":false},{"n":"Куза шурва мол гушти","p":51000.0,"pop":false,"new":false},{"n":"Лула кабоб","p":45000.0,"pop":false,"new":false},{"n":"Манти","p":42000.0,"pop":false,"new":false},{"n":"Мастава 0,5","p":25000.0,"pop":false,"new":false},{"n":"Мастава 1 порси","p":30000.0,"pop":false,"new":false},{"n":"Мясной козили","p":120000.0,"pop":false,"new":false},{"n":"Окорошка фарширивонни","p":55000.0,"pop":false,"new":false},{"n":"Олимп товук","p":90000.0,"pop":false,"new":false},{"n":"Осма шурва 0,5","p":27000.0,"pop":false,"new":false},{"n":"Осма шурва 1 порси","p":40000.0,"pop":false,"new":false},{"n":"Сарёга товук","p":90000.0,"pop":false,"new":false},{"n":"Сетка товук","p":100000.0,"pop":false,"new":false},{"n":"Тифтил шорва","p":37000.0,"pop":false,"new":false},{"n":"Унаши 1 порц","p":20000.0,"pop":false,"new":false},{"n":"Урама Дулма","p":43000.0,"pop":false,"new":false},{"n":"Хива ижжан","p":35000.0,"pop":false,"new":false},{"n":"Шўрва барак","p":35000.0,"pop":false,"new":false},{"n":"Қарейка спешил","p":320000.0,"pop":false,"new":false}]},{"cat":"2-taomlar","items":[{"n":"Вагури","p":400000.0,"pop":false,"new":false},{"n":"Гўшт сай кабоб","p":130000.0,"pop":false,"new":false},{"n":"Ковурилган гушт","p":260000.0,"pop":false,"new":false},{"n":"Кофте с айдохом","p":90000.0,"pop":false,"new":false},{"n":"Мромирни стейк","p":200000.0,"pop":false,"new":false},{"n":"Сариёғо дил","p":230000.0,"pop":false,"new":false},{"n":"Тушенка","p":240000.0,"pop":false,"new":false},{"n":"Хон","p":300000.0,"pop":false,"new":false},{"n":"Қаймоқа дил","p":230000.0,"pop":false,"new":false},{"n":"Қовурилган гўшт ( қаймоқа)","p":290000.0,"pop":false,"new":false}]},{"cat":"Shashliklar","items":[{"n":"Овашной шашлик","p":15000.0,"pop":false,"new":false},{"n":"Ўрама шашлык","p":20000.0,"pop":false,"new":false},{"n":"Гиждувон шашлык","p":20000.0,"pop":false,"new":false},{"n":"Думба шашлык","p":18000.0,"pop":false,"new":false},{"n":"Ижжан шашлык","p":18000.0,"pop":false,"new":false},{"n":"Крилишка шашлык","p":25000.0,"pop":false,"new":false},{"n":"Кускавой Шашлик","p":33000.0,"pop":false,"new":false},{"n":"Кусковой кой","p":33000.0,"pop":false,"new":false},{"n":"Наполеон шашлык","p":30000.0,"pop":false,"new":false},{"n":"Патир шашлык","p":17000.0,"pop":false,"new":false}]},{"cat":"Балик таомлар","items":[{"n":"Ковурилган балик","p":125000.0,"pop":false,"new":false},{"n":"Лакка балик","p":260000.0,"pop":false,"new":false},{"n":"Сетка балик","p":140000.0,"pop":false,"new":false},{"n":"Фалга балик","p":150000.0,"pop":false,"new":false}]},{"cat":"Assorti taomlar","items":[{"n":"Jo'g'  Asorti","p":600000.0,"pop":true,"new":false},{"n":"Бешбармак","p":310000.0,"pop":false,"new":false},{"n":"Гушт ассорти катта","p":415000.0,"pop":false,"new":false},{"n":"Гушт ассоти люкс","p":600000.0,"pop":false,"new":false},{"n":"Екслюзив ассорти","p":445000.0,"pop":false,"new":false},{"n":"Жигарлар 1 порц","p":550000.0,"pop":true,"new":true},{"n":"Жуйан курдик","p":450000.0,"pop":false,"new":false},{"n":"Кабоб ассарти","p":460000.0,"pop":false,"new":false},{"n":"Кормо кг","p":330000.0,"pop":false,"new":false},{"n":"Мангал ассорти","p":550000.0,"pop":false,"new":false},{"n":"Мангал микс","p":480000.0,"pop":false,"new":false},{"n":"Миллий мих ассорти","p":470000.0,"pop":false,"new":false},{"n":"Олимп бешбармок 0,5","p":175000.0,"pop":false,"new":false},{"n":"Палов кг","p":180000.0,"pop":false,"new":false},{"n":"Стеак мол гўшти","p":370000.0,"pop":false,"new":false},{"n":"Стейк ассарти","p":370000.0,"pop":false,"new":false},{"n":"Стейк ассарти карейка","p":350000.0,"pop":false,"new":false},{"n":"Улфатлар ассортий 1 порц","p":420000.0,"pop":true,"new":true},{"n":"Фамилий ассорти","p":379000.0,"pop":true,"new":true},{"n":"Шашлик асарти","p":515000.0,"pop":false,"new":false},{"n":"Шеф ассорти","p":517000.0,"pop":false,"new":false}]},{"cat":"Бараклар","items":[{"n":"Барак ассарти катта 1 порц","p":135000.0,"pop":false,"new":false},{"n":"Барак ассорти","p":100000.0,"pop":false,"new":false},{"n":"Кади барак","p":25000.0,"pop":false,"new":false},{"n":"Картошка барак","p":25000.0,"pop":false,"new":false},{"n":"Кук барак","p":30000.0,"pop":false,"new":false},{"n":"Кутир барак","p":38000.0,"pop":false,"new":false},{"n":"Тухум барак","p":35000.0,"pop":false,"new":false},{"n":"Ушак барак","p":30000.0,"pop":false,"new":false}]},{"cat":"Somsa","items":[{"n":"Кади олот сомса 1 шт","p":6000.0,"pop":false,"new":false},{"n":"Копширмо гумма 1 шт","p":15000.0,"pop":false,"new":false},{"n":"Копширмо гумма ковурилган 1 шт","p":15000.0,"pop":false,"new":false},{"n":"Кук олот сомса 1 шт","p":8000.0,"pop":false,"new":false},{"n":"Олoт сомса 1 шт","p":11000.0,"pop":false,"new":false},{"n":"Олимп копширмо 1 шт","p":16000.0,"pop":false,"new":false},{"n":"Сомса 1 шт","p":17000.0,"pop":false,"new":false}]},{"cat":"Нон чой","items":[{"n":"Бухонка","p":5000.0,"pop":false,"new":false},{"n":"Кора нон","p":6000.0,"pop":false,"new":false},{"n":"Лимон чой","p":17000.0,"pop":false,"new":false},{"n":"Нон асарти","p":25000.0,"pop":false,"new":false},{"n":"Чой","p":5000.0,"pop":false,"new":false},{"n":"Чурак","p":12000.0,"pop":false,"new":false},{"n":"Ягли патир","p":15000.0,"pop":false,"new":false}]},{"cat":"Сетлар","items":[{"n":"1- сет","p":55000.0,"pop":false,"new":false},{"n":"2-сет","p":55000.0,"pop":false,"new":false},{"n":"3-Сет","p":55000.0,"pop":false,"new":false},{"n":"4-ceт","p":55000.0,"pop":false,"new":false}]},{"cat":"Ichimlik","items":[{"n":"Cок","p":18000.0,"pop":false,"new":false},{"n":"Cув газли 1,5","p":7000.0,"pop":false,"new":false},{"n":"Адреналин 0,45","p":19000.0,"pop":false,"new":false},{"n":"Вико","p":23000.0,"pop":false,"new":false},{"n":"Жагуар 0.45","p":15000.0,"pop":false,"new":false},{"n":"Кола 0,5","p":10000.0,"pop":false,"new":false},{"n":"Кола 1,5","p":20000.0,"pop":false,"new":false},{"n":"Мохито 0,45","p":15000.0,"pop":false,"new":false},{"n":"Пепси 0,5","p":9999.0,"pop":false,"new":false},{"n":"Пепси 1,5","p":18000.0,"pop":false,"new":false},{"n":"Пепси балични 0,45","p":13000.0,"pop":false,"new":false},{"n":"Спрайт 0.5","p":10000.0,"pop":false,"new":false},{"n":"Спрайт 1.5","p":18000.0,"pop":false,"new":false},{"n":"Спрайт 1л","p":12000.0,"pop":false,"new":false},{"n":"Сув газсиз 0,5","p":3000.0,"pop":false,"new":false},{"n":"Сув газсиз 1,5","p":7000.0,"pop":false,"new":false},{"n":"Тошкент сув 0,5","p":8998.0,"pop":false,"new":false},{"n":"Фанта 0,5","p":10000.0,"pop":false,"new":false},{"n":"Фанта 1,5","p":20000.0,"pop":false,"new":false},{"n":"Флеш 0,45","p":13000.0,"pop":false,"new":false},{"n":"Чорток 0,7","p":15999.0,"pop":false,"new":false}]},{"cat":"Бариста","items":[{"n":"Айрон газли ( газсиз)","p":20000.0,"pop":false,"new":false},{"n":"Айс Теа","p":55000.0,"pop":false,"new":false},{"n":"Айс американо","p":25000.0,"pop":false,"new":false},{"n":"Айс капучино","p":25000.0,"pop":false,"new":false},{"n":"Айс латте","p":25000.0,"pop":false,"new":false},{"n":"Американо","p":15000.0,"pop":false,"new":false},{"n":"Анор шарбати1 л","p":96000.0,"pop":false,"new":false},{"n":"Банановый шейклар","p":35000.0,"pop":false,"new":false},{"n":"Бардак чой чашка","p":4000.0,"pop":false,"new":false},{"n":"Еспрессо","p":15000.0,"pop":false,"new":false},{"n":"Киви шейк","p":30000.0,"pop":false,"new":false},{"n":"Клубничный шейк","p":35000.0,"pop":false,"new":false},{"n":"Латте","p":20000.0,"pop":false,"new":false},{"n":"Мевали чой","p":30000.0,"pop":false,"new":false},{"n":"Микс сок","p":60000.0,"pop":false,"new":false},{"n":"Мохито ассорти","p":100000.0,"pop":true,"new":true},{"n":"Мохито графин","p":58000.0,"pop":true,"new":false},{"n":"Олма сок натурални 1л","p":40000.0,"pop":false,"new":false},{"n":"Раф кофе","p":50000.0,"pop":false,"new":false},{"n":"Сappuccino","p":25000.0,"pop":false,"new":false},{"n":"Сутли чой","p":50000.0,"pop":false,"new":false},{"n":"Тарвуз сок","p":30000.0,"pop":false,"new":false},{"n":"Флэт Уайт коффе","p":30000.0,"pop":false,"new":false},{"n":"Чизкейк","p":45000.0,"pop":false,"new":false},{"n":"Шоколадный шейк","p":35000.0,"pop":false,"new":false}]},{"cat":"Shirinliklar","items":[{"n":"Fistashkali Chizkeyk","p":55000.0,"pop":false,"new":false},{"n":"Mangoli Chizkeyk","p":60000.0,"pop":false,"new":false},{"n":"Вафли мевали","p":40000.0,"pop":false,"new":false},{"n":"Вафли микс","p":75000.0,"pop":false,"new":false},{"n":"Рафаелло бизели 1 шт","p":40000.0,"pop":false,"new":false},{"n":"Сан себастьян чизкейк","p":50000.0,"pop":false,"new":false},{"n":"Сникерс угалки перожний 1 шт","p":45000.0,"pop":false,"new":false},{"n":"Улитка пирожний 1 шт","p":45000.0,"pop":false,"new":false},{"n":"Фисташковый перожний","p":40000.0,"pop":false,"new":false},{"n":"Шоколадный чишка 1 шт","p":45000.0,"pop":false,"new":false},{"n":"Эстерхази","p":35000.0,"pop":false,"new":false}]},{"cat":"Mevalar","items":[{"n":"Ковун","p":25000.0,"pop":false,"new":false},{"n":"Ковун тарвуз","p":30000.0,"pop":false,"new":false},{"n":"Мева ассарти","p":150000.0,"pop":true,"new":false},{"n":"Мева ассарти катта","p":230000.0,"pop":true,"new":false}]}]</script>
+<script>
+(function(){
+  const raw = JSON.parse(document.getElementById('menu-data').textContent);
+  const LABELS = {"Salat": "Salatlar", "1-taomlar": "Birinchi taomlar", "2-taomlar": "Ikkinchi taomlar", "Shashliklar": "Shashliklar", "Балик таомлар": "Baliq taomlari", "Assorti taomlar": "Assorti taomlar", "Бараклар": "Baraklar", "Somsa": "Somsa", "Нон чой": "Non va choy", "Сетлар": "Setlar", "Ichimlik": "Ichimliklar", "Бариста": "Barista", "Shirinliklar": "Shirinliklar", "Mevalar": "Mevalar"};
+  const main = document.getElementById('main');
+  const nav = document.getElementById('catnav');
+  const empty = document.getElementById('empty');
+  const search = document.getElementById('search');
+
+  function slug(s){ return 'cat-' + s.split('').map(c=>c.charCodeAt(0).toString(36)).join(''); }
+
+  raw.forEach(cat => {
+    const id = slug(cat.cat);
+    const label = LABELS[cat.cat] || cat.cat;
+
+    const btn = document.createElement('button');
+    btn.textContent = label;
+    btn.dataset.target = id;
+    btn.addEventListener('click', () => {
+      document.getElementById(id).scrollIntoView({behavior:'smooth', block:'start'});
+    });
+    nav.appendChild(btn);
+
+    const section = document.createElement('section');
+    section.className = 'category';
+    section.id = id;
+
+    const head = document.createElement('div');
+    head.className = 'cat-head';
+    head.innerHTML = '<h2 class="serif"></h2><span class="cat-count"></span>';
+    head.querySelector('h2').textContent = label;
+    head.querySelector('.cat-count').textContent = cat.items.length + ' ta taom';
+    section.appendChild(head);
+
+    const rule = document.createElement('hr');
+    rule.className = 'cat-rule';
+    section.appendChild(rule);
+
+    const list = document.createElement('div');
+    list.className = 'items';
+    cat.items.forEach(it => {
+      const row = document.createElement('div');
+      row.className = 'item';
+      row.dataset.name = it.n.toLowerCase();
+      const tag = it.new ? 'Yangi' : (it.pop ? 'Sevimli' : '');
+      row.innerHTML =
+        (it.pop || it.new ? '<span class="marker" aria-hidden="true"></span>' : '') +
+        '<span class="name">' + it.n + (tag ? '<span class="tagtxt">' + tag + '</span>' : '') + '</span>' +
+        '<span class="leader" aria-hidden="true"></span>' +
+        '<span class="price">' + Math.round(it.p).toLocaleString('ru-RU') + '</span>';
+      list.appendChild(row);
+    });
+    section.appendChild(list);
+    main.insertBefore(section, empty);
+  });
+
+  const sections = Array.from(document.querySelectorAll('.category'));
+  const navButtons = Array.from(nav.querySelectorAll('button'));
+
+  const reveal = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('in-view'); });
+  }, {threshold:.08});
+  sections.forEach(s => reveal.observe(s));
+
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(e.isIntersecting){
+        navButtons.forEach(b => b.classList.toggle('active', b.dataset.target === e.target.id));
+      }
+    });
+  }, {rootMargin:'-40% 0px -55% 0px'});
+  sections.forEach(s => spy.observe(s));
+
+  search.addEventListener('input', () => {
+    const q = search.value.trim().toLowerCase();
+    let anyVisible = false;
+    sections.forEach(sec => {
+      let sectionHas = false;
+      sec.querySelectorAll('.item').forEach(row => {
+        const match = !q || row.dataset.name.includes(q);
+        row.style.display = match ? '' : 'none';
+        if(match) sectionHas = true;
+      });
+      sec.hidden = !sectionHas;
+      if(sectionHas) anyVisible = true;
+    });
+    empty.hidden = anyVisible;
+  });
+
+  const toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', () => {
+    toTop.classList.toggle('show', window.scrollY > 700);
+  }, {passive:true});
+  toTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+
+  const banner = document.getElementById('offlineBanner');
+  function updateOnline(){ banner.classList.toggle('show', !navigator.onLine); }
+  window.addEventListener('online', updateOnline);
+  window.addEventListener('offline', updateOnline);
+  updateOnline();
+
+  if('serviceWorker' in navigator){
+    navigator.serviceWorker.register('sw.js').catch(()=>{});
+  }
+})();
+</script>
+</body>
+</html>
