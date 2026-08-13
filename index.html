@@ -14,35 +14,35 @@
 <meta name="apple-mobile-web-app-title" content="Olimp Garden">
 <meta name="mobile-web-app-capable" content="yes">
 <style>
-@font-face {
-  font-family: 'Menu UI';
-  src: local('Segoe UI');
-}
+@font-face{ font-family:'Menu UI'; src:local('Segoe UI'); }
 :root{
-  --ground:#F1ECDD; --surface:#FBF8F1; --surface-2:#E8E1CC;
+  --ground:#F1ECDD; --surface:#FBF8F1; --surface-2:#E8E1CC; --surface-3:#DED5B8;
   --ink:#23291F; --ink-soft:#5B6252; --ink-faint:#8B9080;
   --teal:#0E6B63; --teal-deep:#0A4D47; --teal-tint:#DCE9E3;
-  --clay:#B5581F; --gold:#93702E;
+  --clay:#B5581F; --clay-tint:#F3E0CE; --gold:#93702E;
   --line:rgba(35,41,31,.16); --line-strong:rgba(35,41,31,.30);
-  --shadow:0 12px 32px rgba(35,29,16,.10);
+  --shadow:0 10px 28px rgba(35,29,16,.12); --shadow-lg:0 18px 48px rgba(35,29,16,.20);
+  --scrim:rgba(20,24,16,.55);
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --ground:#101D19; --surface:#16241F; --surface-2:#1D2F28;
+    --ground:#101D19; --surface:#16241F; --surface-2:#1D2F28; --surface-3:#24382F;
     --ink:#EFE9DA; --ink-soft:#AEB8A5; --ink-faint:#748071;
     --teal:#57C9BE; --teal-deep:#8FE0D6; --teal-tint:rgba(87,201,190,.14);
-    --clay:#E58B52; --gold:#D8AD68;
+    --clay:#E58B52; --clay-tint:rgba(229,139,82,.16); --gold:#D8AD68;
     --line:rgba(239,233,218,.16); --line-strong:rgba(239,233,218,.30);
-    --shadow:0 12px 32px rgba(0,0,0,.35);
+    --shadow:0 10px 28px rgba(0,0,0,.4); --shadow-lg:0 18px 48px rgba(0,0,0,.5);
+    --scrim:rgba(4,8,6,.72);
   }
 }
 :root[data-theme="dark"]{
-  --ground:#101D19; --surface:#16241F; --surface-2:#1D2F28;
+  --ground:#101D19; --surface:#16241F; --surface-2:#1D2F28; --surface-3:#24382F;
   --ink:#EFE9DA; --ink-soft:#AEB8A5; --ink-faint:#748071;
   --teal:#57C9BE; --teal-deep:#8FE0D6; --teal-tint:rgba(87,201,190,.14);
-  --clay:#E58B52; --gold:#D8AD68;
+  --clay:#E58B52; --clay-tint:rgba(229,139,82,.16); --gold:#D8AD68;
   --line:rgba(239,233,218,.16); --line-strong:rgba(239,233,218,.30);
-  --shadow:0 12px 32px rgba(0,0,0,.35);
+  --shadow:0 10px 28px rgba(0,0,0,.4); --shadow-lg:0 18px 48px rgba(0,0,0,.5);
+  --scrim:rgba(4,8,6,.72);
 }
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -50,207 +50,468 @@ body{
   margin:0; background:var(--ground); color:var(--ink);
   font-family:'Menu UI','Segoe UI','PT Sans','Noto Sans',system-ui,-apple-system,sans-serif;
   font-size:15.5px; line-height:1.5; -webkit-font-smoothing:antialiased;
+  overscroll-behavior-y:contain;
 }
 .serif{ font-family:Georgia,'PT Serif','Noto Serif','Times New Roman',serif; }
+button{ font-family:inherit; }
+img{ max-width:100%; display:block; }
 ::selection{ background:var(--teal); color:var(--surface); }
 @media (prefers-reduced-motion: reduce){
   *{ animation-duration:.001ms !important; transition-duration:.001ms !important; scroll-behavior:auto !important; }
 }
-.tile-motif{
-  position:absolute; inset:0; pointer-events:none; opacity:.5;
-  background-image:linear-gradient(45deg, var(--line) 1px, transparent 1px),
-                    linear-gradient(-45deg, var(--line) 1px, transparent 1px);
-  background-size:34px 34px;
-  mask-image:linear-gradient(180deg, black, transparent 92%);
-  -webkit-mask-image:linear-gradient(180deg, black, transparent 92%);
+
+/* ============ SHELL ============ */
+.wrap{ max-width:1180px; margin:0 auto; }
+.hide{ display:none !important; }
+
+/* top bar */
+.topbar{
+  position:sticky; top:0; z-index:20;
+  background:var(--surface); border-bottom:1px solid var(--line);
 }
-header{ position:relative; overflow:hidden; padding:56px 24px 40px; border-bottom:1px solid var(--line); background:var(--surface); }
-.header-inner{ position:relative; z-index:1; max-width:920px; margin:0 auto; text-align:center; }
-.eyebrow{ font-size:11.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--teal); font-weight:600; }
-h1{ font-family:Georgia,'PT Serif','Noto Serif',serif; font-weight:400; font-style:italic; font-size:clamp(38px,7vw,60px); margin:10px 0 6px; text-wrap:balance; letter-spacing:.01em; }
-.tagline{ color:var(--ink-soft); font-size:15px; margin-bottom:22px; }
-.meta-row{ display:flex; flex-wrap:wrap; justify-content:center; gap:10px 22px; font-size:13.5px; color:var(--ink-soft); }
-.meta-row span{ display:inline-flex; align-items:center; gap:7px; white-space:nowrap; }
-.meta-row a{ color:var(--ink-soft); text-decoration:none; border-bottom:1px solid var(--line-strong); }
-.meta-row a:hover{ color:var(--teal); border-color:var(--teal); }
-.dot{ width:4px; height:4px; border-radius:50%; background:var(--gold); flex:none; }
-.controls{ position:sticky; top:0; z-index:5; background:var(--ground); border-bottom:1px solid var(--line); padding:12px 0; }
-.controls-inner{ max-width:1040px; margin:0 auto; padding:0 20px; display:flex; align-items:center; gap:14px; }
-.search-wrap{ position:relative; flex:0 0 auto; width:220px; }
-.search-wrap input{ width:100%; font-family:inherit; font-size:14px; padding:9px 14px 9px 32px; border-radius:999px; border:1px solid var(--line-strong); background:var(--surface); color:var(--ink); outline:none; }
-.search-wrap input:focus{ border-color:var(--teal); box-shadow:0 0 0 3px var(--teal-tint); }
-.search-wrap svg{ position:absolute; left:11px; top:50%; transform:translateY(-50%); width:14px; height:14px; stroke:var(--ink-faint); pointer-events:none; }
-.search-wrap input::placeholder{ color:var(--ink-faint); }
-nav{ flex:1 1 auto; display:flex; gap:6px; overflow-x:auto; scrollbar-width:none; }
-nav::-webkit-scrollbar{ display:none; }
-nav button{ flex:none; font-family:inherit; font-size:13px; font-weight:600; color:var(--ink-soft); background:transparent; border:1px solid transparent; border-radius:999px; padding:7px 14px; cursor:pointer; white-space:nowrap; transition:color .15s, background .15s, border-color .15s; }
-nav button:hover{ color:var(--ink); background:var(--surface-2); }
-nav button.active{ color:var(--teal-deep); background:var(--teal-tint); border-color:var(--teal); }
-nav button:focus-visible, .search-wrap input:focus-visible, .btn-top:focus-visible{ outline:2px solid var(--teal); outline-offset:2px; }
-main{ max-width:1040px; margin:0 auto; padding:44px 20px 80px; }
-.category{ padding-top:8px; margin-bottom:52px; scroll-margin-top:78px; opacity:0; transform:translateY(14px); transition:opacity .5s ease, transform .5s ease; }
-.category.in-view{ opacity:1; transform:none; }
-.cat-head{ display:flex; align-items:baseline; gap:14px; margin-bottom:4px; }
-.cat-head h2{ font-family:Georgia,'PT Serif','Noto Serif',serif; font-weight:400; font-size:29px; margin:0; }
-.cat-count{ font-size:12px; color:var(--ink-faint); letter-spacing:.04em; }
-.cat-rule{ height:2px; margin:10px 0 22px; border:none; background:linear-gradient(90deg, var(--gold), transparent 60%); }
-.items{ display:grid; grid-template-columns:1fr; gap:0 40px; }
-@media (min-width:680px){ .items{ grid-template-columns:1fr 1fr; } }
-.item{ display:flex; align-items:baseline; gap:8px; padding:10px 0; border-bottom:1px dashed var(--line); }
-.item .name{ color:var(--ink); font-size:14.5px; }
-.item .marker{ display:inline-block; width:6px; height:6px; border-radius:1px; background:var(--clay); transform:rotate(45deg); margin-right:7px; flex:none; position:relative; top:-1px; }
-.item .tagtxt{ font-size:10.5px; color:var(--clay); font-weight:700; letter-spacing:.05em; margin-left:6px; text-transform:uppercase; }
-.item .leader{ flex:1 1 auto; border-bottom:1px dotted var(--line-strong); height:0; transform:translateY(-4px); min-width:14px; }
-.item .price{ font-variant-numeric:tabular-nums; font-weight:600; font-size:14.5px; color:var(--ink); white-space:nowrap; }
-.item .price::after{ content:" so’m"; font-weight:400; color:var(--ink-faint); font-size:12px; }
-.empty-state{ text-align:center; color:var(--ink-faint); padding:60px 20px; font-size:15px; }
-footer{ border-top:1px solid var(--line); background:var(--surface); padding:34px 20px 40px; text-align:center; color:var(--ink-soft); font-size:13px; }
-footer .fname{ font-family:Georgia,'PT Serif',serif; font-style:italic; font-size:17px; color:var(--ink); margin-bottom:6px; }
-footer a{ color:var(--teal-deep); text-decoration:none; border-bottom:1px solid var(--line-strong); }
-.btn-top{ position:fixed; right:18px; bottom:18px; z-index:6; width:40px; height:40px; border-radius:50%; background:var(--surface); border:1px solid var(--line-strong); color:var(--ink-soft); cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow:var(--shadow); opacity:0; pointer-events:none; transition:opacity .2s, transform .15s; }
-.btn-top.show{ opacity:1; pointer-events:auto; }
-.btn-top:hover{ color:var(--teal); transform:translateY(-2px); }
+.topbar-inner{
+  max-width:1180px; margin:0 auto; padding:12px 18px;
+  display:flex; align-items:center; gap:12px;
+}
+.brand{ display:flex; align-items:center; gap:10px; min-width:0; }
+.brand img{ width:38px; height:38px; border-radius:50%; object-fit:cover; border:1.5px solid var(--line-strong); background:var(--surface-2); flex:none; }
+.brand-text{ min-width:0; }
+.brand-name{ font-family:Georgia,'PT Serif',serif; font-style:italic; font-size:19px; line-height:1.15; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.brand-status{ font-size:11.5px; color:var(--ink-faint); display:flex; align-items:center; gap:5px; }
+.status-dot{ width:6px; height:6px; border-radius:50%; flex:none; }
+.status-dot.open{ background:var(--teal); box-shadow:0 0 0 3px var(--teal-tint); }
+.status-dot.closed{ background:var(--clay); box-shadow:0 0 0 3px var(--clay-tint); }
+.topbar-spacer{ flex:1; }
+.icon-btn{
+  width:38px; height:38px; border-radius:50%; border:1px solid var(--line-strong);
+  background:var(--surface); color:var(--ink-soft); cursor:pointer;
+  display:flex; align-items:center; justify-content:center; flex:none;
+  transition:background .15s, color .15s;
+}
+.icon-btn:hover{ background:var(--surface-2); color:var(--ink); }
+.icon-btn svg{ width:17px; height:17px; }
+
+/* back header (category / search) */
+.subbar{ display:flex; align-items:center; gap:12px; padding:12px 18px; max-width:1180px; margin:0 auto; }
+.back-btn{
+  display:flex; align-items:center; gap:6px; border:none; background:none; cursor:pointer;
+  color:var(--ink-soft); font-size:13.5px; font-weight:600; padding:6px 4px;
+}
+.back-btn:hover{ color:var(--teal-deep); }
+.subbar-title{ font-family:Georgia,'PT Serif',serif; font-size:21px; flex:1; text-wrap:balance; }
+.subbar-count{ font-size:12px; color:var(--ink-faint); }
+
+/* search */
+.search-row{ padding:0 18px 12px; max-width:1180px; margin:0 auto; }
+.search-field{
+  display:flex; align-items:center; gap:9px;
+  background:var(--surface); border:1.5px solid var(--line-strong); border-radius:999px;
+  padding:11px 16px;
+}
+.search-field svg{ width:16px; height:16px; stroke:var(--ink-faint); flex:none; }
+.search-field input{
+  border:none; outline:none; background:none; color:var(--ink); font-size:15px; width:100%;
+  font-family:inherit;
+}
+.search-field input::placeholder{ color:var(--ink-faint); }
+
+/* ============ HOME ============ */
+.hero{
+  position:relative; overflow:hidden; border-bottom:1px solid var(--line);
+}
+.hero-cover{ height:0; padding-bottom:34%; max-height:230px; position:relative; background:var(--surface-2); }
+.hero-cover img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.hero-cover::after{ content:''; position:absolute; inset:0; background:linear-gradient(to bottom, rgba(16,29,25,0) 45%, rgba(16,29,25,.55) 100%); }
+.hero-meta{
+  max-width:1180px; margin:0 auto; padding:16px 18px 18px;
+  display:flex; flex-wrap:wrap; gap:8px 20px; font-size:13px; color:var(--ink-soft);
+}
+.hero-meta span{ display:inline-flex; align-items:center; gap:6px; white-space:nowrap; }
+.hero-meta a{ color:var(--ink-soft); text-decoration:none; border-bottom:1px solid var(--line-strong); }
+.hero-meta a:hover{ color:var(--teal-deep); border-color:var(--teal); }
+
+.section{ padding:22px 18px 4px; max-width:1180px; margin:0 auto; }
+.section-head{ display:flex; align-items:baseline; justify-content:space-between; margin-bottom:14px; }
+.section-title{ font-family:Georgia,'PT Serif',serif; font-size:22px; }
+.section-title .tag{ font-size:14px; color:var(--ink-faint); font-family:'Menu UI','Segoe UI',sans-serif; }
+
+/* horizontal rows (popular / new) */
+.hscroll{ display:flex; gap:12px; overflow-x:auto; padding:2px 18px 18px; scroll-snap-type:x proximity; scrollbar-width:none; }
+.hscroll::-webkit-scrollbar{ display:none; }
+.hscroll .pcard{ flex:0 0 152px; scroll-snap-align:start; }
+
+/* category grid */
+.cat-grid{
+  display:grid; grid-template-columns:repeat(auto-fill, minmax(150px,1fr)); gap:12px;
+  padding:0 18px 8px;
+}
+.cat-tile{
+  position:relative; border-radius:16px; overflow:hidden; cursor:pointer; border:1px solid var(--line);
+  background:var(--surface-2); aspect-ratio:4/3;
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.cat-tile:hover{ transform:translateY(-2px); box-shadow:var(--shadow); }
+.cat-tile:active{ transform:scale(.97); }
+.cat-tile img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.cat-tile .ph{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:34px; color:var(--ink-faint); background:var(--surface-2); }
+.cat-tile::after{ content:''; position:absolute; inset:0; background:linear-gradient(to top, rgba(16,20,14,.72) 0%, rgba(16,20,14,0) 55%); }
+.cat-tile .lbl{ position:absolute; left:10px; right:10px; bottom:9px; z-index:1; display:flex; align-items:flex-end; justify-content:space-between; gap:6px; }
+.cat-tile .lbl-name{ color:#fff; font-size:13.5px; font-weight:600; line-height:1.25; text-shadow:0 1px 4px rgba(0,0,0,.5); }
+.cat-tile .lbl-count{ color:#fff; font-size:10.5px; font-weight:700; background:rgba(255,255,255,.18); backdrop-filter:blur(6px); padding:2px 7px; border-radius:20px; white-space:nowrap; flex:none; }
+
+/* contacts */
+.contacts{
+  max-width:1180px; margin:26px auto 0; padding:16px 18px 34px;
+  display:flex; flex-wrap:wrap; gap:10px;
+}
+.contact-chip{
+  display:flex; align-items:center; gap:8px; text-decoration:none; color:var(--ink);
+  background:var(--surface); border:1px solid var(--line); border-radius:999px; padding:9px 15px; font-size:13px;
+}
+.contact-chip:hover{ border-color:var(--teal); color:var(--teal-deep); }
+.contact-chip svg{ width:14px; height:14px; }
+
+/* ============ ITEM CARDS ============ */
+.pgrid{
+  display:grid; grid-template-columns:repeat(auto-fill, minmax(158px,1fr)); gap:14px;
+  padding:0 18px 30px; max-width:1180px; margin:0 auto;
+}
+.pcard{
+  cursor:pointer; border-radius:16px; overflow:hidden; background:var(--surface);
+  border:1px solid var(--line); box-shadow:var(--shadow);
+  transition:transform .15s ease, box-shadow .15s ease;
+  display:flex; flex-direction:column;
+}
+.pcard:hover{ transform:translateY(-3px); box-shadow:var(--shadow-lg); }
+.pcard:active{ transform:scale(.97); }
+.pcard-img{ position:relative; aspect-ratio:1/1; background:var(--surface-2); overflow:hidden; }
+.pcard-img img{ width:100%; height:100%; object-fit:cover; }
+.pcard-img .ph{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:30px; color:var(--ink-faint); }
+.pcard-badge{
+  position:absolute; top:8px; left:8px; font-size:9.5px; font-weight:700; letter-spacing:.03em;
+  text-transform:uppercase; padding:3px 8px; border-radius:20px; color:#fff;
+}
+.pcard-badge.new{ background:var(--teal-deep); }
+.pcard-badge.pop{ background:var(--clay); }
+.pcard-body{ padding:10px 11px 12px; display:flex; flex-direction:column; gap:5px; flex:1; }
+.pcard-name{ font-size:13px; font-weight:600; line-height:1.35; color:var(--ink); }
+.pcard-price{ margin-top:auto; font-variant-numeric:tabular-nums; font-weight:700; font-size:13.5px; color:var(--teal-deep); }
+.pcard-price::after{ content:" so’m"; font-weight:400; color:var(--ink-faint); font-size:11px; }
+
+/* ============ DETAIL MODAL ============ */
+.modal-scrim{
+  position:fixed; inset:0; background:var(--scrim); z-index:100;
+  display:flex; align-items:flex-end; justify-content:center;
+  opacity:0; pointer-events:none; transition:opacity .2s ease;
+}
+.modal-scrim.open{ opacity:1; pointer-events:auto; }
+@media (min-width:640px){ .modal-scrim{ align-items:center; padding:24px; } }
+.modal-card{
+  background:var(--surface); width:100%; max-width:520px; max-height:90vh;
+  border-radius:22px 22px 0 0; overflow:hidden; display:flex; flex-direction:column;
+  transform:translateY(24px); transition:transform .22s cubic-bezier(.2,.7,.3,1);
+  box-shadow:var(--shadow-lg);
+}
+@media (min-width:640px){ .modal-card{ border-radius:22px; transform:scale(.96); } }
+.modal-scrim.open .modal-card{ transform:none; }
+.modal-scroll{ overflow-y:auto; }
+.modal-img{ aspect-ratio:4/3; background:var(--surface-2); position:relative; flex:none; }
+.modal-img img{ width:100%; height:100%; object-fit:cover; }
+.modal-img .ph{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:44px; color:var(--ink-faint); }
+.modal-close{
+  position:absolute; top:12px; right:12px; width:34px; height:34px; border-radius:50%;
+  background:rgba(16,20,14,.55); backdrop-filter:blur(6px); border:none; color:#fff;
+  display:flex; align-items:center; justify-content:center; cursor:pointer;
+}
+.modal-body{ padding:18px 20px 24px; }
+.modal-badges{ display:flex; gap:7px; margin-bottom:10px; }
+.modal-badge{ font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.03em; padding:3px 9px; border-radius:20px; color:#fff; }
+.modal-badge.new{ background:var(--teal-deep); }
+.modal-badge.pop{ background:var(--clay); }
+.modal-cat{ font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--teal); font-weight:600; margin-bottom:6px; }
+.modal-name{ font-family:Georgia,'PT Serif',serif; font-size:24px; line-height:1.25; margin-bottom:10px; text-wrap:balance; }
+.modal-price{ font-variant-numeric:tabular-nums; font-weight:700; font-size:21px; color:var(--teal-deep); margin-bottom:14px; }
+.modal-price::after{ content:" so’m"; font-weight:400; color:var(--ink-faint); font-size:14px; }
+.modal-desc{ font-size:14px; color:var(--ink-soft); line-height:1.7; padding-top:12px; border-top:1px solid var(--line); }
+
+/* ============ SEARCH VIEW ============ */
+.empty-state{ text-align:center; color:var(--ink-faint); padding:70px 20px; font-size:15px; }
+.empty-state .ico{ font-size:38px; margin-bottom:12px; display:block; }
+
 .offline-banner{ display:none; background:var(--clay); color:#fff; text-align:center; font-size:12.5px; padding:6px; }
 .offline-banner.show{ display:block; }
+
+.fade-in{ animation:fadeIn .25s ease both; }
+@keyframes fadeIn{ from{ opacity:0; transform:translateY(6px);} to{ opacity:1; transform:none; } }
 </style>
 </head>
 <body>
 
-<div class="offline-banner" id="offlineBanner">Internet aloqasi yo&#39;q &mdash; oxirgi saqlangan menyu ko&#39;rsatilmoqda</div>
+<div class="offline-banner" id="offlineBanner">Internet aloqasi yo&#39;q — oxirgi saqlangan menyu ko&#39;rsatilmoqda</div>
 
-<header>
-  <div class="tile-motif" aria-hidden="true"></div>
-  <div class="header-inner">
-    <div class="eyebrow">Urganch, Xorazm</div>
-    <h1>Olimp Garden</h1>
-    <p class="tagline">To&#39;liq menyu &mdash; taomlar va narxlar</p>
-    <div class="meta-row">
-      <span>Dushanba-Yakshanba: 11:00 - 00:00</span>
-      <span class="dot" aria-hidden="true"></span>
-      <span><a href="tel:+998991234567">+998991234567</a></span>
-      <span class="dot" aria-hidden="true"></span>
-      <span><a href="https://maps.app.goo.gl/W8scXCyc3vF9nv7D8" target="_blank" rel="noopener">Xaritada ko&#39;rish</a></span>
-    </div>
-  </div>
-</header>
-
-<div class="controls">
-  <div class="controls-inner">
-    <div class="search-wrap">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-      <input id="search" type="text" placeholder="Taom qidirish..." autocomplete="off">
-    </div>
-    <nav id="catnav" aria-label="Bo&#39;limlar"></nav>
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand" id="brand"></div>
+    <div class="topbar-spacer"></div>
+    <button class="icon-btn" id="searchToggle" aria-label="Qidirish">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+    </button>
   </div>
 </div>
 
-<main id="main">
-  <div id="empty" class="empty-state" hidden>Hech narsa topilmadi.</div>
-</main>
+<!-- HOME -->
+<div id="view-home" class="wrap"></div>
 
-<footer>
-  <div class="fname">Olimp Garden</div>
-  <div>Urganch, Xorazm &middot; Dushanba-Yakshanba: 11:00 - 00:00 &middot; <a href="tel:+998991234567">+998991234567</a></div>
-</footer>
+<!-- CATEGORY -->
+<div id="view-category" class="wrap hide">
+  <div class="subbar">
+    <button class="back-btn" id="catBack">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+      Menyu
+    </button>
+    <div class="subbar-title serif" id="catTitle"></div>
+    <div class="subbar-count" id="catCount"></div>
+  </div>
+  <div class="pgrid" id="catGrid"></div>
+</div>
 
-<button class="btn-top" id="toTop" aria-label="Yuqoriga">&uarr;</button>
+<!-- SEARCH -->
+<div id="view-search" class="wrap hide">
+  <div class="subbar">
+    <button class="back-btn" id="searchBack">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+      Orqaga
+    </button>
+  </div>
+  <div class="search-row">
+    <div class="search-field">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="searchInput" type="text" placeholder="Taom qidirish..." autocomplete="off">
+    </div>
+  </div>
+  <div class="pgrid" id="searchGrid"></div>
+  <div class="empty-state" id="searchEmpty"><span class="ico">🔍</span>Taom nomini kiriting</div>
+</div>
 
-<script id="menu-data" type="application/json">[{"cat":"Salat","items":[{"n":"Aччиқ чучук 1 порц","p":18000.0,"pop":false,"new":false},{"n":"Cолений ассорти 1 порц","p":35000.0,"pop":false,"new":false},{"n":"Ананас салат 1 порц","p":40000.0,"pop":false,"new":false},{"n":"Баклажан рулет 1 порц","p":45000.0,"pop":false,"new":false},{"n":"Баклажон салат 1 порц","p":35000.0,"pop":false,"new":false},{"n":"Венигрет салат 1 порц","p":25000.0,"pop":false,"new":false},{"n":"Витаминка 1 порц","p":25000.0,"pop":false,"new":false},{"n":"Гречиский салат 1 порц","p":35000.0,"pop":false,"new":false},{"n":"Грибной салат 1 порц","p":43000.0,"pop":false,"new":false},{"n":"Гулшан салат 1 порц","p":52000.0,"pop":false,"new":false},{"n":"Королевский Салат 1 порц","p":45000.0,"pop":false,"new":false},{"n":"Лаваш рулет 1 порц","p":35000.0,"pop":false,"new":false},{"n":"Мимоза салат 1 порц","p":35000.0,"pop":false,"new":false},{"n":"Мужской каприз 1 порц","p":45000.0,"pop":false,"new":false},{"n":"Норин 1 порц","p":50000.0,"pop":false,"new":false},{"n":"Овашной 1 порц","p":58000.0,"pop":false,"new":false},{"n":"Окрошка (гуштли) 1 порц","p":25000.0,"pop":false,"new":false},{"n":"Окрошка 1 порц","p":20000.0,"pop":false,"new":false},{"n":"Оливъе (гуштли) салат 1 порц","p":40000.0,"pop":false,"new":false},{"n":"Оливъе салат 1 порц","p":35000.0,"pop":false,"new":false},{"n":"Олимп салат 1 порц","p":63000.0,"pop":false,"new":false},{"n":"Свежий салат 1 порц","p":23000.0,"pop":false,"new":false},{"n":"Соленый бодринг 1 порц","p":10000.0,"pop":false,"new":false},{"n":"Солённи помидор 1 шт","p":15000.0,"pop":false,"new":false},{"n":"Соусли баклажон 1 порц","p":35000.0,"pop":false,"new":false},{"n":"Султан салат 1 порц","p":48000.0,"pop":false,"new":false},{"n":"Сырни ассарти 1 порц","p":75000.0,"pop":false,"new":false},{"n":"Франсузкий 1 порц","p":43000.0,"pop":false,"new":false},{"n":"Хрустящие баклажан 1 порц","p":50000.0,"pop":false,"new":false},{"n":"Цезарь салат 1 порц","p":45000.0,"pop":false,"new":false},{"n":"Шаркона салат 1 порц","p":45000.0,"pop":false,"new":false},{"n":"Японский салат 1 порц","p":49000.0,"pop":false,"new":false}]},{"cat":"1-taomlar","items":[{"n":"Чозма лағмон","p":40000.0,"pop":false,"new":false},{"n":"Бедана шурва","p":55000.0,"pop":false,"new":false},{"n":"Борш  0.5","p":27000.0,"pop":false,"new":false},{"n":"Борш 1 порси","p":35000.0,"pop":false,"new":false},{"n":"Гарден Бургер","p":47000.0,"pop":false,"new":false},{"n":"Гарден Бургер","p":47000.0,"pop":false,"new":false},{"n":"Гарден спеcиал","p":300000.0,"pop":false,"new":false},{"n":"Гумма кофте","p":50000.0,"pop":false,"new":false},{"n":"Кади манти","p":24998.0,"pop":false,"new":false},{"n":"Картошка  фри","p":20000.0,"pop":false,"new":false},{"n":"Киевский котлет","p":30000.0,"pop":false,"new":false},{"n":"Ковурма лагмон","p":40000.0,"pop":false,"new":false},{"n":"Куза шурва мол гушти","p":51000.0,"pop":false,"new":false},{"n":"Лула кабоб","p":45000.0,"pop":false,"new":false},{"n":"Манти","p":42000.0,"pop":false,"new":false},{"n":"Мастава 0,5","p":25000.0,"pop":false,"new":false},{"n":"Мастава 1 порси","p":30000.0,"pop":false,"new":false},{"n":"Мясной козили","p":120000.0,"pop":false,"new":false},{"n":"Окорошка фарширивонни","p":55000.0,"pop":false,"new":false},{"n":"Олимп товук","p":90000.0,"pop":false,"new":false},{"n":"Осма шурва 0,5","p":27000.0,"pop":false,"new":false},{"n":"Осма шурва 1 порси","p":40000.0,"pop":false,"new":false},{"n":"Сарёга товук","p":90000.0,"pop":false,"new":false},{"n":"Сетка товук","p":100000.0,"pop":false,"new":false},{"n":"Тифтил шорва","p":37000.0,"pop":false,"new":false},{"n":"Унаши 1 порц","p":20000.0,"pop":false,"new":false},{"n":"Урама Дулма","p":43000.0,"pop":false,"new":false},{"n":"Хива ижжан","p":35000.0,"pop":false,"new":false},{"n":"Шўрва барак","p":35000.0,"pop":false,"new":false},{"n":"Қарейка спешил","p":320000.0,"pop":false,"new":false}]},{"cat":"2-taomlar","items":[{"n":"Вагури","p":400000.0,"pop":false,"new":false},{"n":"Гўшт сай кабоб","p":130000.0,"pop":false,"new":false},{"n":"Ковурилган гушт","p":260000.0,"pop":false,"new":false},{"n":"Кофте с айдохом","p":90000.0,"pop":false,"new":false},{"n":"Мромирни стейк","p":200000.0,"pop":false,"new":false},{"n":"Сариёғо дил","p":230000.0,"pop":false,"new":false},{"n":"Тушенка","p":240000.0,"pop":false,"new":false},{"n":"Хон","p":300000.0,"pop":false,"new":false},{"n":"Қаймоқа дил","p":230000.0,"pop":false,"new":false},{"n":"Қовурилган гўшт ( қаймоқа)","p":290000.0,"pop":false,"new":false}]},{"cat":"Shashliklar","items":[{"n":"Овашной шашлик","p":15000.0,"pop":false,"new":false},{"n":"Ўрама шашлык","p":20000.0,"pop":false,"new":false},{"n":"Гиждувон шашлык","p":20000.0,"pop":false,"new":false},{"n":"Думба шашлык","p":18000.0,"pop":false,"new":false},{"n":"Ижжан шашлык","p":18000.0,"pop":false,"new":false},{"n":"Крилишка шашлык","p":25000.0,"pop":false,"new":false},{"n":"Кускавой Шашлик","p":33000.0,"pop":false,"new":false},{"n":"Кусковой кой","p":33000.0,"pop":false,"new":false},{"n":"Наполеон шашлык","p":30000.0,"pop":false,"new":false},{"n":"Патир шашлык","p":17000.0,"pop":false,"new":false}]},{"cat":"Балик таомлар","items":[{"n":"Ковурилган балик","p":125000.0,"pop":false,"new":false},{"n":"Лакка балик","p":260000.0,"pop":false,"new":false},{"n":"Сетка балик","p":140000.0,"pop":false,"new":false},{"n":"Фалга балик","p":150000.0,"pop":false,"new":false}]},{"cat":"Assorti taomlar","items":[{"n":"Jo'g'  Asorti","p":600000.0,"pop":true,"new":false},{"n":"Бешбармак","p":310000.0,"pop":false,"new":false},{"n":"Гушт ассорти катта","p":415000.0,"pop":false,"new":false},{"n":"Гушт ассоти люкс","p":600000.0,"pop":false,"new":false},{"n":"Екслюзив ассорти","p":445000.0,"pop":false,"new":false},{"n":"Жигарлар 1 порц","p":550000.0,"pop":true,"new":true},{"n":"Жуйан курдик","p":450000.0,"pop":false,"new":false},{"n":"Кабоб ассарти","p":460000.0,"pop":false,"new":false},{"n":"Кормо кг","p":330000.0,"pop":false,"new":false},{"n":"Мангал ассорти","p":550000.0,"pop":false,"new":false},{"n":"Мангал микс","p":480000.0,"pop":false,"new":false},{"n":"Миллий мих ассорти","p":470000.0,"pop":false,"new":false},{"n":"Олимп бешбармок 0,5","p":175000.0,"pop":false,"new":false},{"n":"Палов кг","p":180000.0,"pop":false,"new":false},{"n":"Стеак мол гўшти","p":370000.0,"pop":false,"new":false},{"n":"Стейк ассарти","p":370000.0,"pop":false,"new":false},{"n":"Стейк ассарти карейка","p":350000.0,"pop":false,"new":false},{"n":"Улфатлар ассортий 1 порц","p":420000.0,"pop":true,"new":true},{"n":"Фамилий ассорти","p":379000.0,"pop":true,"new":true},{"n":"Шашлик асарти","p":515000.0,"pop":false,"new":false},{"n":"Шеф ассорти","p":517000.0,"pop":false,"new":false}]},{"cat":"Бараклар","items":[{"n":"Барак ассарти катта 1 порц","p":135000.0,"pop":false,"new":false},{"n":"Барак ассорти","p":100000.0,"pop":false,"new":false},{"n":"Кади барак","p":25000.0,"pop":false,"new":false},{"n":"Картошка барак","p":25000.0,"pop":false,"new":false},{"n":"Кук барак","p":30000.0,"pop":false,"new":false},{"n":"Кутир барак","p":38000.0,"pop":false,"new":false},{"n":"Тухум барак","p":35000.0,"pop":false,"new":false},{"n":"Ушак барак","p":30000.0,"pop":false,"new":false}]},{"cat":"Somsa","items":[{"n":"Кади олот сомса 1 шт","p":6000.0,"pop":false,"new":false},{"n":"Копширмо гумма 1 шт","p":15000.0,"pop":false,"new":false},{"n":"Копширмо гумма ковурилган 1 шт","p":15000.0,"pop":false,"new":false},{"n":"Кук олот сомса 1 шт","p":8000.0,"pop":false,"new":false},{"n":"Олoт сомса 1 шт","p":11000.0,"pop":false,"new":false},{"n":"Олимп копширмо 1 шт","p":16000.0,"pop":false,"new":false},{"n":"Сомса 1 шт","p":17000.0,"pop":false,"new":false}]},{"cat":"Нон чой","items":[{"n":"Бухонка","p":5000.0,"pop":false,"new":false},{"n":"Кора нон","p":6000.0,"pop":false,"new":false},{"n":"Лимон чой","p":17000.0,"pop":false,"new":false},{"n":"Нон асарти","p":25000.0,"pop":false,"new":false},{"n":"Чой","p":5000.0,"pop":false,"new":false},{"n":"Чурак","p":12000.0,"pop":false,"new":false},{"n":"Ягли патир","p":15000.0,"pop":false,"new":false}]},{"cat":"Сетлар","items":[{"n":"1- сет","p":55000.0,"pop":false,"new":false},{"n":"2-сет","p":55000.0,"pop":false,"new":false},{"n":"3-Сет","p":55000.0,"pop":false,"new":false},{"n":"4-ceт","p":55000.0,"pop":false,"new":false}]},{"cat":"Ichimlik","items":[{"n":"Cок","p":18000.0,"pop":false,"new":false},{"n":"Cув газли 1,5","p":7000.0,"pop":false,"new":false},{"n":"Адреналин 0,45","p":19000.0,"pop":false,"new":false},{"n":"Вико","p":23000.0,"pop":false,"new":false},{"n":"Жагуар 0.45","p":15000.0,"pop":false,"new":false},{"n":"Кола 0,5","p":10000.0,"pop":false,"new":false},{"n":"Кола 1,5","p":20000.0,"pop":false,"new":false},{"n":"Мохито 0,45","p":15000.0,"pop":false,"new":false},{"n":"Пепси 0,5","p":9999.0,"pop":false,"new":false},{"n":"Пепси 1,5","p":18000.0,"pop":false,"new":false},{"n":"Пепси балични 0,45","p":13000.0,"pop":false,"new":false},{"n":"Спрайт 0.5","p":10000.0,"pop":false,"new":false},{"n":"Спрайт 1.5","p":18000.0,"pop":false,"new":false},{"n":"Спрайт 1л","p":12000.0,"pop":false,"new":false},{"n":"Сув газсиз 0,5","p":3000.0,"pop":false,"new":false},{"n":"Сув газсиз 1,5","p":7000.0,"pop":false,"new":false},{"n":"Тошкент сув 0,5","p":8998.0,"pop":false,"new":false},{"n":"Фанта 0,5","p":10000.0,"pop":false,"new":false},{"n":"Фанта 1,5","p":20000.0,"pop":false,"new":false},{"n":"Флеш 0,45","p":13000.0,"pop":false,"new":false},{"n":"Чорток 0,7","p":15999.0,"pop":false,"new":false}]},{"cat":"Бариста","items":[{"n":"Айрон газли ( газсиз)","p":20000.0,"pop":false,"new":false},{"n":"Айс Теа","p":55000.0,"pop":false,"new":false},{"n":"Айс американо","p":25000.0,"pop":false,"new":false},{"n":"Айс капучино","p":25000.0,"pop":false,"new":false},{"n":"Айс латте","p":25000.0,"pop":false,"new":false},{"n":"Американо","p":15000.0,"pop":false,"new":false},{"n":"Анор шарбати1 л","p":96000.0,"pop":false,"new":false},{"n":"Банановый шейклар","p":35000.0,"pop":false,"new":false},{"n":"Бардак чой чашка","p":4000.0,"pop":false,"new":false},{"n":"Еспрессо","p":15000.0,"pop":false,"new":false},{"n":"Киви шейк","p":30000.0,"pop":false,"new":false},{"n":"Клубничный шейк","p":35000.0,"pop":false,"new":false},{"n":"Латте","p":20000.0,"pop":false,"new":false},{"n":"Мевали чой","p":30000.0,"pop":false,"new":false},{"n":"Микс сок","p":60000.0,"pop":false,"new":false},{"n":"Мохито ассорти","p":100000.0,"pop":true,"new":true},{"n":"Мохито графин","p":58000.0,"pop":true,"new":false},{"n":"Олма сок натурални 1л","p":40000.0,"pop":false,"new":false},{"n":"Раф кофе","p":50000.0,"pop":false,"new":false},{"n":"Сappuccino","p":25000.0,"pop":false,"new":false},{"n":"Сутли чой","p":50000.0,"pop":false,"new":false},{"n":"Тарвуз сок","p":30000.0,"pop":false,"new":false},{"n":"Флэт Уайт коффе","p":30000.0,"pop":false,"new":false},{"n":"Чизкейк","p":45000.0,"pop":false,"new":false},{"n":"Шоколадный шейк","p":35000.0,"pop":false,"new":false}]},{"cat":"Shirinliklar","items":[{"n":"Fistashkali Chizkeyk","p":55000.0,"pop":false,"new":false},{"n":"Mangoli Chizkeyk","p":60000.0,"pop":false,"new":false},{"n":"Вафли мевали","p":40000.0,"pop":false,"new":false},{"n":"Вафли микс","p":75000.0,"pop":false,"new":false},{"n":"Рафаелло бизели 1 шт","p":40000.0,"pop":false,"new":false},{"n":"Сан себастьян чизкейк","p":50000.0,"pop":false,"new":false},{"n":"Сникерс угалки перожний 1 шт","p":45000.0,"pop":false,"new":false},{"n":"Улитка пирожний 1 шт","p":45000.0,"pop":false,"new":false},{"n":"Фисташковый перожний","p":40000.0,"pop":false,"new":false},{"n":"Шоколадный чишка 1 шт","p":45000.0,"pop":false,"new":false},{"n":"Эстерхази","p":35000.0,"pop":false,"new":false}]},{"cat":"Mevalar","items":[{"n":"Ковун","p":25000.0,"pop":false,"new":false},{"n":"Ковун тарвуз","p":30000.0,"pop":false,"new":false},{"n":"Мева ассарти","p":150000.0,"pop":true,"new":false},{"n":"Мева ассарти катта","p":230000.0,"pop":true,"new":false}]}]</script>
+<!-- DETAIL MODAL -->
+<div class="modal-scrim" id="modal">
+  <div class="modal-card">
+    <div class="modal-scroll">
+      <div class="modal-img" id="modalImgWrap">
+        <button class="modal-close" id="modalClose" aria-label="Yopish">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+</div>
+
+<script id="menu-data" type="application/json">{"restaurant":{"name":"Olimp Garden","address":"Urganch, Xorazm","phone":"+998991234567","hours":"Dushanba-Yakshanba: 11:00 - 00:00","maps":"https://maps.app.goo.gl/W8scXCyc3vF9nv7D8","logo":"http://178.104.44.177/images/olimplogo1-1761979540428-6284dbe7.png","cover":"http://178.104.44.177/images/Screen Shot 2025-10-25 at 20.32.52-1761406406950-6d239157.png"},"categories":[{"id":"cmh6687pt0001jo045xarlp6i","cat":"Salat","label":"Salatlar","image":"http://178.104.44.177/images/4V1A5356-1761401672096-ca8e0edd.JPG","items":[{"id":"cmhefzjs90007ld04t8slsf9r","n":"Aччиқ чучук 1 порц","p":18000.0,"img":"http://178.104.44.177/images/achchiq chuchuk-1761890283836-6ecc63f4.JPG","pop":false,"new":false,"desc":null},{"id":"cmh6dikr30003l504362mxait","n":"Cолений ассорти 1 порц","p":35000.0,"img":"http://178.104.44.177/images/4V1A5310 (1)-1761402456294-a8b60949.JPG","pop":false,"new":false,"desc":null},{"id":"cmhf9y2e8001vl104qijshqf5","n":"Ананас салат 1 порц","p":40000.0,"img":"http://178.104.44.177/images/ананас-1761994056931-34a92cbc.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8xp2yo000tk3045s6na2wp","n":"Баклажан рулет 1 порц","p":45000.0,"img":"http://178.104.44.177/images/4V1A5469-1761557233265-cd80459b.JPG","pop":false,"new":false,"desc":null},{"id":"cmhg5obvf0001la04d1hhmjnp","n":"Баклажон салат 1 порц","p":35000.0,"img":"http://178.104.44.177/images/баклажон салат-1761993893680-06259f0b.JPG","pop":false,"new":false,"desc":null},{"id":"cmhfaf485002dl104eo3ls37o","n":"Венигрет салат 1 порц","p":25000.0,"img":"http://178.104.44.177/images/vinegrat-1762442857215-ee4b76e6.JPEG","pop":false,"new":false,"desc":null},{"id":"cmh8x8s4c0005k304xnknbky1","n":"Витаминка 1 порц","p":25000.0,"img":"http://178.104.44.177/images/4V1A5389-1761556473081-cbb35380.JPG","pop":false,"new":false,"desc":null},{"id":"cmhfagw7b002fl1049kz1c2pd","n":"Гречиский салат 1 порц","p":35000.0,"img":"http://178.104.44.177/images/grechiskiy-1762436162289-d172f86e.jpg","pop":false,"new":false,"desc":null},{"id":"cmh8x1hb30001k304qfmfabpn","n":"Грибной салат 1 порц","p":43000.0,"img":"http://178.104.44.177/images/4V1A5362-1761556131425-d806249c.JPG","pop":false,"new":false,"desc":null},{"id":"cmhfadjix002bl104n0yu4cin","n":"Гулшан салат 1 порц","p":52000.0,"img":"http://178.104.44.177/images/gulshan-1762435751252-3411f987.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8ykkwo002bk304vxe128ut","n":"Королевский Салат 1 порц","p":45000.0,"img":"http://178.104.44.177/images/IMG_2517-1761558702977-f04bdb8a.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8xurb90011k304ywax0xik","n":"Лаваш рулет 1 порц","p":35000.0,"img":"http://178.104.44.177/images/4V1A5488-1761557498095-f3ed4972.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8y9q1y001nk304a0h5f7x8","n":"Мимоза салат 1 порц","p":35000.0,"img":"http://178.104.44.177/images/4V1A5540-1761558196116-a7d58e22.JPG","pop":false,"new":false,"desc":null},{"id":"cmh6d99qm0001ld045tgxihaq","n":"Мужской каприз 1 порц","p":45000.0,"img":"http://178.104.44.177/images/4V1A5356__1_-1761402089299-bae6d72c-1783174777950-6d980d86.jpg","pop":false,"new":false,"desc":null},{"id":"cmh93d2lr0001i304modxqe3z","n":"Норин 1 порц","p":50000.0,"img":"http://178.104.44.177/images/норин-1761929397154-242880d5.JPG","pop":false,"new":false,"desc":null},{"id":"cmhf1hur30001la04r2jlo815","n":"Овашной 1 порц","p":58000.0,"img":"http://178.104.44.177/images/ovoshnoy-1761926408864-4bc4ce2a.JPG","pop":false,"new":false,"desc":null},{"id":"cmhfakmeb002jl104v9ewqcqq","n":"Окрошка (гуштли) 1 порц","p":25000.0,"img":"http://178.104.44.177/images/oqroshka-1762435972683-9d1eb98c.jpg","pop":false,"new":false,"desc":null},{"id":"cmhfaj80m002hl1042houunmh","n":"Окрошка 1 порц","p":20000.0,"img":"http://178.104.44.177/images/oqroshka-1762435994075-bffca80d.jpg","pop":false,"new":false,"desc":null},{"id":"cmhfa4e060023l104wqzucj8b","n":"Оливъе (гуштли) салат 1 порц","p":40000.0,"img":"http://178.104.44.177/images/Оливъе-1762021115698-6c19f216.png","pop":false,"new":false,"desc":null},{"id":"cmhfa32wg0021l104wdsqbvxu","n":"Оливъе салат 1 порц","p":35000.0,"img":"http://178.104.44.177/images/Оливъе-1761993519386-f9f563f5.png","pop":false,"new":false,"desc":null},{"id":"cmh8x0s2h0005ky04v7olazor","n":"Олимп салат 1 порц","p":63000.0,"img":"http://178.104.44.177/images/4V1A5350-1761556099460-f64507be.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8y369d001bk304coc86x20","n":"Свежий салат 1 порц","p":23000.0,"img":"http://178.104.44.177/images/4V1A5519-1761557890760-7432277c.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8yalug001pk304ihjuswzo","n":"Соленый бодринг 1 порц","p":10000.0,"img":"http://178.104.44.177/images/4V1A5543-1761558236396-f3fc1c78.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8wy9f60001ky04btdnlygq","n":"Солённи помидор 1 шт","p":15000.0,"img":"http://178.104.44.177/images/4V1A5328-1761555981885-ac6b2b7c.JPG","pop":false,"new":false,"desc":null},{"id":"cmh6ddvhv0001l504l1ib4pa2","n":"Соусли баклажон 1 порц","p":35000.0,"img":"http://178.104.44.177/images/Screen Shot 2025-10-25 at 19.24.18-1761402275822-5901be5b.png","pop":false,"new":false,"desc":null},{"id":"cmhf9wau8001tl104noc3bp7h","n":"Султан салат 1 порц","p":48000.0,"img":"http://178.104.44.177/images/султан-1761990996933-ea0ea590.JPG","pop":false,"new":false,"desc":null},{"id":"cmhfamof2002ll104h1abm8fq","n":"Сырни ассарти 1 порц","p":75000.0,"img":"http://178.104.44.177/images/sirni osorti-1762443550143-0d4a158c.JPEG","pop":false,"new":false,"desc":null},{"id":"cmhefqt6w0003ld040ds07f41","n":"Франсузкий 1 порц","p":43000.0,"img":"http://178.104.44.177/images/фран-1761929198626-8dbcb8d4.JPG","pop":false,"new":false,"desc":null},{"id":"cmh6dmie40001ky046h30drof","n":"Хрустящие баклажан 1 порц","p":50000.0,"img":"http://178.104.44.177/images/4V1A5345-1761402619566-99fb432d.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8x7x4o0003k304xx8vvd8e","n":"Цезарь салат 1 порц","p":45000.0,"img":"http://178.104.44.177/images/4V1A5381-1761556432552-04e0302a.JPG","pop":false,"new":false,"desc":null},{"id":"cmhf9uus3001rl104htnim8ic","n":"Шаркона салат 1 порц","p":45000.0,"img":"http://178.104.44.177/images/шпрп-1762022312078-3236bc22.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8xdgly000dk3044s7pc4hv","n":"Японский салат 1 порц","p":49000.0,"img":"http://178.104.44.177/images/4V1A5420-1761556691436-e1c3d559.JPG","pop":false,"new":false,"desc":null}]},{"id":"cmh6dn1gy000d9kbcypia7tty","cat":"1-taomlar","label":"Birinchi taomlar","image":"http://178.104.44.177/images/4V1A5627-1761402610301-f5597387.JPG","items":[{"id":"cmhf8hsmr000xl104y50rlbqq","n":"Чозма лағмон","p":40000.0,"img":null,"pop":false,"new":false,"desc":null},{"id":"cmh8y023q0017k304j4lvljsn","n":"Бедана шурва","p":55000.0,"img":"http://178.104.44.177/images/4V1A5503-1761557745307-79d3ea6d.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8xekf0000fk3046ietytd9","n":"Борш  0.5","p":27000.0,"img":"http://178.104.44.177/images/4V1A5428-1761556742827-cfacbd36.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8yfyw40021k304nkd0jqei","n":"Борш 1 порси","p":35000.0,"img":"http://178.104.44.177/images/4V1A5625-1761558487761-93fea251.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8ylwsm002dk304a2eeap17","n":"Гарден Бургер","p":47000.0,"img":"http://178.104.44.177/images/IMG_2536-1761558765441-1676c24f.JPG","pop":false,"new":false,"desc":null},{"id":"cmhehuz050003ju04m942h98m","n":"Гарден Бургер","p":47000.0,"img":"http://178.104.44.177/images/berger-1761893425059-e4b3a08a.JPG","pop":false,"new":false,"desc":null},{"id":"cmhf8p0hh0013l1049bpbya1m","n":"Гарден спеcиал","p":300000.0,"img":"http://178.104.44.177/images/garden shpeshil-1762020633874-bd1f6aff.JPEG","pop":false,"new":false,"desc":null},{"id":"cmh8yoy2z002lk3042b96wfvv","n":"Гумма кофте","p":50000.0,"img":"http://178.104.44.177/images/IMG_2538-1761558906684-7fbfeb1a.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8yb7zo001rk304l013o3jd","n":"Кади манти","p":24998.0,"img":"http://178.104.44.177/images/4V1A5545-1761558266376-177065f1.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8wz69g0003ky04vpslqtxx","n":"Картошка  фри","p":20000.0,"img":"http://178.104.44.177/images/4V1A5341-1761556024790-675f6434.JPG","pop":false,"new":false,"desc":null},{"id":"cmhfvpzky0001jv04vvq717wy","n":"Киевский котлет","p":30000.0,"img":"http://178.104.44.177/images/кивески-1761977175025-4a9a9c5f.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8z2366003pk304mklkc2fk","n":"Ковурма лагмон","p":40000.0,"img":"http://178.104.44.177/images/IMG_2554-1761559519630-431d9306.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8z4bgz003zk304eclrr7d2","n":"Куза шурва мол гушти","p":51000.0,"img":"http://178.104.44.177/images/IMG_2658-1761559624209-0f459340.JPG","pop":false,"new":false,"desc":null},{"id":"cmhf8y8sl0017l104buvqu50y","n":"Лула кабоб","p":45000.0,"img":"http://178.104.44.177/images/лула кабоб-1762020949082-bf5c01d6.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8yqayq002rk304forbkxe3","n":"Манти","p":42000.0,"img":"http://178.104.44.177/images/IMG_2542-1761558969753-3011bd7b.JPG","pop":false,"new":false,"desc":null},{"id":"cmhf2l3qo0001la04vnz3hn6q","n":"Мастава 0,5","p":25000.0,"img":"http://178.104.44.177/images/mastava 0.5-1761928240669-9f1da3da.JPG","pop":false,"new":false,"desc":null},{"id":"cmhf3mii30001js04njk158fn","n":"Мастава 1 порси","p":30000.0,"img":"http://178.104.44.177/images/mastava 0.5-1761929986082-d67758f3.JPG","pop":false,"new":false,"desc":null},{"id":"cmhf1vb1b0003jr042spn2f5o","n":"Мясной козили","p":120000.0,"img":"http://178.104.44.177/images/kozi-1761927037645-98399f1b.JPG","pop":false,"new":false,"desc":null},{"id":"cmhf92b0p0019l104bsn5kvxb","n":"Окорошка фарширивонни","p":55000.0,"img":"http://178.104.44.177/images/okroshka-1761939673555-6c02fb61.JPG","pop":false,"new":false,"desc":null},{"id":"cmhf8rrf60015l104kr5v8mo9","n":"Олимп товук","p":90000.0,"img":"http://178.104.44.177/images/олимп товук-1762016157317-7b45c41f.JPEG","pop":false,"new":false,"desc":null},{"id":"cmh8yh6800023k304mx880kwo","n":"Осма шурва 0,5","p":27000.0,"img":"http://178.104.44.177/images/4V1A5627-1761558543924-9a069499.JPG","pop":false,"new":false,"desc":null},{"id":"cmheh6ztt0007le04oa9oopsz","n":"Осма шурва 1 порси","p":40000.0,"img":"http://178.104.44.177/images/osma sho'rva 1-1761892307571-e4b51711.JPG","pop":false,"new":false,"desc":null},{"id":"cmheh01rs0005le04a0cpn7l3","n":"Сарёга товук","p":90000.0,"img":"http://178.104.44.177/images/sariyog'a tovuq-1761891986905-c524a8a0.JPG","pop":false,"new":false,"desc":null},{"id":"cmhehit2t000ble04350bx9dd","n":"Сетка товук","p":100000.0,"img":"http://178.104.44.177/images/setka tovuq-1761892858049-ec3ba2e9.JPG","pop":false,"new":false,"desc":null},{"id":"cmhf1sksj0001jr04a4t64nig","n":"Тифтил шорва","p":37000.0,"img":"http://178.104.44.177/images/tiftil-1761926909564-fb1aa82d.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8yy4xq003hk304hqxxibmw","n":"Унаши 1 порц","p":20000.0,"img":"http://178.104.44.177/images/IMG_2557-1761559335292-379af527.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8z3y8f003xk304tstovoou","n":"Урама Дулма","p":43000.0,"img":"http://178.104.44.177/images/IMG_2662-1761559606405-bb884b94.JPG","pop":false,"new":false,"desc":null},{"id":"cmhehaqlp0009le04cx22i71a","n":"Хива ижжан","p":35000.0,"img":"http://178.104.44.177/images/xiva ijjon-1761892485607-2ee873af.JPG","pop":false,"new":false,"desc":null},{"id":"cmhefux5c0005ld04w948q8ol","n":"Шўрва барак","p":35000.0,"img":"http://178.104.44.177/images/sho'rva barak-1761890067574-639e07fb.JPG","pop":false,"new":false,"desc":null},{"id":"cmk71symn0001jo04b5dl8ts6","n":"Қарейка спешил","p":320000.0,"img":"http://178.104.44.177/images/IMG_1378-1767973541493-fb058bb4.JPEG","pop":false,"new":false,"desc":null}]},{"id":"cmh6ebuyd000p9kbcqgsewogr","cat":"2-taomlar","label":"Ikkinchi taomlar","image":"http://178.104.44.177/images/IMG_2536-1761403769981-5691b143.JPG","items":[{"id":"cmhei677o0009ju043771rw8w","n":"Вагури","p":400000.0,"img":"http://178.104.44.177/images/vaguri-1761893952138-f56a87ad.JPG","pop":false,"new":false,"desc":null},{"id":"cmhegukw00001le04rp85jpmr","n":"Гўшт сай кабоб","p":130000.0,"img":"http://178.104.44.177/images/gusht say-1761891730051-76a7b5b3.JPG","pop":false,"new":false,"desc":null},{"id":"cmhei0epz0007ju04mlurekv3","n":"Ковурилган гушт","p":260000.0,"img":"http://178.104.44.177/images/qovurilgan gusht-1761893659117-2c7f15ef.JPG","pop":false,"new":false,"desc":null},{"id":"cmhf9nl4s001ll1043upzzf2d","n":"Кофте с айдохом","p":90000.0,"img":"http://178.104.44.177/images/кофте-1761992928281-cafe1fd4.JPG","pop":false,"new":false,"desc":null},{"id":"cmhf94vph001bl104oggscz7p","n":"Мромирни стейк","p":200000.0,"img":"http://178.104.44.177/images/мрамирни стейк-1761992967119-668d31fb.JPG","pop":false,"new":false,"desc":null},{"id":"cmhf8l3zo0011l104vsuplqxl","n":"Сариёғо дил","p":230000.0,"img":"http://178.104.44.177/images/дил-1761993024531-d02642b1.JPG","pop":false,"new":false,"desc":null},{"id":"cmhegx5200003le04uvdi73qs","n":"Тушенка","p":240000.0,"img":"http://178.104.44.177/images/tusho'nka-1761891851328-a9e55417.JPG","pop":false,"new":false,"desc":null},{"id":"cmhehrrat0001ju04hqq8z63f","n":"Хон","p":300000.0,"img":"http://178.104.44.177/images/Hon-1761893278035-194a7a63.JPG","pop":false,"new":false,"desc":null},{"id":"cmhf8jmp5000zl104binth87u","n":"Қаймоқа дил","p":230000.0,"img":"http://178.104.44.177/images/сарийога дил-1761994216833-0728c248.JPG","pop":false,"new":false,"desc":null},{"id":"cmhei8cvs000bju04jf309ats","n":"Қовурилган гўшт ( қаймоқа)","p":290000.0,"img":"http://178.104.44.177/images/dil qaymoqa-1761894054144-6ae0fbf6.JPG","pop":false,"new":false,"desc":null}]},{"id":"cmh6e09ib000h9kbc5a9aheqt","cat":"Shashliklar","label":"Shashliklar","image":"http://178.104.44.177/images/IMG_2692-1761403227572-a3914b70.JPG","items":[{"id":"cmhf87wwk000rl104hiqm2b6u","n":"Овашной шашлик","p":15000.0,"img":"http://178.104.44.177/images/овошной шашлик-1761993083857-cdd1cf44.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8yrd3p002xk304agvgv3xs","n":"Ўрама шашлык","p":20000.0,"img":"http://178.104.44.177/images/IMG_2691-1761559019344-ac114f82.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8yucby003bk304wg5jejc3","n":"Гиждувон шашлык","p":20000.0,"img":"http://178.104.44.177/images/IMG_2688-1761559158683-fcb83c9e.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8ys5li0031k304ok0bza09","n":"Думба шашлык","p":18000.0,"img":"http://178.104.44.177/images/IMG_2690-1761559056364-44aa7706.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8yo4ep002jk3040g35gtrs","n":"Ижжан шашлык","p":18000.0,"img":"http://178.104.44.177/images/IMG_2694-1761558868052-133095c2.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8ynby9002fk304rwo9jff3","n":"Крилишка шашлык","p":25000.0,"img":"http://178.104.44.177/images/IMG_2696-1761558832005-b8d1bb17.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8yppvy002nk304tcag86he","n":"Кускавой Шашлик","p":33000.0,"img":"http://178.104.44.177/images/IMG_2693-1761558943022-1605dc8e.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8yqm8k002tk304ponc4xcp","n":"Кусковой кой","p":33000.0,"img":"http://178.104.44.177/images/IMG_2692-1761558984370-24931e63.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8yjbfe0027k304otai07z1","n":"Наполеон шашлык","p":30000.0,"img":"http://178.104.44.177/images/IMG_2697-1761558644052-5be2bce9.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8ytarj0035k304e6rt9zjz","n":"Патир шашлык","p":17000.0,"img":"http://178.104.44.177/images/IMG_2689-1761559110004-f65daf56.JPG","pop":false,"new":false,"desc":null}]},{"id":"cmhf2ed3g0001jx04dtlkphfe","cat":"Балик таомлар","label":"Baliq taomlari","image":null,"items":[{"id":"cmhf7johg000fl10460dxq1hx","n":"Ковурилган балик","p":125000.0,"img":"http://178.104.44.177/images/сазан-1761994756731-f7f07999.jpg","pop":false,"new":false,"desc":null},{"id":"cmhf7yqvf000ll104nsf7e5g3","n":"Лакка балик","p":260000.0,"img":"http://178.104.44.177/images/лакка балик-1761994536596-4a1ef882.jpg","pop":false,"new":false,"desc":null},{"id":"cmh8ysk000033k304mnmn5peo","n":"Сетка балик","p":140000.0,"img":"http://178.104.44.177/images/IMG_2552-1761559074840-8339fdb1.JPG","pop":false,"new":false,"desc":null},{"id":"cmhf7l6or000hl104szb6bez0","n":"Фалга балик","p":150000.0,"img":"http://178.104.44.177/images/фалга балик-1761994861406-a72a1113.jpg","pop":false,"new":false,"desc":null}]},{"id":"cmh6eqqh90005ky04ccy4g5vz","cat":"Assorti taomlar","label":"Assorti taomlar","image":"http://178.104.44.177/images/shashlik ass-1761935213214-3ce945d6.JPG","items":[{"id":"cmn8qh7xl0001l404jwc0lg1c","n":"Jo'g'  Asorti","p":600000.0,"img":"http://178.104.44.177/images/IMG_9208-1774605798596-68c87ff0.JPG","pop":true,"new":false,"desc":null},{"id":"cmh8xhuqw000jk304fao63qhe","n":"Бешбармак","p":310000.0,"img":"http://178.104.44.177/images/4V1A5436-1761556896264-b5193740.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8y6i39001jk304e1tgvvpk","n":"Гушт ассорти катта","p":415000.0,"img":"http://178.104.44.177/images/4V1A5529-1761558046284-cd30e1d3.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8z2u91003tk304wwdnciy4","n":"Гушт ассоти люкс","p":600000.0,"img":"http://178.104.44.177/images/IMG_9643-1774616212357-c2ff5dba.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8yi1s80025k30417ezlrsp","n":"Екслюзив ассорти","p":445000.0,"img":"http://178.104.44.177/images/4V1A5631-1761558585091-b10c55a8.JPG","pop":false,"new":false,"desc":null},{"id":"55365ab5c1094d3a8396e41d","n":"Жигарлар 1 порц","p":550000.0,"img":"http://178.104.44.177/images/IMG_4942-1783175138246-e7ca7130.jpg","pop":true,"new":true,"desc":null},{"id":"cmh8xniav000pk304hb2g7rso","n":"Жуйан курдик","p":450000.0,"img":"http://178.104.44.177/images/4V1A5458-1761557160186-e81418eb.JPG","pop":false,"new":false,"desc":null},{"id":"cmhf8d9sz000vl1047jc5hmq3","n":"Кабоб ассарти","p":460000.0,"img":"http://178.104.44.177/images/кабоб ассарти кичик-1762016231212-db0a9cc9.JPEG","pop":false,"new":false,"desc":null},{"id":"cmhf9bpdw001fl1047a4gz3d9","n":"Кормо кг","p":330000.0,"img":"http://178.104.44.177/images/qarmo-1761939717716-64fc4fc2.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8z1gzq003nk304hjw18smm","n":"Мангал ассорти","p":550000.0,"img":"http://178.104.44.177/images/IMG_2666-1761559491321-2722a388.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8z25eg003rk30470uyw3f6","n":"Мангал микс","p":480000.0,"img":"http://178.104.44.177/images/IMG_2664-1761559522559-3f1535ee.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8xa3920007k304t8b7sxaw","n":"Миллий мих ассорти","p":470000.0,"img":"http://178.104.44.177/images/IMG_3516-1774709182415-bd9f9851.JPG","pop":false,"new":false,"desc":null},{"id":"cmhf9l0k6001jl104iazzz0nh","n":"Олимп бешбармок 0,5","p":175000.0,"img":"http://178.104.44.177/images/IMG_1599-1769154691224-c64d245f.JPG","pop":false,"new":false,"desc":null},{"id":"cmhf9779h001dl104qleoedq3","n":"Палов кг","p":180000.0,"img":"http://178.104.44.177/images/palov pad zakaz-1762444071178-e8128d67.jpg","pop":false,"new":false,"desc":null},{"id":"cmh8xepak001r9ksthfh5u3ze","n":"Стеак мол гўшти","p":370000.0,"img":"http://178.104.44.177/images/IMG_2705-1761556747260-9d9d8a3a.JPG","pop":false,"new":false,"desc":null},{"id":"cmhf82mhq000nl104x4cx04vg","n":"Стейк ассарти","p":370000.0,"img":"http://178.104.44.177/images/стейк асс-1761993147532-a361b2f4.JPG","pop":false,"new":false,"desc":null},{"id":"cmhf859sf000pl1045mg9d463","n":"Стейк ассарти карейка","p":350000.0,"img":"http://178.104.44.177/images/salom.php-1781622005543-6f6cf2d0.png","pop":false,"new":false,"desc":null},{"id":"5ced8e48cef54eaa822f0b05","n":"Улфатлар ассортий 1 порц","p":420000.0,"img":"http://178.104.44.177/images/8228-1786371681443-8e204326.jpg","pop":true,"new":true,"desc":null},{"id":"acbbe54c30804bd587ea0a5d","n":"Фамилий ассорти","p":379000.0,"img":"http://178.104.44.177/images/7129-1783960877359-93d38a41.jpg","pop":true,"new":true,"desc":"Oilanggiz uchun eng yaxshi tanlov🤩"},{"id":"cmhf2s7km0005la04jdotr1y6","n":"Шашлик асарти","p":515000.0,"img":"http://178.104.44.177/images/shashlik ass-1761928571927-6b61cf01.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8z5xms0043k304ufeft3bx","n":"Шеф ассорти","p":517000.0,"img":"http://178.104.44.177/images/IMG_2661-1761559699375-37f5961c.JPG","pop":false,"new":false,"desc":null}]},{"id":"cmh6dtbet000f9kbcpmsbeumc","cat":"Бараклар","label":"Baraklar","image":"http://178.104.44.177/images/kartoshka-1761935162620-1b6bbcf1.JPG","items":[{"id":"cmhf89mdj000tl104xjt2pvlr","n":"Барак ассарти катта 1 порц","p":135000.0,"img":"http://178.104.44.177/images/барак ассарти катта-1761993056945-31fda236.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8xthqu000zk30427e6obxr","n":"Барак ассорти","p":100000.0,"img":"http://178.104.44.177/images/4V1A5485-1761557439309-1392e841.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8xs4bq000xk304feg3o8rr","n":"Кади барак","p":25000.0,"img":"http://178.104.44.177/images/4V1A5479-1761557374723-c65fd465.JPG","pop":false,"new":false,"desc":null},{"id":"cmheg5ae50009ld04xxhzets2","n":"Картошка барак","p":25000.0,"img":"http://178.104.44.177/images/kartoshka-1761890550160-90de0bd2.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8xoce7000rk304dv0grap1","n":"Кук барак","p":30000.0,"img":"http://178.104.44.177/images/4V1A5467-1761557198968-7a20371e.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8xgnsc001t9kstue8t6r17","n":"Кутир барак","p":38000.0,"img":"http://178.104.44.177/images/IMG_2704-1761556836812-7d1ec8e5.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8xm77t000nk304sz0layd7","n":"Тухум барак","p":35000.0,"img":"http://178.104.44.177/images/4V1A5446-1761557098912-ba0f2f2e.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8xy8zp0015k304tgyvl0wr","n":"Ушак барак","p":30000.0,"img":"http://178.104.44.177/images/4V1A5499-1761557679382-3e20ddff.JPG","pop":false,"new":false,"desc":null}]},{"id":"cmh6de9dn00039kbc7fprpxqs","cat":"Somsa","label":"Somsa","image":"http://178.104.44.177/images/IMG_2556-1761402203094-2df0ea77.JPG","items":[{"id":"cmhf78f840007l1047j4hpg4v","n":"Кади олот сомса 1 шт","p":6000.0,"img":"http://178.104.44.177/images/кук олот-1761993283194-98eebce7.JPG","pop":false,"new":false,"desc":null},{"id":"cmhf7a9wj0009l104w99qs6h8","n":"Копширмо гумма 1 шт","p":15000.0,"img":"http://178.104.44.177/images/копширмо-1761993249439-2e44e39b.JPG","pop":false,"new":false,"desc":null},{"id":"cmhf7dhtu000bl104iuhadq86","n":"Копширмо гумма ковурилган 1 шт","p":15000.0,"img":"http://178.104.44.177/images/4V1A8739-1762020998959-6db987d6.JPG","pop":false,"new":false,"desc":null},{"id":"cmhf777hw0005l1047jhgnpw4","n":"Кук олот сомса 1 шт","p":8000.0,"img":"http://178.104.44.177/images/кук олот-1761993309952-5a632a36.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8yz42b003jk304pb87ei2y","n":"Олoт сомса 1 шт","p":11000.0,"img":"http://178.104.44.177/images/IMG_2556-1761559380991-96e77396.JPG","pop":false,"new":false,"desc":null},{"id":"cmhf7f4uz000dl10420kj9lby","n":"Олимп копширмо 1 шт","p":16000.0,"img":"http://178.104.44.177/images/олимп к-1761993204201-a5fb7339.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8z1di4003lk304y3v5f4zq","n":"Сомса 1 шт","p":17000.0,"img":"http://178.104.44.177/images/IMG_2555-1761559487430-e0ca9ace.JPG","pop":false,"new":false,"desc":null}]},{"id":"cmhf70xv10001gy04w1zdoyqi","cat":"Нон чой","label":"Non va choy","image":"http://178.104.44.177/images/нон ассарти-1761970697640-bdcc744d.jpg","items":[{"id":"cmhfbdct1003pl104adouxqmc","n":"Бухонка","p":5000.0,"img":"http://178.104.44.177/images/бухонка-1761971816663-9cebf383.webp","pop":false,"new":false,"desc":null},{"id":"cmhfbbu8v003nl1042wa4r8y9","n":"Кора нон","p":6000.0,"img":"http://178.104.44.177/images/кора нон-1762059645915-c40b6d8e.jpg","pop":false,"new":false,"desc":null},{"id":"cmhftd3gd000bjr04po6fh453","n":"Лимон чой","p":17000.0,"img":"http://178.104.44.177/images/лимон ч-1761973214638-be5de0cc.webp","pop":false,"new":false,"desc":null},{"id":"cmhf738ad0001l1045c3yiqof","n":"Нон асарти","p":25000.0,"img":"http://178.104.44.177/images/IMG_9645-1783175124418-f76a8cd6.jpg","pop":false,"new":false,"desc":null},{"id":"cmhftalx70009jr048h51hi3f","n":"Чой","p":5000.0,"img":"http://178.104.44.177/images/чой-1761973103341-c584d656.jpg","pop":false,"new":false,"desc":null},{"id":"cmhfb9aag003jl104xlg1jllm","n":"Чурак","p":12000.0,"img":"http://178.104.44.177/images/чурак-1762059173415-eb4092da.jpg","pop":false,"new":false,"desc":null},{"id":"cmhfbanoy003ll10485b4e2fu","n":"Ягли патир","p":15000.0,"img":"http://178.104.44.177/images/патир йогли-1762059128998-6707c636.jpg","pop":false,"new":false,"desc":null}]},{"id":"cmkqjxzo10001l804v5ag34bs","cat":"Сетлар","label":"Setlar","image":"http://178.104.44.177/images/IMG_1600-1769153225416-bdd53352.JPG","items":[{"id":"cmkqkcgn60003l804ahvoxiyj","n":"1- сет","p":55000.0,"img":"http://178.104.44.177/images/IMG_1605-1769153544878-6a097841.JPG","pop":false,"new":false,"desc":null},{"id":"cmkqkh3lu0005l804rqj7p2cx","n":"2-сет","p":55000.0,"img":"http://178.104.44.177/images/IMG_1602-1769153760184-795704dc.JPG","pop":false,"new":false,"desc":null},{"id":"cmkqkt80a0007l804bj5ptp12","n":"3-Сет","p":55000.0,"img":"http://178.104.44.177/images/IMG_1600-1769154327845-6e90d8f3.JPG","pop":false,"new":false,"desc":null},{"id":"cml0nmy940001l504l5t5j3uw","n":"4-ceт","p":55000.0,"img":"http://178.104.44.177/images/IMG_2566-1769763734819-d93a9701.JPG","pop":false,"new":false,"desc":null}]},{"id":"cmh6e76mt000j9kbc0kea8jcc","cat":"Ichimlik","label":"Ichimliklar","image":"http://178.104.44.177/images/Screenshot 2025-10-25 at 7.45.26 PM-1761403549413-7ded1875.png","items":[{"id":"cmhfb841u003hl10414g7tpb8","n":"Cок","p":18000.0,"img":"http://178.104.44.177/images/соклар-1761979478728-e04ed895.avif","pop":false,"new":false,"desc":null},{"id":"cmhfaxryu0033l104ynjbiqnf","n":"Cув газли 1,5","p":7000.0,"img":"http://178.104.44.177/images/газли 1,5-1761971208233-21035ad2.jpg","pop":false,"new":false,"desc":null},{"id":"cmhfb2jni0039l104y3kffus4","n":"Адреналин 0,45","p":19000.0,"img":"http://178.104.44.177/images/адреналин-1761971519807-2af34fe6.jpg","pop":false,"new":false,"desc":null},{"id":"cmhfb75xg003fl10413w1th4n","n":"Вико","p":23000.0,"img":"http://178.104.44.177/images/вико-1761971440038-5e0403d5.jpg","pop":false,"new":false,"desc":null},{"id":"cmig5h0xv0001l204msfx2ts1","n":"Жагуар 0.45","p":15000.0,"img":"http://178.104.44.177/images/1000094594-1764170339018-983e29be.jpg","pop":false,"new":false,"desc":null},{"id":"cmhfar8dd002tl1044xt8jipw","n":"Кола 0,5","p":10000.0,"img":"http://178.104.44.177/images/кола 0,5-1761970567768-da8a3496.webp","pop":false,"new":false,"desc":null},{"id":"cmhfap0xe002pl1047fys3h9s","n":"Кола 1,5","p":20000.0,"img":"http://178.104.44.177/images/кола-1761970590107-0babad15.webp","pop":false,"new":false,"desc":null},{"id":"cmhfb6bhc003dl104eykpoegm","n":"Мохито 0,45","p":15000.0,"img":"http://178.104.44.177/images/мохито 0,45-1761971475796-af3c0721.jpg","pop":false,"new":false,"desc":null},{"id":"cmhfatgkq002xl104od5go069","n":"Пепси 0,5","p":9999.0,"img":"http://178.104.44.177/images/пепси 0,5-1761970538200-5e1519aa.jpeg","pop":false,"new":false,"desc":null},{"id":"cmhfaw66n0031l104pd56p8j0","n":"Пепси 1,5","p":18000.0,"img":"http://178.104.44.177/images/пепси 1,5-1761970492818-59fcb876.jpg","pop":false,"new":false,"desc":null},{"id":"cmhfav99d002zl104hx2pnid5","n":"Пепси балични 0,45","p":13000.0,"img":"http://178.104.44.177/images/пепси болични-1761970517696-2377855e.jpg","pop":false,"new":false,"desc":null},{"id":"cmig54jiu0003k004dbgzfik3","n":"Спрайт 0.5","p":10000.0,"img":"http://178.104.44.177/images/1000094588-1764169758149-e73cb26d.jpg","pop":false,"new":false,"desc":null},{"id":"cmig1twzj0001kz04iwifvhsa","n":"Спрайт 1.5","p":18000.0,"img":"http://178.104.44.177/images/1000094590-1764164221230-e22eae94.jpg","pop":false,"new":false,"desc":null},{"id":"cmig50hrm0001k0041ffekji5","n":"Спрайт 1л","p":12000.0,"img":"http://178.104.44.177/images/1000094589-1764169567790-d17df2f2.jpg","pop":false,"new":false,"desc":null},{"id":"cmhfb0jha0037l1040xeiy6mu","n":"Сув газсиз 0,5","p":3000.0,"img":"http://178.104.44.177/images/сув 0,5-1761971154071-a4f73a1c.jpg","pop":false,"new":false,"desc":null},{"id":"cmhfaz49l0035l104rdkl95jw","n":"Сув газсиз 1,5","p":7000.0,"img":"http://178.104.44.177/images/сув 1,5-1761971176271-f8b093e9.jpg","pop":false,"new":false,"desc":null},{"id":"cmk71x5z80003jo04e0evazno","n":"Тошкент сув 0,5","p":8998.0,"img":"http://178.104.44.177/images/cukc2lui4n324lr96rgg-1767973740760-7319c049.jpg","pop":false,"new":false,"desc":null},{"id":"cmhfasgj3002vl104648guskf","n":"Фанта 0,5","p":10000.0,"img":"http://178.104.44.177/images/фанта 0,5-1761970764213-0f0ca09d.webp","pop":false,"new":false,"desc":null},{"id":"cmhfapzw4002rl104nq9rt3wj","n":"Фанта 1,5","p":20000.0,"img":"http://178.104.44.177/images/фанта 1,5-1761970788204-40cba9b8.jpg","pop":false,"new":false,"desc":null},{"id":"cmhfb47u8003bl1042viv5951","n":"Флеш 0,45","p":13000.0,"img":"http://178.104.44.177/images/флеш-1761971498754-2b4119b2.jpg","pop":false,"new":false,"desc":null},{"id":"cmhfse1hv0001jy04cl90p6f5","n":"Чорток 0,7","p":15999.0,"img":"http://178.104.44.177/images/чорток-1761971583806-4a52d227.jpg","pop":false,"new":false,"desc":null}]},{"id":"cmhf75j8p0003l104bci1dfgn","cat":"Бариста","label":"Barista","image":"http://178.104.44.177/images/cappuccino-1761973796520-7fe3711a.jpg","items":[{"id":"cmhnnmxf40001js049s5kbzdg","n":"Айрон газли ( газсиз)","p":20000.0,"img":"http://178.104.44.177/images/ayron gazli-1762447304249-0ae4066a.jpg","pop":false,"new":false,"desc":null},{"id":"cmhok1vm80007l204umvh01ao","n":"Айс Теа","p":55000.0,"img":"http://178.104.44.177/images/Аys Tea-1762501772504-3ca2a500.png","pop":false,"new":false,"desc":null},{"id":"cmhoj9r7a0003l804rs254jhs","n":"Айс американо","p":25000.0,"img":"http://178.104.44.177/images/Айс американо-1762500450432-1b28214f.webp","pop":false,"new":false,"desc":null},{"id":"cmhnpvtx90001kw04wce7ug6p","n":"Айс капучино","p":25000.0,"img":"http://178.104.44.177/images/i-1762451102680-e4c7d6af.webp","pop":false,"new":false,"desc":null},{"id":"cmhnq1ni00003kw04drd71xha","n":"Айс латте","p":25000.0,"img":"http://178.104.44.177/images/Аys latte-1762451371413-00049ce2.webp","pop":false,"new":false,"desc":null},{"id":"cmhfsl3ub0003jy04gyffxrgn","n":"Американо","p":15000.0,"img":"http://178.104.44.177/images/американо-1761971913793-b02ad717.jpg","pop":false,"new":false,"desc":null},{"id":"cmhfszgus0003jr04n2twkljt","n":"Анор шарбати1 л","p":96000.0,"img":"http://178.104.44.177/images/Анор сок-1761972583752-4c9ec106.jpg","pop":false,"new":false,"desc":null},{"id":"cmhokcslw0003l4047ypsxg8d","n":"Банановый шейклар","p":35000.0,"img":"http://178.104.44.177/images/Банановый шейклар-1762502284200-fb7dc115.jpg","pop":false,"new":false,"desc":null},{"id":"cmhojcz2z0001l204ryuwdzfc","n":"Бардак чой чашка","p":4000.0,"img":"http://178.104.44.177/images/Bardak choy chashka-1762500611872-a0407887.webp","pop":false,"new":false,"desc":null},{"id":"cmhoj5a9k0001l8046mtzn0ht","n":"Еспрессо","p":15000.0,"img":"http://178.104.44.177/images/Ekspresso-1762500230565-4db6762c.jpg","pop":false,"new":false,"desc":null},{"id":"cmhokh4f70005l404pzoo468g","n":"Киви шейк","p":30000.0,"img":"http://178.104.44.177/images/Киви-1762502483095-093d6e90.jpeg","pop":false,"new":false,"desc":null},{"id":"cmhokjzh70007l4040ctbssto","n":"Клубничный шейк","p":35000.0,"img":"http://178.104.44.177/images/Клубничный шейк-1762502618903-6b54787a.jpg","pop":false,"new":false,"desc":null},{"id":"cmhnq6nqg0005kw04ieutsitu","n":"Латте","p":20000.0,"img":"http://178.104.44.177/images/Латте-1762451604911-41e003b4.webp","pop":false,"new":false,"desc":null},{"id":"cmhftiok8000djr0412u3phcu","n":"Мевали чой","p":30000.0,"img":"http://178.104.44.177/images/мева чой-1761973475438-48bde585.webp","pop":false,"new":false,"desc":null},{"id":"cmhok5fc10009l204nzr5jnmf","n":"Микс сок","p":60000.0,"img":"http://178.104.44.177/images/Микс сок-1762501940195-246bc50a.webp","pop":false,"new":false,"desc":null},{"id":"76eccf3f85dd4f608cf5568b","n":"Мохито ассорти","p":100000.0,"img":"http://178.104.44.177/images/6836-1783175701613-9b3567ef.jpg","pop":true,"new":true,"desc":null},{"id":"cmhft6rw40007jr04otimazre","n":"Мохито графин","p":58000.0,"img":"http://178.104.44.177/images/мохито г-1761972906954-4599dd40.jpg","pop":true,"new":false,"desc":null},{"id":"cmhfsx0aa0001jr04zwuxdlk5","n":"Олма сок натурални 1л","p":40000.0,"img":"http://178.104.44.177/images/олма сок-1761972463352-796d581d.jpg","pop":false,"new":false,"desc":null},{"id":"cmhojswc50003l20472l929xz","n":"Раф кофе","p":50000.0,"img":"http://178.104.44.177/images/Рай кофе-1762501348911-afdc4d01.jpg","pop":false,"new":false,"desc":null},{"id":"cmhfspyyn0005jy04pwcgmrmn","n":"Сappuccino","p":25000.0,"img":"http://178.104.44.177/images/cappuccino-1761972140389-f3acea2f.jpg","pop":false,"new":false,"desc":null},{"id":"cmhokt0l3000bl404aht6a9il","n":"Сутли чой","p":50000.0,"img":"http://178.104.44.177/images/Sutli choy-1762503041199-0213da9c.jpg","pop":false,"new":false,"desc":null},{"id":"cmhok8erb0001l404ebx2x8p1","n":"Тарвуз сок","p":30000.0,"img":"http://178.104.44.177/images/Тарвуз сок-1762502079147-eb76d027.jpg","pop":false,"new":false,"desc":null},{"id":"cmhojy9vs0005l204n75kzwgm","n":"Флэт Уайт коффе","p":30000.0,"img":"http://178.104.44.177/images/коффе ф-1762501604645-be78027f.webp","pop":false,"new":false,"desc":null},{"id":"cmhft1p5g0005jr04dyvjcmr7","n":"Чизкейк","p":45000.0,"img":"http://178.104.44.177/images/чизкецк-1761972687066-8585b7a0.webp","pop":false,"new":false,"desc":null},{"id":"cmhokozhz0009l404bcnfup5n","n":"Шоколадный шейк","p":35000.0,"img":"http://178.104.44.177/images/Шоколадный шейк-1762502851400-85434dca.jpg","pop":false,"new":false,"desc":null}]},{"id":"cmh6dby4500019kbc4b8r0wgz","cat":"Shirinliklar","label":"Shirinliklar","image":"http://178.104.44.177/images/IMG_2699-1761402092571-0ff60af9.JPG","items":[{"id":"cmn8qsfpv0001l704b85zdvqq","n":"Fistashkali Chizkeyk","p":55000.0,"img":"http://178.104.44.177/images/19cd23b06db1eabc00ebba4fef438aaf-1774606321094-06992411.jpg","pop":false,"new":false,"desc":null},{"id":"cmn8r12ij0001id04uop7o26m","n":"Mangoli Chizkeyk","p":60000.0,"img":"http://178.104.44.177/images/photo_2026-03-27_15-14-44-1774606727488-b3902683.jpg","pop":false,"new":false,"desc":"чизкейк с манго"},{"id":"cmh8yk21g0029k30401o1bzdj","n":"Вафли мевали","p":40000.0,"img":"http://178.104.44.177/images/4V1A5634-1761558678386-8e6b7211.JPG","pop":false,"new":false,"desc":null},{"id":"cmhngorvq0001la04zn4wm5c5","n":"Вафли микс","p":75000.0,"img":"http://178.104.44.177/images/IMG_1375-1767973086552-eaa29492.JPEG","pop":false,"new":false,"desc":null},{"id":"cmh8xjc3n001v9kst4d2qwsuo","n":"Рафаелло бизели 1 шт","p":40000.0,"img":"http://178.104.44.177/images/IMG_2702-1761556963238-8d45c554.JPG","pop":false,"new":false,"desc":null},{"id":"cmkkuy7kl0003l50451d1dmbd","n":"Сан себастьян чизкейк","p":50000.0,"img":"http://178.104.44.177/images/1000096384-1768808552015-f9520f84.webp","pop":false,"new":false,"desc":null},{"id":"cmh8xk5ca001x9kst6fdtacke","n":"Сникерс угалки перожний 1 шт","p":45000.0,"img":"http://178.104.44.177/images/IMG_2701-1761557001577-d5f6455e.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8xt3o5001z9kstpt6g8b9z","n":"Улитка пирожний 1 шт","p":45000.0,"img":"http://178.104.44.177/images/IMG_2700-1761557417354-826d25ea.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8yegtc001zk304a8anxf15","n":"Фисташковый перожний","p":40000.0,"img":"http://178.104.44.177/images/IMG_2698-1761558417564-a240bb1f.JPG","pop":false,"new":false,"desc":null},{"id":"cmh6f50440001l504j5p2jewl","n":"Шоколадный чишка 1 шт","p":45000.0,"img":"http://178.104.44.177/images/IMG_2703-1761405131439-e1099d52.JPG","pop":false,"new":false,"desc":null},{"id":"cmh8yddw8001xk30495s50h9o","n":"Эстерхази","p":35000.0,"img":"http://178.104.44.177/images/IMG_2699-1761558367573-8ff9e19c.JPG","pop":false,"new":false,"desc":null}]},{"id":"cmh6dhfxa00059kbcl4il7tkv","cat":"Mevalar","label":"Mevalar","image":"http://178.104.44.177/images/4V1A5405-1761402350319-1cb0fc9c.JPG","items":[{"id":"cmhf1km240003la04z4vhs9s4","n":"Ковун","p":25000.0,"img":"http://178.104.44.177/images/qovun-1761926538718-8326f86c.JPG","pop":false,"new":false,"desc":null},{"id":"cmhf1pgzf0001i504bll39yok","n":"Ковун тарвуз","p":30000.0,"img":"http://178.104.44.177/images/qovun tarvuz-1761926765110-92da6ed6.JPG","pop":false,"new":false,"desc":null},{"id":"cmhefmk7p0001ld04e1b62t5t","n":"Мева ассарти","p":150000.0,"img":"http://178.104.44.177/images/IMG_4947-1783175198624-3389c5c9.jpg","pop":true,"new":false,"desc":null},{"id":"cmhefife50001l5046r3k31nq","n":"Мева ассарти катта","p":230000.0,"img":"http://178.104.44.177/images/IMG_4945-1783175190414-4efbac69.jpg","pop":true,"new":false,"desc":null}]}],"popular":[{"id":"cmn8qh7xl0001l404jwc0lg1c","n":"Jo'g'  Asorti","p":600000.0,"img":"http://178.104.44.177/images/IMG_9208-1774605798596-68c87ff0.JPG","pop":true,"new":false,"desc":null,"cat":"Assorti taomlar"},{"id":"55365ab5c1094d3a8396e41d","n":"Жигарлар 1 порц","p":550000.0,"img":"http://178.104.44.177/images/IMG_4942-1783175138246-e7ca7130.jpg","pop":true,"new":true,"desc":null,"cat":"Assorti taomlar"},{"id":"5ced8e48cef54eaa822f0b05","n":"Улфатлар ассортий 1 порц","p":420000.0,"img":"http://178.104.44.177/images/8228-1786371681443-8e204326.jpg","pop":true,"new":true,"desc":null,"cat":"Assorti taomlar"},{"id":"acbbe54c30804bd587ea0a5d","n":"Фамилий ассорти","p":379000.0,"img":"http://178.104.44.177/images/7129-1783960877359-93d38a41.jpg","pop":true,"new":true,"desc":"Oilanggiz uchun eng yaxshi tanlov🤩","cat":"Assorti taomlar"},{"id":"76eccf3f85dd4f608cf5568b","n":"Мохито ассорти","p":100000.0,"img":"http://178.104.44.177/images/6836-1783175701613-9b3567ef.jpg","pop":true,"new":true,"desc":null,"cat":"Barista"},{"id":"cmhft6rw40007jr04otimazre","n":"Мохито графин","p":58000.0,"img":"http://178.104.44.177/images/мохито г-1761972906954-4599dd40.jpg","pop":true,"new":false,"desc":null,"cat":"Barista"},{"id":"cmhefmk7p0001ld04e1b62t5t","n":"Мева ассарти","p":150000.0,"img":"http://178.104.44.177/images/IMG_4947-1783175198624-3389c5c9.jpg","pop":true,"new":false,"desc":null,"cat":"Mevalar"},{"id":"cmhefife50001l5046r3k31nq","n":"Мева ассарти катта","p":230000.0,"img":"http://178.104.44.177/images/IMG_4945-1783175190414-4efbac69.jpg","pop":true,"new":false,"desc":null,"cat":"Mevalar"}],"newItems":[{"id":"55365ab5c1094d3a8396e41d","n":"Жигарлар 1 порц","p":550000.0,"img":"http://178.104.44.177/images/IMG_4942-1783175138246-e7ca7130.jpg","pop":true,"new":true,"desc":null,"cat":"Assorti taomlar"},{"id":"5ced8e48cef54eaa822f0b05","n":"Улфатлар ассортий 1 порц","p":420000.0,"img":"http://178.104.44.177/images/8228-1786371681443-8e204326.jpg","pop":true,"new":true,"desc":null,"cat":"Assorti taomlar"},{"id":"acbbe54c30804bd587ea0a5d","n":"Фамилий ассорти","p":379000.0,"img":"http://178.104.44.177/images/7129-1783960877359-93d38a41.jpg","pop":true,"new":true,"desc":"Oilanggiz uchun eng yaxshi tanlov🤩","cat":"Assorti taomlar"},{"id":"76eccf3f85dd4f608cf5568b","n":"Мохито ассорти","p":100000.0,"img":"http://178.104.44.177/images/6836-1783175701613-9b3567ef.jpg","pop":true,"new":true,"desc":null,"cat":"Barista"}]}</script>
 <script>
 (function(){
-  const raw = JSON.parse(document.getElementById('menu-data').textContent);
-  const LABELS = {"Salat": "Salatlar", "1-taomlar": "Birinchi taomlar", "2-taomlar": "Ikkinchi taomlar", "Shashliklar": "Shashliklar", "Балик таомлар": "Baliq taomlari", "Assorti taomlar": "Assorti taomlar", "Бараклар": "Baraklar", "Somsa": "Somsa", "Нон чой": "Non va choy", "Сетлар": "Setlar", "Ichimlik": "Ichimliklar", "Бариста": "Barista", "Shirinliklar": "Shirinliklar", "Mevalar": "Mevalar"};
-  const main = document.getElementById('main');
-  const nav = document.getElementById('catnav');
-  const empty = document.getElementById('empty');
-  const search = document.getElementById('search');
+  const DATA = JSON.parse(document.getElementById('menu-data').textContent);
+  const R = DATA.restaurant;
 
-  function slug(s){ return 'cat-' + s.split('').map(c=>c.charCodeAt(0).toString(36)).join(''); }
+  const homeEl = document.getElementById('view-home');
+  const catViewEl = document.getElementById('view-category');
+  const searchViewEl = document.getElementById('view-search');
+  const catGridEl = document.getElementById('catGrid');
+  const catTitleEl = document.getElementById('catTitle');
+  const catCountEl = document.getElementById('catCount');
+  const searchGridEl = document.getElementById('searchGrid');
+  const searchEmptyEl = document.getElementById('searchEmpty');
+  const searchInput = document.getElementById('searchInput');
 
-  raw.forEach(cat => {
-    const id = slug(cat.cat);
-    const label = LABELS[cat.cat] || cat.cat;
+  const PLACEHOLDER = '\u{1F37D}️';
 
-    const btn = document.createElement('button');
-    btn.textContent = label;
-    btn.dataset.target = id;
-    btn.addEventListener('click', () => {
-      document.getElementById(id).scrollIntoView({behavior:'smooth', block:'start'});
+  function fmt(p){ return Math.round(p).toLocaleString('ru-RU'); }
+
+  function isOpenNow(hours){
+    if(!hours) return null;
+    const m = hours.match(/(\d{1,2}):(\d{2})\s*[-–—]\s*(\d{1,2}):(\d{2})/);
+    if(!m) return null;
+    const now = new Date(), tot = now.getHours()*60 + now.getMinutes();
+    const op = (+m[1])*60 + (+m[2]), cl = (+m[3])*60 + (+m[4]);
+    return cl > op ? (tot >= op && tot < cl) : (tot >= op || tot < cl);
+  }
+
+  /* ---------- brand / topbar ---------- */
+  function renderBrand(){
+    const open = isOpenNow(R.hours);
+    const brand = document.getElementById('brand');
+    brand.innerHTML =
+      (R.logo ? `<img src="${R.logo}" alt="">` : '') +
+      `<div class="brand-text">
+        <div class="brand-name">${R.name}</div>
+        <div class="brand-status">${open===null?'':`<span class="status-dot ${open?'open':'closed'}"></span>${open?'Ochiq':'Yopiq'} · `}${R.hours}</div>
+      </div>`;
+  }
+
+  /* ---------- item card ---------- */
+  function cardHtml(item, catLabel){
+    const badge = item.new ? '<span class="pcard-badge new">Yangi</span>' : (item.pop ? '<span class="pcard-badge pop">Sevimli</span>' : '');
+    const img = item.img
+      ? `<img src="${item.img}" alt="" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph',textContent:'${PLACEHOLDER}'}))">`
+      : `<div class="ph">${PLACEHOLDER}</div>`;
+    return `<div class="pcard" data-id="${item.id}">
+      <div class="pcard-img">${img}${badge}</div>
+      <div class="pcard-body">
+        <div class="pcard-name">${item.n}</div>
+        <div class="pcard-price">${fmt(item.p)}</div>
+      </div>
+    </div>`;
+  }
+
+  function bindCards(container, lookup){
+    container.querySelectorAll('.pcard').forEach(el => {
+      el.addEventListener('click', () => openDetail(lookup(el.dataset.id)));
     });
-    nav.appendChild(btn);
+  }
 
-    const section = document.createElement('section');
-    section.className = 'category';
-    section.id = id;
+  const itemIndex = {};
+  DATA.categories.forEach(c => c.items.forEach(i => { itemIndex[i.id] = { ...i, cat: c.label }; }));
 
-    const head = document.createElement('div');
-    head.className = 'cat-head';
-    head.innerHTML = '<h2 class="serif"></h2><span class="cat-count"></span>';
-    head.querySelector('h2').textContent = label;
-    head.querySelector('.cat-count').textContent = cat.items.length + ' ta taom';
-    section.appendChild(head);
+  /* ---------- home ---------- */
+  function renderHome(){
+    let html = '';
 
-    const rule = document.createElement('hr');
-    rule.className = 'cat-rule';
-    section.appendChild(rule);
+    html += `<div class="hero">`;
+    if(R.cover){
+      html += `<div class="hero-cover"><img src="${R.cover}" alt="" onerror="this.parentElement.style.display='none'"></div>`;
+    }
+    html += `<div class="hero-meta">
+      <span>${R.hours}</span>
+      <span><a href="tel:${R.phone.replace(/\s/g,'')}">${R.phone}</a></span>
+      <span><a href="${R.maps}" target="_blank" rel="noopener">Xaritada ko&#39;rish</a></span>
+    </div></div>`;
 
-    const list = document.createElement('div');
-    list.className = 'items';
-    cat.items.forEach(it => {
-      const row = document.createElement('div');
-      row.className = 'item';
-      row.dataset.name = it.n.toLowerCase();
-      const tag = it.new ? 'Yangi' : (it.pop ? 'Sevimli' : '');
-      row.innerHTML =
-        (it.pop || it.new ? '<span class="marker" aria-hidden="true"></span>' : '') +
-        '<span class="name">' + it.n + (tag ? '<span class="tagtxt">' + tag + '</span>' : '') + '</span>' +
-        '<span class="leader" aria-hidden="true"></span>' +
-        '<span class="price">' + Math.round(it.p).toLocaleString('ru-RU') + '</span>';
-      list.appendChild(row);
+    if(DATA.popular.length){
+      html += `<div class="section"><div class="section-head"><span class="section-title">Sevimli taomlar <span class="tag">${DATA.popular.length}</span></span></div></div>`;
+      html += `<div class="hscroll" data-role="popular">${DATA.popular.map(i => cardHtml(i)).join('')}</div>`;
+    }
+    if(DATA.newItems.length){
+      html += `<div class="section"><div class="section-head"><span class="section-title">Yangi taomlar <span class="tag">${DATA.newItems.length}</span></span></div></div>`;
+      html += `<div class="hscroll" data-role="new">${DATA.newItems.map(i => cardHtml(i)).join('')}</div>`;
+    }
+
+    html += `<div class="section"><div class="section-head"><span class="section-title">Bo&#39;limlar <span class="tag">${DATA.categories.length}</span></span></div></div>`;
+    html += `<div class="cat-grid">`;
+    DATA.categories.forEach(c => {
+      const img = c.image
+        ? `<img src="${c.image}" alt="" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph',textContent:'${PLACEHOLDER}'}))">`
+        : `<div class="ph">${PLACEHOLDER}</div>`;
+      html += `<div class="cat-tile" data-id="${c.id}">
+        ${img}
+        <div class="lbl"><span class="lbl-name">${c.label}</span><span class="lbl-count">${c.items.length}</span></div>
+      </div>`;
     });
-    section.appendChild(list);
-    main.insertBefore(section, empty);
+    html += `</div>`;
+
+    html += `<div class="contacts">`;
+    html += `<a class="contact-chip" href="tel:${R.phone.replace(/\s/g,'')}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>${R.phone}</a>`;
+    html += `<a class="contact-chip" href="${R.maps}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>${R.address}</a>`;
+    html += `</div>`;
+
+    homeEl.innerHTML = html;
+
+    homeEl.querySelectorAll('.hscroll .pcard').forEach(el => {
+      el.addEventListener('click', () => openDetail(itemIndex[el.dataset.id]));
+    });
+    homeEl.querySelectorAll('.cat-tile').forEach(el => {
+      el.addEventListener('click', () => openCategory(el.dataset.id));
+    });
+  }
+
+  /* ---------- category ---------- */
+  let currentCatId = null;
+  function openCategory(id){
+    const cat = DATA.categories.find(c => c.id === id);
+    if(!cat) return;
+    currentCatId = id;
+    catTitleEl.textContent = cat.label;
+    catCountEl.textContent = cat.items.length + ' ta taom';
+    catGridEl.innerHTML = cat.items.map(i => cardHtml(i)).join('');
+    bindCards(catGridEl, iid => itemIndex[iid]);
+    showView('category');
+  }
+
+  /* ---------- search ---------- */
+  const allItems = Object.values(itemIndex);
+  function runSearch(q){
+    q = q.trim().toLowerCase();
+    if(!q){
+      searchGridEl.innerHTML = '';
+      searchEmptyEl.innerHTML = '<span class="ico">\u{1F50D}</span>Taom nomini kiriting';
+      searchEmptyEl.classList.remove('hide');
+      return;
+    }
+    const matches = allItems.filter(i => i.n.toLowerCase().includes(q));
+    if(!matches.length){
+      searchGridEl.innerHTML = '';
+      searchEmptyEl.innerHTML = '<span class="ico">\u{1F614}</span>Hech narsa topilmadi';
+      searchEmptyEl.classList.remove('hide');
+      return;
+    }
+    searchEmptyEl.classList.add('hide');
+    searchGridEl.innerHTML = matches.map(i => cardHtml(i)).join('');
+    bindCards(searchGridEl, iid => itemIndex[iid]);
+  }
+  searchInput.addEventListener('input', () => runSearch(searchInput.value));
+
+  /* ---------- detail modal ---------- */
+  const modal = document.getElementById('modal');
+  const modalImgWrap = document.getElementById('modalImgWrap');
+  const modalBody = document.getElementById('modalBody');
+
+  function openDetail(item){
+    if(!item) return;
+    modalImgWrap.innerHTML = document.getElementById('modalClose').outerHTML +
+      (item.img
+        ? `<img src="${item.img}" alt="" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph',textContent:'${PLACEHOLDER}'}))">`
+        : `<div class="ph">${PLACEHOLDER}</div>`);
+    document.getElementById('modalClose').addEventListener('click', closeDetail);
+
+    const badges = [
+      item.new ? '<span class="modal-badge new">Yangi</span>' : '',
+      item.pop ? '<span class="modal-badge pop">Sevimli</span>' : '',
+    ].filter(Boolean).join('');
+
+    modalBody.innerHTML = `
+      ${badges ? `<div class="modal-badges">${badges}</div>` : ''}
+      <div class="modal-cat">${item.cat || ''}</div>
+      <div class="modal-name serif">${item.n}</div>
+      <div class="modal-price">${fmt(item.p)}</div>
+      ${item.desc ? `<div class="modal-desc">${item.desc}</div>` : ''}
+    `;
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeDetail(){
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  modal.addEventListener('click', e => { if(e.target === modal) closeDetail(); });
+  document.addEventListener('keydown', e => { if(e.key === 'Escape') closeDetail(); });
+
+  /* ---------- view switching ---------- */
+  function showView(name){
+    homeEl.classList.toggle('hide', name !== 'home');
+    catViewEl.classList.toggle('hide', name !== 'category');
+    searchViewEl.classList.toggle('hide', name !== 'search');
+    const active = name === 'home' ? homeEl : (name === 'category' ? catViewEl : searchViewEl);
+    active.classList.remove('fade-in'); void active.offsetWidth; active.classList.add('fade-in');
+    window.scrollTo(0,0);
+  }
+  document.getElementById('catBack').addEventListener('click', () => showView('home'));
+  document.getElementById('searchBack').addEventListener('click', () => showView('home'));
+  document.getElementById('searchToggle').addEventListener('click', () => {
+    showView('search');
+    runSearch('');
+    setTimeout(() => searchInput.focus(), 100);
   });
 
-  const sections = Array.from(document.querySelectorAll('.category'));
-  const navButtons = Array.from(nav.querySelectorAll('button'));
-
-  const reveal = new IntersectionObserver(entries => {
-    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('in-view'); });
-  }, {threshold:.08});
-  sections.forEach(s => reveal.observe(s));
-
-  const spy = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if(e.isIntersecting){
-        navButtons.forEach(b => b.classList.toggle('active', b.dataset.target === e.target.id));
-      }
-    });
-  }, {rootMargin:'-40% 0px -55% 0px'});
-  sections.forEach(s => spy.observe(s));
-
-  search.addEventListener('input', () => {
-    const q = search.value.trim().toLowerCase();
-    let anyVisible = false;
-    sections.forEach(sec => {
-      let sectionHas = false;
-      sec.querySelectorAll('.item').forEach(row => {
-        const match = !q || row.dataset.name.includes(q);
-        row.style.display = match ? '' : 'none';
-        if(match) sectionHas = true;
-      });
-      sec.hidden = !sectionHas;
-      if(sectionHas) anyVisible = true;
-    });
-    empty.hidden = anyVisible;
-  });
-
-  const toTop = document.getElementById('toTop');
-  window.addEventListener('scroll', () => {
-    toTop.classList.toggle('show', window.scrollY > 700);
-  }, {passive:true});
-  toTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
-
+  /* ---------- offline banner ---------- */
   const banner = document.getElementById('offlineBanner');
   function updateOnline(){ banner.classList.toggle('show', !navigator.onLine); }
   window.addEventListener('online', updateOnline);
@@ -260,6 +521,9 @@ footer a{ color:var(--teal-deep); text-decoration:none; border-bottom:1px solid 
   if('serviceWorker' in navigator){
     navigator.serviceWorker.register('sw.js').catch(()=>{});
   }
+
+  renderBrand();
+  renderHome();
 })();
 </script>
 </body>
