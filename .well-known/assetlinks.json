@@ -1,0 +1,8 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "uz.olimpgarden.menu",
+    "sha256_cert_fingerprints": ["85:6D:31:97:44:F6:56:18:99:D0:02:39:C3:96:D6:20:3A:75:EA:6E:E4:87:0B:01:F1:4A:E2:C0:6D:86:B4:DA"]
+  }
+}]
