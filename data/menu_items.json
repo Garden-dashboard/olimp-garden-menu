@@ -128,12 +128,12 @@
   "price": 48000,
   "category": "Сетлар",
   "iikoGroup": "Гарден Сет",
-  "photo": null,
+  "photo": "images/93beeb42208534f6.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "b20189f8-46d3-45fa-b285-2bf89ad49dfb",
@@ -145,12 +145,12 @@
   "price": 48000,
   "category": "Сетлар",
   "iikoGroup": "Гарден Сет",
-  "photo": null,
+  "photo": "images/5ca1923d7eef1bd1.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "afacd8bd-bfeb-4a36-b3fa-5295bbf9a2b2",
@@ -162,12 +162,12 @@
   "price": 15000,
   "category": "Ichimlik",
   "iikoGroup": "Напитка",
-  "photo": null,
+  "photo": "images/c6ae296d092868af.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "443a34cd-7671-4e3c-a16b-9d432311df9d",
@@ -196,12 +196,12 @@
   "price": 30000,
   "category": "1-taomlar",
   "iikoGroup": "1-таом",
-  "photo": null,
+  "photo": "images/a684f25afcda31c1.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "3a4fe95c-e547-4793-bdc5-834820a4f3ac",
@@ -213,12 +213,12 @@
   "price": 18000,
   "category": "Ichimlik",
   "iikoGroup": "Напитка",
-  "photo": null,
+  "photo": "images/0fbcfd9a52dbf32f.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "5517987c-82d5-4fc5-8810-28cac1dab54a",
@@ -264,12 +264,12 @@
   "price": 40000,
   "category": "Shirinliklar",
   "iikoGroup": "Гарден Перожний",
-  "photo": null,
+  "photo": "images/dbdf2d7c2ea21130.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "830cd289-ee0d-4e87-8197-ca6fd958e617",
@@ -281,12 +281,12 @@
   "price": 35000,
   "category": "Shirinliklar",
   "iikoGroup": "Гарден Перожний",
-  "photo": null,
+  "photo": "images/14baeb74bd390513.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "34ebfdb1-e865-4de4-90ba-0bd21c10da23",
@@ -298,12 +298,12 @@
   "price": 40000,
   "category": "1-taomlar",
   "iikoGroup": "1-таом",
-  "photo": null,
+  "photo": "images/7127996115eb9ef4.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "1037b96d-9f73-4d3c-88f2-bf14d664a2c9",
@@ -315,12 +315,12 @@
   "price": 9000,
   "category": "Ichimlik",
   "iikoGroup": "Напитка",
-  "photo": null,
+  "photo": "images/b9b1c564086f0e90.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "680a724f-2187-42b1-989b-661353d305d3",
@@ -349,12 +349,12 @@
   "price": 20000,
   "category": "1-taomlar",
   "iikoGroup": "1-таом",
-  "photo": null,
+  "photo": "images/32f3bec5d3fafc6b.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "87230bbc-efc2-4192-b9e3-932ea286b96a",
@@ -366,12 +366,12 @@
   "price": 35000,
   "category": "1-taomlar",
   "iikoGroup": "1-таом",
-  "photo": null,
+  "photo": "images/66b71ec1c4054548.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "de55a19e-2b84-46f9-8bb6-5c8829004fd5",
@@ -383,12 +383,12 @@
   "price": 28000,
   "category": "1-taomlar",
   "iikoGroup": "1-таом",
-  "photo": null,
+  "photo": "images/b76467058d571b54.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "6f5de234-cb65-4979-a1fb-47d1df577f02",
@@ -400,12 +400,12 @@
   "price": 37000,
   "category": "1-taomlar",
   "iikoGroup": "1-таом",
-  "photo": null,
+  "photo": "images/74326721b03d4525.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "8a914a83-2d96-4f9c-b429-45ae2aaa688c",
@@ -417,12 +417,12 @@
   "price": 550000,
   "category": "Assorti taomlar",
   "iikoGroup": "Ассорти блюда",
-  "photo": null,
+  "photo": "images/0ca7cd73c4022049.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "302fd5d7-ed59-4be5-b7de-a34ebedc358d",
@@ -434,12 +434,12 @@
   "price": 470000,
   "category": "Assorti taomlar",
   "iikoGroup": "Ассорти блюда",
-  "photo": null,
+  "photo": "images/91c3ed580bc20c95.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "0dc47e67-c75a-4080-b769-01967fd47f06",
@@ -502,12 +502,12 @@
   "price": 60000,
   "category": "Ichimlik",
   "iikoGroup": "Табий шарбат",
-  "photo": null,
+  "photo": "images/6be1808788518452.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "89e2fa9d-c8e1-4cc7-9a26-abec9182d373",
@@ -621,12 +621,12 @@
   "price": 18000,
   "category": "Ichimlik",
   "iikoGroup": "Напитка",
-  "photo": "images/277eab8528bf1b48.jpg",
+  "photo": "images/c9036e6cd0c86c03.jpg",
   "desc": "O'rtacha hajmda — istalgan vaqt uchun qulay tanlov.",
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": true
  },
  {
   "id": "708b7c9a-52d9-411b-99ae-dd684497f7d4",
@@ -689,12 +689,12 @@
   "price": 7000,
   "category": "Ichimlik",
   "iikoGroup": "Напитка",
-  "photo": null,
+  "photo": "images/fc13083826463b02.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "de042b33-973a-45a2-b2cc-c3f099633985",
@@ -723,12 +723,12 @@
   "price": 10000,
   "category": "Ichimlik",
   "iikoGroup": "Напитка",
-  "photo": null,
+  "photo": "images/8437e89b8c592af0.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "c379b82d-71fd-487b-a71d-0350fd545912",
@@ -740,12 +740,12 @@
   "price": 20000,
   "category": "Ichimlik",
   "iikoGroup": "Напитка",
-  "photo": null,
+  "photo": "images/2e12b112d9ab1530.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "f4c80606-89e8-4427-b94f-9a57f7dcc7d6",
@@ -774,12 +774,12 @@
   "price": 13000,
   "category": "Ichimlik",
   "iikoGroup": "Напитка",
-  "photo": null,
+  "photo": "images/b39f9c6e03160132.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "8f8dadd5-b30d-4e0c-9f37-0bff2bab2ac3",
@@ -791,12 +791,12 @@
   "price": 16000,
   "category": "Ichimlik",
   "iikoGroup": "Напитка",
-  "photo": null,
+  "photo": "images/7ab8b3877062474d.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "1ae133d2-65e9-440d-868c-15318698e52f",
@@ -859,12 +859,12 @@
   "price": 150000,
   "category": "Балик таомлар",
   "iikoGroup": "Баликлар",
-  "photo": null,
+  "photo": "images/0e9321acf84dcd30.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "959ac4e6-5d80-4074-adb8-872e69168882",
@@ -1080,12 +1080,12 @@
   "price": 25000,
   "category": "Нон чой",
   "iikoGroup": "Нон чай",
-  "photo": null,
+  "photo": "images/f8dcd2403ac7ba28.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "c0ffd037-cb74-45ee-ba4c-568efb991cff",
@@ -1097,12 +1097,12 @@
   "price": 17000,
   "category": "Нон чой",
   "iikoGroup": "Нон чай",
-  "photo": null,
+  "photo": "images/84893fa05ff54ce4.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "829a8364-e6fe-4927-bd36-63adad9827a2",
@@ -1165,12 +1165,12 @@
   "price": 48000,
   "category": "Сетлар",
   "iikoGroup": "Гарден Сет",
-  "photo": null,
+  "photo": "images/511cf2d16a469ff3.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "c526b55e-f0bd-4606-818a-673251f774f2",
@@ -1267,12 +1267,12 @@
   "price": 15000,
   "category": "Нон чой",
   "iikoGroup": "Нон чай",
-  "photo": null,
+  "photo": "images/9da5e3e98bd13f84.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "3524dc76-5bc4-48e1-b7be-2d98484fd0f5",
@@ -1284,12 +1284,12 @@
   "price": 8000,
   "category": "Нон чой",
   "iikoGroup": "Нон чай",
-  "photo": null,
+  "photo": "images/9da5e3e98bd13f84.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "5f23955c-1917-4f8f-9d5e-921084ac3f86",
@@ -1743,12 +1743,12 @@
   "price": 19000,
   "category": "Ichimlik",
   "iikoGroup": "Напитка",
-  "photo": null,
+  "photo": "images/f55809b0956c4573.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "aef36819-11a7-4488-840e-bc747db8812b",
@@ -1845,12 +1845,12 @@
   "price": 10000,
   "category": "Ichimlik",
   "iikoGroup": "Напитка",
-  "photo": null,
+  "photo": "images/9750e3ec2a80f858.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "ea33c4ed-92ba-479a-a7e6-dd27bbc032a4",
@@ -1879,12 +1879,12 @@
   "price": 20000,
   "category": "Ichimlik",
   "iikoGroup": "Напитка",
-  "photo": null,
+  "photo": "images/9e64bfe846f5dbea.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "4494ccb4-1391-4ec2-bb70-b338e7d2c6ca",
@@ -1896,12 +1896,12 @@
   "price": 45000,
   "category": "Salat",
   "iikoGroup": "Маянез салатлар",
-  "photo": null,
+  "photo": "images/98195ad56e3135e2.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "770f4d5e-975c-4970-88a8-522244159f66",
@@ -1913,12 +1913,12 @@
   "price": 45000,
   "category": "Salat",
   "iikoGroup": "Маянез салатлар",
-  "photo": null,
+  "photo": "images/20b5eeb41a265d53.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "66870e27-c895-4546-940d-8c3c9ffa3b8b",
@@ -1930,12 +1930,12 @@
   "price": 35000,
   "category": "Salat",
   "iikoGroup": "Маянез салатлар",
-  "photo": null,
+  "photo": "images/dffc826305074702.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "6aa4a1f5-3d4b-483e-be33-2ff87a2ef026",
@@ -2032,12 +2032,12 @@
   "price": 400000,
   "category": "2-taomlar",
   "iikoGroup": "2-таом",
-  "photo": null,
+  "photo": "images/9626700263822d9f.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "8a07492a-f061-403e-8837-17d601a0df82",
@@ -2049,12 +2049,12 @@
   "price": 195000,
   "category": "2-taomlar",
   "iikoGroup": "2-таом",
-  "photo": null,
+  "photo": "images/9626700263822d9f.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "e3e11b30-2a91-4086-8b13-e63e80edec5d",
@@ -2100,12 +2100,12 @@
   "price": 130000,
   "category": "2-taomlar",
   "iikoGroup": "2-таом",
-  "photo": null,
+  "photo": "images/d1df863366688c55.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "ab8bddac-5d66-487e-8813-75de8b5e2d50",
@@ -2117,12 +2117,12 @@
   "price": 300000,
   "category": "2-taomlar",
   "iikoGroup": "2-таом",
-  "photo": null,
+  "photo": "images/f2f6557e2cd3962a.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "eb181136-9cf5-46a3-a36f-40226186f237",
@@ -2134,12 +2134,12 @@
   "price": 100000,
   "category": "Бараклар",
   "iikoGroup": "Барак",
-  "photo": null,
+  "photo": "images/0bc60ec251801b4e.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "f200cec8-a544-451e-95c4-d61343b679b7",
@@ -2151,12 +2151,12 @@
   "price": 220000,
   "category": "2-taomlar",
   "iikoGroup": "2-таом",
-  "photo": null,
+  "photo": "images/bccebc734777406d.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "1b0bd001-f58d-46e1-81a1-22bfdce82a5a",
@@ -2219,12 +2219,12 @@
   "price": 135000,
   "category": "Бараклар",
   "iikoGroup": "Барак",
-  "photo": null,
+  "photo": "images/637bfe5249ea0ec2.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "ff455af3-6f06-4a57-939f-54dc6319ae63",
@@ -2236,12 +2236,12 @@
   "price": 30000,
   "category": "Бараклар",
   "iikoGroup": "Барак",
-  "photo": null,
+  "photo": "images/b5250a3c231a30bd.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "5a3c073a-e015-4d93-90a7-2b9b6c782b1b",
@@ -2321,12 +2321,12 @@
   "price": 25000,
   "category": "Ichimlik",
   "iikoGroup": "Фруктовый чай",
-  "photo": null,
+  "photo": "images/29355808bf919a6f.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "2667d761-3e86-4eba-b74a-511bf2ca2ff0",
@@ -2372,12 +2372,12 @@
   "price": 48000,
   "category": "Бараклар",
   "iikoGroup": "Барак",
-  "photo": null,
+  "photo": "images/4965a4e12e4ace01.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "0b1e8a99-ec0a-4d02-90d2-7f2ea1d236f7",
@@ -2406,12 +2406,12 @@
   "price": 24000,
   "category": "Ichimlik",
   "iikoGroup": "Айронлар",
-  "photo": null,
+  "photo": "images/c97d6f9182e20573.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "bb9bc6de-33d1-4ecc-ac5e-658d70140341",
@@ -2457,12 +2457,12 @@
   "price": 40000,
   "category": "Бариста",
   "iikoGroup": "Бариста дисерт",
-  "photo": null,
+  "photo": "images/9f2a97566a1177e7.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "bec7afaa-0e56-4d33-a9fc-68b5f3ac4c80",
@@ -2474,12 +2474,12 @@
   "price": 75000,
   "category": "Бариста",
   "iikoGroup": "Бариста дисерт",
-  "photo": null,
+  "photo": "images/04caedf82a51e550.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "c16c4031-ac71-456c-96df-4666d27b364d",
@@ -2491,12 +2491,12 @@
   "price": 50000,
   "category": "Бариста",
   "iikoGroup": "Бариста дисерт",
-  "photo": null,
+  "photo": "images/5dbe0f69c6a288f9.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "26c73117-6e8b-4cdf-a1ca-b26d52f656f3",
@@ -2525,12 +2525,12 @@
   "price": 330000,
   "category": "2-taomlar",
   "iikoGroup": "2-таом",
-  "photo": null,
+  "photo": "images/87a85398f3d5b21d.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "639103dd-e9c4-4403-81e5-c78d0dc89a84",
@@ -2559,12 +2559,12 @@
   "price": 290000,
   "category": "2-taomlar",
   "iikoGroup": "2-таом",
-  "photo": null,
+  "photo": "images/e5ff461fba1d240c.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "9f5b9759-d8c9-433e-bffe-670627da0162",
@@ -2627,12 +2627,12 @@
   "price": 48000,
   "category": "Сетлар",
   "iikoGroup": "Гарден Сет",
-  "photo": null,
+  "photo": "images/8183925bef50082b.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "a58f392e-6d76-4df5-8f6c-87d0b1e1bc5c",
@@ -2763,12 +2763,12 @@
   "price": 13000,
   "category": "Ichimlik",
   "iikoGroup": "Напитка",
-  "photo": null,
+  "photo": "images/f62d432fd2a50964.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "b8a7a067-a09d-4948-b9a4-30d04320426b",
@@ -2780,12 +2780,12 @@
   "price": 18000,
   "category": "Ichimlik",
   "iikoGroup": "Напитка",
-  "photo": null,
+  "photo": "images/50c20d6ce10f06f2.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "598f7f57-ac5e-430d-bde5-c787d920f78d",
@@ -2797,12 +2797,12 @@
   "price": 10000,
   "category": "Ichimlik",
   "iikoGroup": "Напитка",
-  "photo": "images/277eab8528bf1b48.jpg",
+  "photo": "images/749175c0731e3f61.jpg",
   "desc": "O'rtacha hajmda — istalgan vaqt uchun qulay tanlov.",
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": true
  },
  {
   "id": "36a1721f-dd4d-4583-87dc-5923bf42f487",
@@ -2831,12 +2831,12 @@
   "price": 240000,
   "category": "2-taomlar",
   "iikoGroup": "2-таом",
-  "photo": null,
+  "photo": "images/f4faad5aae0085b7.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "a774ae9c-c5ea-46d8-840d-4735c4506aa7",
@@ -2950,12 +2950,12 @@
   "price": 27000,
   "category": "1-taomlar",
   "iikoGroup": "1-таом",
-  "photo": null,
+  "photo": "images/4c2b5a95918a2a39.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "af1144f1-8232-468a-add5-59c2bc291fbd",
@@ -2967,12 +2967,12 @@
   "price": 35000,
   "category": "1-taomlar",
   "iikoGroup": "1-таом",
-  "photo": null,
+  "photo": "images/8c6e49e691f8ebfd.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "2743e705-8806-4a83-8d4d-442d3ad24f27",
@@ -3188,12 +3188,12 @@
   "price": 230000,
   "category": "2-taomlar",
   "iikoGroup": "2-таом",
-  "photo": null,
+  "photo": "images/2b355836a71ad7a1.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "e8b1a42a-d90a-4179-830a-b34c12863a29",
@@ -3205,12 +3205,12 @@
   "price": 460000,
   "category": "Assorti taomlar",
   "iikoGroup": "Ассорти блюда",
-  "photo": null,
+  "photo": "images/1c2c8419ab08e903.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "b3e645bc-d70a-47e7-b146-c1fb7a4345fd",
@@ -3273,12 +3273,12 @@
   "price": 43000,
   "category": "2-taomlar",
   "iikoGroup": "2-таом",
-  "photo": null,
+  "photo": "images/6c4e2755fa94c05f.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "cb0efb50-d3fa-41f3-a20b-68a95e04c2cd",
@@ -3341,12 +3341,12 @@
   "price": 25000,
   "category": "Бариста",
   "iikoGroup": "Кофе",
-  "photo": null,
+  "photo": "images/c61c09a07cf07127.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "c6218ef1-e88a-4e6d-af4e-bbe23e48a57e",
@@ -3358,12 +3358,12 @@
   "price": 25000,
   "category": "Бариста",
   "iikoGroup": "Кофе",
-  "photo": null,
+  "photo": "images/2c23c6b824c89f60.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "8a2702d1-666d-4c32-941d-4a5cfedc91cc",
@@ -3375,12 +3375,12 @@
   "price": 25000,
   "category": "Бариста",
   "iikoGroup": "Кофе",
-  "photo": null,
+  "photo": "images/f976f709e0923412.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "95a9181a-3ef1-4279-9e9f-a45f26f8e0c5",
@@ -3392,12 +3392,12 @@
   "price": 15000,
   "category": "Бариста",
   "iikoGroup": "Кофе",
-  "photo": null,
+  "photo": "images/06d5b592110e7bf9.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "552288b7-a5ad-4590-a52c-151bb1278da0",
@@ -3409,12 +3409,12 @@
   "price": 25000,
   "category": "Бариста",
   "iikoGroup": "Кофе",
-  "photo": null,
+  "photo": "images/88640adcd352a221.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "007d5083-17f2-4fa6-96ea-4b20fa1a3cdb",
@@ -3443,12 +3443,12 @@
   "price": 600000,
   "category": "Assorti taomlar",
   "iikoGroup": "Ассорти блюда",
-  "photo": null,
+  "photo": "images/fa1e2798be6cc690.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "b7e95c44-12df-4e30-9989-5079dc336ef8",
@@ -3460,12 +3460,12 @@
   "price": 320000,
   "category": "Assorti taomlar",
   "iikoGroup": "Ассорти блюда",
-  "photo": null,
+  "photo": "images/e0ccc0e9efd2b205.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "185ad30d-412d-4781-8e7a-391caef19f41",
@@ -3494,12 +3494,12 @@
   "price": 415000,
   "category": "Assorti taomlar",
   "iikoGroup": "Ассорти блюда",
-  "photo": null,
+  "photo": "images/1da2dbdbd5be96e5.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "7a1fb567-dafe-47d3-aa1f-93fc1a012dff",
@@ -3511,12 +3511,12 @@
   "price": 50000,
   "category": "Бариста",
   "iikoGroup": "Кофе",
-  "photo": null,
+  "photo": "images/db705f68e8367faf.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "dfe24dd2-98b9-45b1-9ea4-0a14a59b7e70",
@@ -3528,12 +3528,12 @@
   "price": 15000,
   "category": "Бариста",
   "iikoGroup": "Кофе",
-  "photo": null,
+  "photo": "images/e1ce91c087688c20.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "dd6c2b40-2a4f-438f-9182-28d13832acc8",
@@ -3545,12 +3545,12 @@
   "price": 310000,
   "category": "Assorti taomlar",
   "iikoGroup": "Ассорти блюда",
-  "photo": null,
+  "photo": "images/40fa7305b23ce2a8.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "7548be95-2824-4db5-b8df-9a4ea29e2400",
@@ -3596,12 +3596,12 @@
   "price": 175000,
   "category": "Assorti taomlar",
   "iikoGroup": "Ассорти блюда",
-  "photo": null,
+  "photo": "images/26b7f9c13c3625be.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "ef3b22dd-3311-426d-93a6-812633f5cd28",
@@ -3613,12 +3613,12 @@
   "price": 445000,
   "category": "Assorti taomlar",
   "iikoGroup": "Ассорти блюда",
-  "photo": null,
+  "photo": "images/12118b58ce1009a1.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "1ad1c755-f1db-491b-aaba-d5508d0d2a74",
@@ -3664,12 +3664,12 @@
   "price": 35000,
   "category": "Salat",
   "iikoGroup": "Свежый салатлар",
-  "photo": null,
+  "photo": "images/115252ae1e70ebbd.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "bc142c4d-1d9c-4e6f-9135-714e0cffaf14",
@@ -3681,12 +3681,12 @@
   "price": 30000,
   "category": "Mevalar",
   "iikoGroup": "Фрукты",
-  "photo": null,
+  "photo": "images/e9d2519c84a03319.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "8fe0e82d-b9c7-4fa7-8a06-726c103bef74",
@@ -3715,12 +3715,12 @@
   "price": 18000,
   "category": "Salat",
   "iikoGroup": "Свежый салатлар",
-  "photo": null,
+  "photo": "images/325829036113d19c.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "63a79bcd-631b-4ce6-8519-066d7bf8b361",
@@ -3749,12 +3749,12 @@
   "price": 58000,
   "category": "Salat",
   "iikoGroup": "Свежый салатлар",
-  "photo": null,
+  "photo": "images/7f6a7ebc4685fb85.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "053a04a9-081d-4db4-b128-0fbbaa3bbade",
@@ -3783,12 +3783,12 @@
   "price": 20000,
   "category": "Salat",
   "iikoGroup": "Свежый салатлар",
-  "photo": null,
+  "photo": "images/ceae2d7b93c42f70.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "2460932f-425f-4142-a5d7-0d8ea7403f1a",
@@ -3800,12 +3800,12 @@
   "price": 25000,
   "category": "Salat",
   "iikoGroup": "Свежый салатлар",
-  "photo": null,
+  "photo": "images/02eccd172b998e9e.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "fe7d32cc-b49e-43b3-8eb6-539538dd9648",
@@ -3817,12 +3817,12 @@
   "price": 70000,
   "category": "Salat",
   "iikoGroup": "Свежый салатлар",
-  "photo": null,
+  "photo": "images/bc0530065fcd69d3.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "13a64689-3dd3-4c7a-9665-b20de87a2565",
@@ -3851,12 +3851,12 @@
   "price": 35000,
   "category": "Salat",
   "iikoGroup": "Свежый салатлар",
-  "photo": null,
+  "photo": "images/0d684ccfc88e2a69.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "43e018a1-344b-42bc-91cb-ec9f330fd2be",
@@ -3885,12 +3885,12 @@
   "price": 25000,
   "category": "Salat",
   "iikoGroup": "Свежый салатлар",
-  "photo": null,
+  "photo": "images/ee2473c91e18682a.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "a5cb2932-8a6f-4522-93ba-8d17eead25ed",
@@ -3936,12 +3936,12 @@
   "price": 25000,
   "category": "Salat",
   "iikoGroup": "Свежый салатлар",
-  "photo": null,
+  "photo": "images/0c85155d8118c3e3.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "fda162f3-108e-43a1-aa5b-0101b345d039",
@@ -3987,12 +3987,12 @@
   "price": 15000,
   "category": "Salat",
   "iikoGroup": "Салёоный салатлар",
-  "photo": null,
+  "photo": "images/8b253bae3a657fbf.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "702a2dc3-5f53-4684-9239-f034621ea653",
@@ -4072,12 +4072,12 @@
   "price": 35000,
   "category": "Salat",
   "iikoGroup": "Салёоный салатлар",
-  "photo": null,
+  "photo": "images/a14fdd6395436f82.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "f9187a43-f552-47cb-9839-eab19b6b4902",
@@ -4208,12 +4208,12 @@
   "price": 15000,
   "category": "Somsa",
   "iikoGroup": "Сомса",
-  "photo": null,
+  "photo": "images/35d9f57de4afcea9.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "5f915206-b079-491b-b3a6-7ca71ca88197",
@@ -4259,12 +4259,12 @@
   "price": 48000,
   "category": "Salat",
   "iikoGroup": "Сояли салатлар",
-  "photo": null,
+  "photo": "images/24aa84fab3b13370.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "3f04c6c6-82d9-4c70-89f8-502d7a21330c",
@@ -4310,12 +4310,12 @@
   "price": 50000,
   "category": "Salat",
   "iikoGroup": "Сояли салатлар",
-  "photo": null,
+  "photo": "images/4dd931b19218e0ab.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "50e0940c-6989-4083-acb0-5dd631840a73",
@@ -4327,12 +4327,12 @@
   "price": 55000,
   "category": "1-taomlar",
   "iikoGroup": "1-таом",
-  "photo": null,
+  "photo": "images/86fe6200830af5d4.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "38f9dbe6-751c-4a55-921e-d762993ff57e",
@@ -4344,12 +4344,12 @@
   "price": 51000,
   "category": "1-taomlar",
   "iikoGroup": "1-таом",
-  "photo": null,
+  "photo": "images/e5e1f879b393d041.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "3fcb715e-c072-4abe-88a6-121578bb21d3",
@@ -4514,12 +4514,12 @@
   "price": 20000,
   "category": "Shashliklar",
   "iikoGroup": "Шашлык на мангале",
-  "photo": null,
+  "photo": "images/29c126c453203264.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "fabb6176-78b3-4ab2-82d1-baa7aec85795",
@@ -4548,12 +4548,12 @@
   "price": 18000,
   "category": "Shashliklar",
   "iikoGroup": "Шашлык на мангале",
-  "photo": null,
+  "photo": "images/ead8819fd9f64a24.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "fe1b64a3-980d-4823-a92d-d858bbc6fedc",
@@ -4565,12 +4565,12 @@
   "price": 25000,
   "category": "Shashliklar",
   "iikoGroup": "Шашлык на мангале",
-  "photo": null,
+  "photo": "images/ddcc241d77671e4e.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "82abaf8a-595d-40a7-960d-f2ad0ccdc3a8",
@@ -4582,12 +4582,12 @@
   "price": 18000,
   "category": "Shashliklar",
   "iikoGroup": "Шашлык на мангале",
-  "photo": null,
+  "photo": "images/ed84e7d707336e8c.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "17ec9cc4-c73f-44d8-a071-7dc685ab39e6",
@@ -4599,12 +4599,12 @@
   "price": 25000,
   "category": "1-taomlar",
   "iikoGroup": "1-таом",
-  "photo": null,
+  "photo": "images/ae70dda2d350078b.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "e4e6df09-1b03-4afb-8d80-b6d22536f660",
@@ -4616,12 +4616,12 @@
   "price": 15000,
   "category": "Somsa",
   "iikoGroup": "Сомса",
-  "photo": null,
+  "photo": "images/f8be980f7c82f29a.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "cef58665-e24f-498a-9881-36a40810a38e",
@@ -4650,12 +4650,12 @@
   "price": 8000,
   "category": "Somsa",
   "iikoGroup": "Сомса",
-  "photo": null,
+  "photo": "images/1573a09c444f083f.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "83ad4928-a7e9-4942-9d62-e5b25f4d7703",
@@ -4667,12 +4667,12 @@
   "price": 600000,
   "category": "Assorti taomlar",
   "iikoGroup": "Ассорти на мангале",
-  "photo": null,
+  "photo": "images/a853356c6b088b56.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "df07ca2d-c04e-4395-af31-f4ff61336c84",
@@ -4735,12 +4735,12 @@
   "price": 240000,
   "category": "Assorti taomlar",
   "iikoGroup": "Ассорти на мангале",
-  "photo": null,
+  "photo": "images/4ce3c9a8fcd9ec43.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "f45f8385-cfe9-4553-a1bc-830aad7336c6",
@@ -4752,12 +4752,12 @@
   "price": 370000,
   "category": "Assorti taomlar",
   "iikoGroup": "Ассорти на мангале",
-  "photo": null,
+  "photo": "images/4ce3c9a8fcd9ec43.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "ea11ebf7-74b4-4c86-bae8-f5792ad66d39",
@@ -4769,12 +4769,12 @@
   "price": 515000,
   "category": "Assorti taomlar",
   "iikoGroup": "Ассорти на мангале",
-  "photo": null,
+  "photo": "images/7cb43253573ed5cc.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "92bb050c-adcd-4a93-b7e6-5f90a08a6f0d",
@@ -5007,12 +5007,12 @@
   "price": 16000,
   "category": "Somsa",
   "iikoGroup": "Сомса",
-  "photo": null,
+  "photo": "images/541af00a98e59f82.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "d2779351-02c6-4590-a609-ad951af6542f",
@@ -5024,12 +5024,12 @@
   "price": 45000,
   "category": "Shirinliklar",
   "iikoGroup": "Дисерт кухня",
-  "photo": null,
+  "photo": "images/112a9433e35a4aae.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "3eb50728-35a4-4541-a002-7b2773a7814d",
@@ -5092,12 +5092,12 @@
   "price": 40000,
   "category": "Salat",
   "iikoGroup": "Маянез салатлар",
-  "photo": null,
+  "photo": "images/56a6804c9e615527.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "1fcb781d-b4e1-466c-9c33-169ec6708f17",
@@ -5126,12 +5126,12 @@
   "price": 33000,
   "category": "Shashliklar",
   "iikoGroup": "Шашлык на мангале",
-  "photo": null,
+  "photo": "images/b0fff193838c85ca.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "3f569a05-30cf-4820-8fdd-0a5b3f8a89f1",
@@ -5194,12 +5194,12 @@
   "price": 33000,
   "category": "Shashliklar",
   "iikoGroup": "Шашлык на мангале",
-  "photo": null,
+  "photo": "images/a8362854596a38dc.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "2b05f68e-778a-48aa-9932-433594096149",
@@ -5211,12 +5211,12 @@
   "price": 30000,
   "category": "Shashliklar",
   "iikoGroup": "Шашлык на мангале",
-  "photo": null,
+  "photo": "images/c89b4e0662679af0.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "28d950ea-3502-443f-9ee5-039c8f70448f",
@@ -5228,12 +5228,12 @@
   "price": 17000,
   "category": "Shashliklar",
   "iikoGroup": "Шашлык на мангале",
-  "photo": null,
+  "photo": "images/60618f5c849bfb73.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "15fb7851-5b79-4c40-9955-21b9d5f87502",
@@ -5279,12 +5279,12 @@
   "price": 43000,
   "category": "Salat",
   "iikoGroup": "Маянез салатлар",
-  "photo": null,
+  "photo": "images/6ef0650746c601a1.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "303fb029-a273-4d6c-9a07-633f88d25bf7",
@@ -5296,12 +5296,12 @@
   "price": 35000,
   "category": "Salat",
   "iikoGroup": "Маянез салатлар",
-  "photo": null,
+  "photo": "images/4524d80d6b4c3133.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "00ab44f2-aae9-4de4-8536-b4062c3638f3",
@@ -5483,12 +5483,12 @@
   "price": 90000,
   "category": "2-taomlar",
   "iikoGroup": "Стейк",
-  "photo": null,
+  "photo": "images/cf312725a113704a.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "d53f59a7-6ab3-468d-9cae-b0b3e5dc5949",
@@ -5534,12 +5534,12 @@
   "price": 97000,
   "category": "2-taomlar",
   "iikoGroup": "Стейк",
-  "photo": null,
+  "photo": "images/d67b1ff0b49ea8f3.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "a2acfe8e-42b9-41bb-aea3-d35eb1cede03",
@@ -5585,12 +5585,12 @@
   "price": 370000,
   "category": "2-taomlar",
   "iikoGroup": "Стейк",
-  "photo": null,
+  "photo": "images/624079c81ca96664.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "edf78707-7ee7-4464-b15a-436829b252d2",
@@ -5602,12 +5602,12 @@
   "price": 230000,
   "category": "Mevalar",
   "iikoGroup": "Фрукты",
-  "photo": null,
+  "photo": "images/e5777543b2abef98.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "b3c8856e-7dee-4c37-93d4-74aa69e356a7",
@@ -5942,12 +5942,12 @@
   "price": 200000,
   "category": "2-taomlar",
   "iikoGroup": "2-таом",
-  "photo": null,
+  "photo": "images/10d6c488a8b15f13.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "f478d0b9-b05f-49a7-9e43-96829c8df3d6",
@@ -6027,12 +6027,12 @@
   "price": 20000,
   "category": "Ichimlik",
   "iikoGroup": "Табий шарбат",
-  "photo": null,
+  "photo": "images/b0a4a5f8a0adbad7.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "b2595e3f-9817-4eb3-99bf-1a9b34ee3c98",
@@ -6044,12 +6044,12 @@
   "price": 105000,
   "category": "Ichimlik",
   "iikoGroup": "Махито",
-  "photo": null,
+  "photo": "images/d19224af122deda8.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "821f65b2-715a-46c6-bad9-fc5b76174f3e",
@@ -6180,12 +6180,12 @@
   "price": 30000,
   "category": "Ichimlik",
   "iikoGroup": "Табий шарбат",
-  "photo": null,
+  "photo": "images/fb14f138d3a55785.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "2be5bff8-f548-427e-bf83-30f96b10e28e",
@@ -6333,12 +6333,12 @@
   "price": 9000,
   "category": "Ichimlik",
   "iikoGroup": "Напитка",
-  "photo": null,
+  "photo": "images/ca4707d729030ea5.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "0ab19fb3-e5eb-45c3-9457-c53cef5d57c8",
@@ -6401,12 +6401,12 @@
   "price": 379000,
   "category": "Assorti taomlar",
   "iikoGroup": "Ассорти блюда",
-  "photo": null,
+  "photo": "images/52e10e42a5e18a7d.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "4cd7e952-4bce-4c2e-8ea1-b2515c5ac86a",
@@ -6639,12 +6639,12 @@
   "price": 30000,
   "category": "Ichimlik",
   "iikoGroup": "Махито",
-  "photo": null,
+  "photo": "images/dcc084ac2a80c8d8.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "ccc46925-466d-41c7-9fef-5d8e15c50f85",
@@ -6894,12 +6894,12 @@
   "price": 50000,
   "category": "Shirinliklar",
   "iikoGroup": "Гарден Перожний",
-  "photo": null,
+  "photo": "images/18a6118d3ebccf5b.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "83b1f085-c8d9-43b5-83ef-e2f35f8e346a",
@@ -6945,12 +6945,12 @@
   "price": 50000,
   "category": "Salat",
   "iikoGroup": "Сояли салатлар",
-  "photo": null,
+  "photo": "images/464d028c7c148509.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "d28658e9-9ba9-4967-ae71-9424c5c16dcb",
@@ -6996,12 +6996,12 @@
   "price": 90000,
   "category": "2-taomlar",
   "iikoGroup": "2-таом",
-  "photo": null,
+  "photo": "images/a41768f07d2e2678.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "fb230a6d-b81f-4551-9266-8fed73cff3c7",
@@ -7013,12 +7013,12 @@
   "price": 55000,
   "category": "2-taomlar",
   "iikoGroup": "2-таом",
-  "photo": null,
+  "photo": "images/fa8b098ddef58b7e.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "455fe8c4-9b4f-42c8-9c4c-c4b41355019d",
@@ -7217,12 +7217,12 @@
   "price": 18000,
   "category": "Salat",
   "iikoGroup": "Свежый салатлар",
-  "photo": null,
+  "photo": "images/11d7b2236a0c77dd.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "19b40c75-e399-42a1-b438-7102dc6f32c3",
@@ -7387,12 +7387,12 @@
   "price": 45000,
   "category": "Shirinliklar",
   "iikoGroup": "Гарден Перожний",
-  "photo": null,
+  "photo": "images/c5b3c701880b6ca9.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "a8d23ea4-3592-4ad6-ae42-ff4082fef118",
@@ -7489,12 +7489,12 @@
   "price": 150000,
   "category": "Mevalar",
   "iikoGroup": "Фрукты",
-  "photo": null,
+  "photo": "images/4bcae1111d563bef.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "070dca3e-56ba-4e1e-9b1c-0fbb0a67f710",
@@ -7557,12 +7557,12 @@
   "price": 45000,
   "category": "Shirinliklar",
   "iikoGroup": "Гарден Перожний",
-  "photo": null,
+  "photo": "images/3a3f42a818464ae0.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": true
  },
  {
   "id": "5fc8d035-26e7-4e3f-9d7a-da9c9bf93887",
