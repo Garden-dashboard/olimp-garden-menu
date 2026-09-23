@@ -7319,11 +7319,11 @@
   "price": 255000,
   "category": "2-taomlar",
   "iikoGroup": "2-таом",
-  "photo": null,
+  "photo": "images/0d82557bb69f4cd392a3791155f53380.jpg",
   "desc": null,
-  "popular": false,
+  "popular": true,
   "new": false,
-  "available": false,
+  "available": true,
   "manual": false
  },
  {
