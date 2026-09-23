@@ -92,14 +92,15 @@
   "nRu": "Айц  Вафли 1 порц",
   "nEn": "Айц  Вафли 1 порц",
   "price": 48000,
-  "category": "Бариста",
+  "category": "Shirinliklar",
   "iikoGroup": "Бариста дисерт",
   "photo": "images/6637c35e60d4a8e0.jpg",
   "desc": null,
   "popular": false,
   "new": true,
   "available": true,
-  "manual": false
+  "manual": false,
+  "categoryManual": true
  },
  {
   "id": "66c4a4f5-31cb-4f7b-bf0e-1f24725aaa2f",
@@ -500,14 +501,15 @@
   "nRu": "Микс (олма сабзи) сок 1 литр",
   "nEn": "Микс (олма сабзи) сок 1 литр",
   "price": 60000,
-  "category": "Ichimlik",
+  "category": "Бариста",
   "iikoGroup": "Табий шарбат",
   "photo": "images/6be1808788518452.jpg",
   "desc": null,
   "popular": false,
   "new": false,
   "available": true,
-  "manual": true
+  "manual": true,
+  "categoryManual": true
  },
  {
   "id": "89e2fa9d-c8e1-4cc7-9a26-abec9182d373",
@@ -2081,14 +2083,15 @@
   "nRu": "Ковурма лагмон",
   "nEn": "Ковурма лагмон",
   "price": 40000,
-  "category": "2-taomlar",
+  "category": "1-taomlar",
   "iikoGroup": "2-таом",
   "photo": "images/d013fa9786a403eb.jpg",
   "desc": "Qovurilgan lag'monning boy ta'mi — to'yimli va mazali, kuchli ishtaha uchun.",
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "categoryManual": true
  },
  {
   "id": "9954d2fe-7ef8-48fa-89cc-296070790262",
@@ -2285,14 +2288,15 @@
   "nRu": "Бардак чой (чашка)",
   "nEn": "Бардак чой (чашка)",
   "price": 4000,
-  "category": "Ichimlik",
+  "category": "Бариста",
   "iikoGroup": "Фруктовый чай",
   "photo": "images/17c1d2f079dcc152.jpg",
   "desc": "Issiq choy — har qanday suhbatga yaxshi hamroh.",
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "categoryManual": true
  },
  {
   "id": "ef8581a6-63e7-4529-a1d9-8c49389e1b7f",
@@ -2319,14 +2323,15 @@
   "nRu": "Мевали чай (оддий)",
   "nEn": "Мевали чай (оддий)",
   "price": 25000,
-  "category": "Ichimlik",
+  "category": "Бариста",
   "iikoGroup": "Фруктовый чай",
   "photo": "images/29355808bf919a6f.jpg",
   "desc": null,
   "popular": false,
   "new": false,
   "available": true,
-  "manual": true
+  "manual": true,
+  "categoryManual": true
  },
  {
   "id": "2667d761-3e86-4eba-b74a-511bf2ca2ff0",
@@ -2353,14 +2358,15 @@
   "nRu": "Манголи чизкейк 1 порц",
   "nEn": "Манголи чизкейк 1 порц",
   "price": 60000,
-  "category": "Бариста",
+  "category": "Shirinliklar",
   "iikoGroup": "Бариста дисерт",
   "photo": "images/2886f3c23e8da837.jpg",
   "desc": "Mangoning tropik shirinligi cheesecake yumshoqligida — bir bo'lak yetarli emasligini his qilasiz.",
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "categoryManual": true
  },
  {
   "id": "11e5586b-f155-47b3-b8f2-87a378df7024",
@@ -2404,14 +2410,15 @@
   "nRu": "Айрон.(газли) 1л",
   "nEn": "Айрон.(газли) 1л",
   "price": 24000,
-  "category": "Ichimlik",
+  "category": "Бариста",
   "iikoGroup": "Айронлар",
   "photo": "images/c97d6f9182e20573.jpg",
   "desc": null,
   "popular": false,
   "new": false,
   "available": true,
-  "manual": true
+  "manual": true,
+  "categoryManual": true
  },
  {
   "id": "bb9bc6de-33d1-4ecc-ac5e-658d70140341",
@@ -2455,14 +2462,15 @@
   "nRu": "Банановый вафли 1 порц",
   "nEn": "Банановый вафли 1 порц",
   "price": 40000,
-  "category": "Бариста",
+  "category": "Shirinliklar",
   "iikoGroup": "Бариста дисерт",
   "photo": "images/9f2a97566a1177e7.jpg",
   "desc": null,
   "popular": false,
   "new": false,
   "available": true,
-  "manual": true
+  "manual": true,
+  "categoryManual": true
  },
  {
   "id": "bec7afaa-0e56-4d33-a9fc-68b5f3ac4c80",
@@ -2472,14 +2480,15 @@
   "nRu": "Микс вафли 1 порц",
   "nEn": "Микс вафли 1 порц",
   "price": 75000,
-  "category": "Бариста",
+  "category": "Shirinliklar",
   "iikoGroup": "Бариста дисерт",
   "photo": "images/04caedf82a51e550.jpg",
   "desc": null,
   "popular": false,
   "new": false,
   "available": true,
-  "manual": true
+  "manual": true,
+  "categoryManual": true
  },
  {
   "id": "c16c4031-ac71-456c-96df-4666d27b364d",
@@ -2489,14 +2498,15 @@
   "nRu": "Шоколадный чизкейк 1 порц",
   "nEn": "Шоколадный чизкейк 1 порц",
   "price": 50000,
-  "category": "Бариста",
+  "category": "Shirinliklar",
   "iikoGroup": "Бариста дисерт",
   "photo": "images/5dbe0f69c6a288f9.jpg",
   "desc": null,
   "popular": false,
   "new": false,
   "available": true,
-  "manual": true
+  "manual": true,
+  "categoryManual": true
  },
  {
   "id": "26c73117-6e8b-4cdf-a1ca-b26d52f656f3",
@@ -2506,14 +2516,15 @@
   "nRu": "Фисташкали чизкейк 1 порц",
   "nEn": "Фисташкали чизкейк 1 порц",
   "price": 55000,
-  "category": "Бариста",
+  "category": "Shirinliklar",
   "iikoGroup": "Бариста дисерт",
   "photo": "images/d13b8aa42e726058.jpg",
   "desc": "Pista mazasi bilan boyitilgan cheesecake — shirinlik ixlosmandlari uchun haqiqiy zavq.",
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "categoryManual": true
  },
  {
   "id": "963008e6-e211-4bbe-9889-ab9cfc6f0800",
@@ -3186,14 +3197,15 @@
   "nRu": "Сарёғга дил 1 кг",
   "nEn": "Сарёғга дил 1 кг",
   "price": 230000,
-  "category": "2-taomlar",
+  "category": "1-taomlar",
   "iikoGroup": "2-таом",
   "photo": "images/2b355836a71ad7a1.jpg",
   "desc": null,
   "popular": false,
   "new": false,
   "available": true,
-  "manual": true
+  "manual": true,
+  "categoryManual": true
  },
  {
   "id": "e8b1a42a-d90a-4179-830a-b34c12863a29",
@@ -3220,14 +3232,15 @@
   "nRu": "Лула кабоб 1 порц",
   "nEn": "Лула кабоб 1 порц",
   "price": 45000,
-  "category": "2-taomlar",
+  "category": "1-taomlar",
   "iikoGroup": "2-таом",
   "photo": "images/9648bba830924332.jpg",
   "desc": "Mangalda pishirilgan sershira lula kabob — go'sht ixlosmandlari uchun klassik tanlov.",
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "categoryManual": true
  },
  {
   "id": "ec322629-2805-4fe7-8e96-1cc9b5b79abd",
@@ -3271,14 +3284,15 @@
   "nRu": "Урамали Долма 1 порц",
   "nEn": "Урамали Долма 1 порц",
   "price": 43000,
-  "category": "2-taomlar",
+  "category": "1-taomlar",
   "iikoGroup": "2-таом",
   "photo": "images/6c4e2755fa94c05f.jpg",
   "desc": null,
   "popular": false,
   "new": false,
   "available": true,
-  "manual": true
+  "manual": true,
+  "categoryManual": true
  },
  {
   "id": "cb0efb50-d3fa-41f3-a20b-68a95e04c2cd",
@@ -4172,14 +4186,15 @@
   "nRu": "Картошка фри 1 порц",
   "nEn": "Картошка фри 1 порц",
   "price": 20000,
-  "category": "Shirinliklar",
+  "category": "1-taomlar",
   "iikoGroup": "Дисерт кухня",
   "photo": "images/2d8f546d7ce2dc38.jpg",
   "desc": "Qarsildoq va issiq-issiq — har qanday taomga mazali hamroh.",
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "categoryManual": true
  },
  {
   "id": "e8cfedbc-752c-472a-940c-ce1ed485baf8",
@@ -4444,14 +4459,15 @@
   "nRu": "Мясной козили 1 порц",
   "nEn": "Мясной козили 1 порц",
   "price": 120000,
-  "category": "2-taomlar",
+  "category": "1-taomlar",
   "iikoGroup": "Мясной.",
   "photo": "images/2f953ac569f11b4f.jpg",
   "desc": "Go'shtning boy ta'mi maxsus usulda tayyorlangan — go'sht ixlosmandlari uchun mukammal tanlov.",
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "categoryManual": true
  },
  {
   "id": "de3fff07-f310-4b6e-99ac-d664d21fe439",
@@ -5022,14 +5038,15 @@
   "nRu": "Хива ижжон 1 порц",
   "nEn": "Хива ижжон 1 порц",
   "price": 45000,
-  "category": "Shirinliklar",
+  "category": "1-taomlar",
   "iikoGroup": "Дисерт кухня",
   "photo": "images/112a9433e35a4aae.jpg",
   "desc": null,
   "popular": false,
   "new": false,
   "available": true,
-  "manual": true
+  "manual": true,
+  "categoryManual": true
  },
  {
   "id": "3eb50728-35a4-4541-a002-7b2773a7814d",
@@ -5481,14 +5498,15 @@
   "nRu": "Кофте с айдахом 1 порц",
   "nEn": "Кофте с айдахом 1 порц",
   "price": 90000,
-  "category": "2-taomlar",
+  "category": "1-taomlar",
   "iikoGroup": "Стейк",
   "photo": "images/cf312725a113704a.jpg",
   "desc": null,
   "popular": false,
   "new": false,
   "available": true,
-  "manual": true
+  "manual": true,
+  "categoryManual": true
  },
  {
   "id": "d53f59a7-6ab3-468d-9cae-b0b3e5dc5949",
@@ -5515,14 +5533,15 @@
   "nRu": "Гумма кофте 1 порц",
   "nEn": "Гумма кофте 1 порц",
   "price": 50000,
-  "category": "2-taomlar",
+  "category": "1-taomlar",
   "iikoGroup": "Стейк",
   "photo": "images/671af2e2231bf36f.jpg",
   "desc": "Milliy retsept bo'yicha tayyorlangan — boy va to'yimli, sinab ko'rganlar unutolmaydi.",
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "categoryManual": true
  },
  {
   "id": "d071b4a0-8324-45c2-b956-4fa27d38cdbf",
@@ -5583,14 +5602,15 @@
   "nRu": "Стейк мол гушт 1 кг",
   "nEn": "Стейк мол гушт 1 кг",
   "price": 370000,
-  "category": "2-taomlar",
+  "category": "Assorti taomlar",
   "iikoGroup": "Стейк",
   "photo": "images/624079c81ca96664.jpg",
   "desc": null,
   "popular": false,
   "new": false,
   "available": true,
-  "manual": true
+  "manual": true,
+  "categoryManual": true
  },
  {
   "id": "edf78707-7ee7-4464-b15a-436829b252d2",
@@ -6033,14 +6053,15 @@
   "nRu": "Тарвуз сок 1 литр",
   "nEn": "Тарвуз сок 1 литр",
   "price": 20000,
-  "category": "Ichimlik",
+  "category": "Бариста",
   "iikoGroup": "Табий шарбат",
   "photo": "images/b0a4a5f8a0adbad7.jpg",
   "desc": null,
   "popular": false,
   "new": false,
   "available": true,
-  "manual": true
+  "manual": true,
+  "categoryManual": true
  },
  {
   "id": "b2595e3f-9817-4eb3-99bf-1a9b34ee3c98",
@@ -6050,14 +6071,15 @@
   "nRu": "Махито ассорти 3х",
   "nEn": "Махито ассорти 3х",
   "price": 105000,
-  "category": "Ichimlik",
+  "category": "Бариста",
   "iikoGroup": "Махито",
   "photo": "images/d19224af122deda8.jpg",
   "desc": null,
   "popular": false,
   "new": false,
   "available": true,
-  "manual": true
+  "manual": true,
+  "categoryManual": true
  },
  {
   "id": "821f65b2-715a-46c6-bad9-fc5b76174f3e",
@@ -6186,14 +6208,15 @@
   "nRu": "Олма сок (СТАКАН)",
   "nEn": "Олма сок (СТАКАН)",
   "price": 30000,
-  "category": "Ichimlik",
+  "category": "Бариста",
   "iikoGroup": "Табий шарбат",
   "photo": "images/fb14f138d3a55785.jpg",
   "desc": null,
   "popular": false,
   "new": false,
   "available": true,
-  "manual": true
+  "manual": true,
+  "categoryManual": true
  },
  {
   "id": "2be5bff8-f548-427e-bf83-30f96b10e28e",
@@ -6645,14 +6668,15 @@
   "nRu": "Айс теа стакан",
   "nEn": "Айс теа стакан",
   "price": 30000,
-  "category": "Ichimlik",
+  "category": "Бариста",
   "iikoGroup": "Махито",
   "photo": "images/dcc084ac2a80c8d8.jpg",
   "desc": null,
   "popular": false,
   "new": false,
   "available": true,
-  "manual": true
+  "manual": true,
+  "categoryManual": true
  },
  {
   "id": "ccc46925-466d-41c7-9fef-5d8e15c50f85",
