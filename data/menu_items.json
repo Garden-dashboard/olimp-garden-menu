@@ -553,14 +553,15 @@
   "nRu": "Держател 1 шт",
   "nEn": "Держател 1 шт",
   "price": 2000,
-  "category": "Assorti taomlar",
+  "category": "Бариста",
   "iikoGroup": "Прочее",
   "photo": null,
   "desc": null,
   "popular": false,
   "new": false,
   "available": false,
-  "manual": false
+  "manual": false,
+  "categoryManual": true
  },
  {
   "id": "7e61b5b1-56ad-42e3-91d3-f49347ee3d4e",
@@ -570,14 +571,15 @@
   "nRu": "Мохито стакан 1 шт",
   "nEn": "Мохито стакан 1 шт",
   "price": 2000,
-  "category": "Assorti taomlar",
+  "category": "Бариста",
   "iikoGroup": "Прочее",
   "photo": null,
   "desc": null,
   "popular": false,
   "new": false,
   "available": false,
-  "manual": false
+  "manual": false,
+  "categoryManual": true
  },
  {
   "id": "3238b8b5-558b-4f39-bfb9-f550575546ac",
@@ -1116,11 +1118,11 @@
   "price": 48000,
   "category": "Сетлар",
   "iikoGroup": "Гарден Сет",
-  "photo": null,
+  "photo": "images/f67b0162a0c24c689180caaf14a2b949.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
+  "available": true,
   "manual": false
  },
  {
@@ -4734,11 +4736,11 @@
   "price": 500000,
   "category": "Assorti taomlar",
   "iikoGroup": "Ассорти на мангале",
-  "photo": null,
+  "photo": "images/fcf123352a574d2cad1764c9e564ac7b.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
+  "available": true,
   "manual": false
  },
  {
