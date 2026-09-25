@@ -7648,5 +7648,22 @@
   "new": false,
   "available": false,
   "manual": false
+ },
+ {
+  "id": "f2f8abf8-18fa-4009-bbed-89f81a379823",
+  "num": "24216",
+  "name": "Делизия салат 1 порц",
+  "nUz": "Делизия салат 1 порц",
+  "nRu": "Делизия салат 1 порц",
+  "nEn": "Делизия салат 1 порц",
+  "price": 100000,
+  "category": "Salat",
+  "iikoGroup": "Сояли салатлар",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
  }
 ]
