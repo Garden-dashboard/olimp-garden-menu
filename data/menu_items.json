@@ -7665,5 +7665,22 @@
   "new": false,
   "available": false,
   "manual": false
+ },
+ {
+  "id": "8748e0e3-2441-4bfc-ad0e-740d33345515",
+  "num": "24218",
+  "name": "Паста Алфредоо",
+  "nUz": "Паста Алфредоо",
+  "nRu": "Паста Алфредоо",
+  "nEn": "Паста Алфредоо",
+  "price": 50000,
+  "category": "2-taomlar",
+  "iikoGroup": "2-таом",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
  }
 ]
