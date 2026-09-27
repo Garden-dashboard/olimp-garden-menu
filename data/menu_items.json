@@ -41,8 +41,8 @@
   "nRu": "Катта бедана 1",
   "nEn": "Катта бедана 1",
   "price": 40000,
-  "category": "Shirinliklar",
-  "iikoGroup": "Дисерт кухня",
+  "category": "1-taomlar",
+  "iikoGroup": "1-таом",
   "photo": null,
   "desc": null,
   "popular": false,
@@ -822,7 +822,7 @@
  {
   "id": "75092ab2-29a4-4f82-8e4f-642f0a8c618d",
   "num": "23758",
-  "name": "Шафтоли шт",
+  "name": "Шафтоли 1 шт",
   "nUz": "Шафтоли шт",
   "nRu": "Шафтоли шт",
   "nEn": "Шафтоли шт",
@@ -1786,7 +1786,8 @@
   "popular": false,
   "new": false,
   "available": false,
-  "manual": false
+  "manual": false,
+  "hiddenNoIiko": true
  },
  {
   "id": "3940623d-9971-4b30-8f1c-ba8011700c8c",
@@ -2560,7 +2561,8 @@
   "popular": false,
   "new": false,
   "available": false,
-  "manual": false
+  "manual": false,
+  "hiddenNoIiko": true
  },
  {
   "id": "0002c5e8-7d2e-4013-b872-e7828187787c",
@@ -4894,7 +4896,8 @@
   "popular": false,
   "new": false,
   "available": false,
-  "manual": false
+  "manual": false,
+  "hiddenNoIiko": true
  },
  {
   "id": "bf996770-ce73-40af-a643-1d626d479f24",
@@ -5422,7 +5425,8 @@
   "popular": false,
   "new": false,
   "available": false,
-  "manual": false
+  "manual": false,
+  "hiddenNoIiko": true
  },
  {
   "id": "9fb3c690-1524-411d-a221-aeecd01cfd58",
@@ -5439,7 +5443,8 @@
   "popular": false,
   "new": false,
   "available": false,
-  "manual": false
+  "manual": false,
+  "hiddenNoIiko": true
  },
  {
   "id": "db00ce46-7c4b-4dae-9a02-c409115ceb21",
@@ -5646,7 +5651,8 @@
   "popular": false,
   "new": false,
   "available": false,
-  "manual": false
+  "manual": false,
+  "hiddenNoIiko": true
  },
  {
   "id": "803db9a9-ffbc-4718-9498-f8f6629726ec",
@@ -6643,7 +6649,8 @@
   "popular": false,
   "new": false,
   "available": false,
-  "manual": false
+  "manual": false,
+  "hiddenNoIiko": true
  },
  {
   "id": "344812f3-f886-47e6-aee8-6fd8f706163e",
@@ -6746,7 +6753,8 @@
   "popular": false,
   "new": false,
   "available": false,
-  "manual": false
+  "manual": false,
+  "hiddenNoIiko": true
  },
  {
   "id": "1474785e-05c4-4376-b614-690927f99bc9",
@@ -6763,7 +6771,8 @@
   "popular": false,
   "new": false,
   "available": false,
-  "manual": false
+  "manual": false,
+  "hiddenNoIiko": true
  },
  {
   "id": "6179dbc4-6cb1-48ea-b675-c6cb07d2e020",
@@ -6780,7 +6789,8 @@
   "popular": false,
   "new": false,
   "available": false,
-  "manual": false
+  "manual": false,
+  "hiddenNoIiko": true
  },
  {
   "id": "39b96f8d-01e7-49e1-aebf-4746feb2a250",
@@ -6865,7 +6875,8 @@
   "popular": false,
   "new": false,
   "available": false,
-  "manual": false
+  "manual": false,
+  "hiddenNoIiko": true
  },
  {
   "id": "8fdd8138-88b9-4d00-89e9-f62805c2e66c",
@@ -6950,7 +6961,8 @@
   "popular": false,
   "new": false,
   "available": false,
-  "manual": false
+  "manual": false,
+  "hiddenNoIiko": true
  },
  {
   "id": "6b5e78e5-9195-4786-9273-c90ac3736da3",
@@ -7613,7 +7625,8 @@
   "popular": false,
   "new": false,
   "available": false,
-  "manual": false
+  "manual": false,
+  "hiddenNoIiko": true
  },
  {
   "id": "d310681e-fa38-4c15-8d2b-c96fc067d9ba",
@@ -7676,6 +7689,40 @@
   "price": 50000,
   "category": "2-taomlar",
   "iikoGroup": "2-таом",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
+ },
+ {
+  "id": "63b85494-f1ee-436a-af22-3818076751b6",
+  "num": "24220",
+  "name": "Медовка 1 шт",
+  "nUz": "Медовка 1 шт",
+  "nRu": "Медовка 1 шт",
+  "nEn": "Медовка 1 шт",
+  "price": 5000,
+  "category": "Mevalar",
+  "iikoGroup": "Фрукты",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
+ },
+ {
+  "id": "2c75691d-db49-4fd1-b069-732dcb3e7ba3",
+  "num": "24221",
+  "name": "Хурмо 1 шт",
+  "nUz": "Хурмо 1 шт",
+  "nRu": "Хурмо 1 шт",
+  "nEn": "Хурмо 1 шт",
+  "price": 10000,
+  "category": "Mevalar",
+  "iikoGroup": "Фрукты",
   "photo": null,
   "desc": null,
   "popular": false,
