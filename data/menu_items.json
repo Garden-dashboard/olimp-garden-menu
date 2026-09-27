@@ -7729,5 +7729,22 @@
   "new": false,
   "available": false,
   "manual": false
+ },
+ {
+  "id": "4bd30e65-9f64-436f-8415-0f716f00b394",
+  "num": "24225",
+  "name": "Ассорти балик (160)",
+  "nUz": "Ассорти балик (160)",
+  "nRu": "Ассорти балик (160)",
+  "nEn": "Ассорти балик (160)",
+  "price": 160000,
+  "category": "Балик таомлар",
+  "iikoGroup": "Баликлар",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
  }
 ]
