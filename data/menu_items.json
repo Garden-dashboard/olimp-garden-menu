@@ -26,11 +26,11 @@
   "price": 400000,
   "category": "2-taomlar",
   "iikoGroup": "2-таом",
-  "photo": null,
+  "photo": "images/40c2b7a9314547c0a9b1eae157758d41.jpg",
   "desc": null,
   "popular": false,
-  "new": false,
-  "available": false,
+  "new": true,
+  "available": true,
   "manual": false
  },
  {
