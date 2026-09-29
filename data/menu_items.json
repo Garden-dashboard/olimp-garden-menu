@@ -7746,5 +7746,39 @@
   "new": false,
   "available": false,
   "manual": false
+ },
+ {
+  "id": "78c9ed33-e77b-4fa6-9c4f-cb4cd18168a1",
+  "num": "23600",
+  "name": "Оливка 50 гр",
+  "nUz": "Оливка 50 гр",
+  "nRu": "Оливка 50 гр",
+  "nEn": "Оливка 50 гр",
+  "price": 15000,
+  "category": "Salat",
+  "iikoGroup": "Салат прочее",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
+ },
+ {
+  "id": "3aaf9f9f-27e9-488b-a21c-becb7b74c3b9",
+  "num": "24227",
+  "name": "Имбир чай",
+  "nUz": "Имбир чай",
+  "nRu": "Имбир чай",
+  "nEn": "Имбир чай",
+  "price": 29000,
+  "category": "Ichimlik",
+  "iikoGroup": "Фруктовый чай",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
  }
 ]
