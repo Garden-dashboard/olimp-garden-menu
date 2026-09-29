@@ -7780,5 +7780,39 @@
   "new": false,
   "available": false,
   "manual": false
+ },
+ {
+  "id": "c5e2eae8-a66d-45f7-ac5a-082ea2bb3458",
+  "num": "24228",
+  "name": "Манго Маракуя чай",
+  "nUz": "Манго Маракуя чай",
+  "nRu": "Манго Маракуя чай",
+  "nEn": "Манго Маракуя чай",
+  "price": 29000,
+  "category": "Ichimlik",
+  "iikoGroup": "Фруктовый чай",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
+ },
+ {
+  "id": "92aac816-60aa-4f00-9f29-af935165e2ae",
+  "num": "24229",
+  "name": "Малина чай",
+  "nUz": "Малина чай",
+  "nRu": "Малина чай",
+  "nEn": "Малина чай",
+  "price": 29000,
+  "category": "Ichimlik",
+  "iikoGroup": "Фруктовый чай",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
  }
 ]
