@@ -7831,5 +7831,22 @@
   "new": false,
   "available": false,
   "manual": false
+ },
+ {
+  "id": "eccb0881-89e5-4883-a9f4-97d31f13a8b0",
+  "num": "24243",
+  "name": "Ковурилган гушт 1 порц",
+  "nUz": "Ковурилган гушт 1 порц",
+  "nRu": "Ковурилган гушт 1 порц",
+  "nEn": "Ковурилган гушт 1 порц",
+  "price": 120000,
+  "category": "2-taomlar",
+  "iikoGroup": "2-таом",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
  }
 ]
