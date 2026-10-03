@@ -7848,5 +7848,22 @@
   "new": false,
   "available": false,
   "manual": false
+ },
+ {
+  "id": "2989d620-3b85-4c73-8d89-e620350eaf67",
+  "num": "24248",
+  "name": "Руккола с апельсином 1 порц",
+  "nUz": "Руккола с апельсином 1 порц",
+  "nRu": "Руккола с апельсином 1 порц",
+  "nEn": "Руккола с апельсином 1 порц",
+  "price": 55000,
+  "category": "Salat",
+  "iikoGroup": "Сояли салатлар",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
  }
 ]
