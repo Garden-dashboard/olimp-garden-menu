@@ -7933,5 +7933,22 @@
   "new": false,
   "available": false,
   "manual": false
+ },
+ {
+  "id": "14d37953-b68c-45b4-a47d-9cc47f1d78c4",
+  "num": "24266",
+  "name": "нев",
+  "nUz": "нев",
+  "nRu": "нев",
+  "nEn": "нев",
+  "price": 210000,
+  "category": "Сетлар",
+  "iikoGroup": "Гарден Сет",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
  }
 ]
