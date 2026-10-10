@@ -7950,5 +7950,22 @@
   "new": false,
   "available": false,
   "manual": false
+ },
+ {
+  "id": "9211952e-9802-4a3b-99b5-d8790a80268d",
+  "num": "24268",
+  "name": "Маракуя 1 шт",
+  "nUz": "Маракуя 1 шт",
+  "nRu": "Маракуя 1 шт",
+  "nEn": "Маракуя 1 шт",
+  "price": 20000,
+  "category": "Mevalar",
+  "iikoGroup": "Фрукты",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
  }
 ]
