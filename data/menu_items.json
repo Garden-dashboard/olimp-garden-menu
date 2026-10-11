@@ -31,7 +31,8 @@
   "popular": false,
   "new": true,
   "available": true,
-  "manual": false
+  "manual": false,
+  "hiddenNoIiko": true
  },
  {
   "id": "6d3e3cec-fa15-423d-a609-39f675b66339",
@@ -834,7 +835,8 @@
   "popular": false,
   "new": false,
   "available": false,
-  "manual": false
+  "manual": false,
+  "hiddenNoIiko": true
  },
  {
   "id": "1a2ed4e6-ff1c-48bb-9fd0-b3c198dd82a2",
@@ -4419,7 +4421,8 @@
   "popular": false,
   "new": false,
   "available": false,
-  "manual": false
+  "manual": false,
+  "hiddenNoIiko": true
  },
  {
   "id": "8ffee9ec-b125-42b9-8f43-5b7568e18bb8",
@@ -4497,7 +4500,7 @@
   "nUz": "Мясной ассорти 1 порц",
   "nRu": "Мясной ассорти 1 порц",
   "nEn": "Мясной ассорти 1 порц",
-  "price": 95000,
+  "price": 105000,
   "category": "2-taomlar",
   "iikoGroup": "Мясной.",
   "photo": null,
@@ -5426,7 +5429,7 @@
   "new": false,
   "available": false,
   "manual": false,
-  "hiddenNoIiko": true
+  "hiddenNoIiko": false
  },
  {
   "id": "9fb3c690-1524-411d-a221-aeecd01cfd58",
@@ -7319,7 +7322,8 @@
   "popular": false,
   "new": false,
   "available": false,
-  "manual": false
+  "manual": false,
+  "hiddenNoIiko": true
  },
  {
   "id": "fcd7131d-54d8-481d-be0f-3208f2441949",
@@ -7937,11 +7941,11 @@
  {
   "id": "14d37953-b68c-45b4-a47d-9cc47f1d78c4",
   "num": "24266",
-  "name": "нев",
+  "name": "Сет (Стипендия 4 персон)",
   "nUz": "нев",
   "nRu": "нев",
   "nEn": "нев",
-  "price": 210000,
+  "price": 200000,
   "category": "Сетлар",
   "iikoGroup": "Гарден Сет",
   "photo": null,
@@ -7961,6 +7965,23 @@
   "price": 20000,
   "category": "Mevalar",
   "iikoGroup": "Фрукты",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
+ },
+ {
+  "id": "502c5cfc-6fb3-4f9a-86ff-4ca778444cc7",
+  "num": "24269",
+  "name": "Мраморный сыр 1 кг",
+  "nUz": "Мраморный сыр 1 кг",
+  "nRu": "Мраморный сыр 1 кг",
+  "nEn": "Мраморный сыр 1 кг",
+  "price": 150000,
+  "category": "2-taomlar",
+  "iikoGroup": "Мясной.",
   "photo": null,
   "desc": null,
   "popular": false,
