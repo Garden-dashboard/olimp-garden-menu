@@ -7948,11 +7948,11 @@
   "price": 200000,
   "category": "Сетлар",
   "iikoGroup": "Гарден Сет",
-  "photo": null,
+  "photo": "images/7fdf1bda669548d8991498ae9619abbd.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
+  "available": true,
   "manual": false
  },
  {
