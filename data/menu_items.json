@@ -8057,5 +8057,22 @@
   "new": false,
   "available": false,
   "manual": false
+ },
+ {
+  "id": "984c3427-b1db-4704-b1de-a6dd77b097b1",
+  "num": "24290",
+  "name": "Судак сетка балик 1кг",
+  "nUz": "Судак сетка балик 1кг",
+  "nRu": "Судак сетка балик 1кг",
+  "nEn": "Судак сетка балик 1кг",
+  "price": 215000,
+  "category": "Балик таомлар",
+  "iikoGroup": "Баликлар",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
  }
 ]
