@@ -7750,7 +7750,8 @@
   "popular": false,
   "new": false,
   "available": false,
-  "manual": false
+  "manual": false,
+  "hiddenNoIiko": true
  },
  {
   "id": "78c9ed33-e77b-4fa6-9c4f-cb4cd18168a1",
