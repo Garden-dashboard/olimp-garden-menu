@@ -3842,7 +3842,8 @@
   "popular": false,
   "new": false,
   "available": false,
-  "manual": true
+  "manual": true,
+  "skip": true
  },
  {
   "id": "13a64689-3dd3-4c7a-9665-b20de87a2565",
@@ -5127,10 +5128,10 @@
  {
   "id": "1fcb781d-b4e1-466c-9c33-169ec6708f17",
   "num": "23544",
-  "name": "Мини котлет 1 порц",
-  "nUz": "Мини котлет 1 порц",
-  "nRu": "Мини котлет 1 порц",
-  "nEn": "Мини котлет 1 порц",
+  "name": "Мангалный котлет 1 порц",
+  "nUz": "Мангалный котлет 1 порц",
+  "nRu": "Мангалный котлет 1 порц",
+  "nEn": "Мангалный котлет 1 порц",
   "price": 40000,
   "category": "Shashliklar",
   "iikoGroup": "Шашлык на мангале",
@@ -8033,6 +8034,23 @@
   "price": 29000,
   "category": "Бариста",
   "iikoGroup": "Бариста дисерт",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
+ },
+ {
+  "id": "57261713-5214-4a90-b4a1-d6f6b89bd2c2",
+  "num": "24289",
+  "name": "Мини котлет 1 шт",
+  "nUz": "Мини котлет 1 шт",
+  "nRu": "Мини котлет 1 шт",
+  "nEn": "Мини котлет 1 шт",
+  "price": 13000,
+  "category": "Shashliklar",
+  "iikoGroup": "Шашлык на мангале",
   "photo": null,
   "desc": null,
   "popular": false,
