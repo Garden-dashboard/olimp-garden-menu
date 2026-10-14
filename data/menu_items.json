@@ -8022,5 +8022,22 @@
   "new": false,
   "available": false,
   "manual": false
+ },
+ {
+  "id": "8b30aaf9-b2dd-431f-ad33-6fb971131b1b",
+  "num": "24287",
+  "name": "Турк пахлаваси",
+  "nUz": "Турк пахлаваси",
+  "nRu": "Турк пахлаваси",
+  "nEn": "Турк пахлаваси",
+  "price": 29000,
+  "category": "Бариста",
+  "iikoGroup": "Бариста дисерт",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
  }
 ]
