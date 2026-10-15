@@ -502,7 +502,7 @@
   "nRu": "Микс (олма сабзи) сок 1 литр",
   "nEn": "Микс (олма сабзи) сок 1 литр",
   "price": 60000,
-  "category": "Бариста",
+  "category": "Tabiiy sharbatlar",
   "iikoGroup": "Табий шарбат",
   "photo": "images/6e14576804524c9abb15e90458c56d8e.jpg",
   "desc": null,
@@ -510,7 +510,8 @@
   "new": false,
   "available": true,
   "manual": true,
-  "categoryManual": true
+  "categoryManual": true,
+  "nameManual": false
  },
  {
   "id": "89e2fa9d-c8e1-4cc7-9a26-abec9182d373",
@@ -562,7 +563,8 @@
   "new": false,
   "available": false,
   "manual": false,
-  "categoryManual": true
+  "categoryManual": true,
+  "skip": true
  },
  {
   "id": "7e61b5b1-56ad-42e3-91d3-f49347ee3d4e",
@@ -580,7 +582,8 @@
   "new": false,
   "available": false,
   "manual": false,
-  "categoryManual": true
+  "categoryManual": true,
+  "skip": true
  },
  {
   "id": "3238b8b5-558b-4f39-bfb9-f550575546ac",
@@ -1091,7 +1094,8 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": true
+  "manual": true,
+  "pos": 7
  },
  {
   "id": "c0ffd037-cb74-45ee-ba4c-568efb991cff",
@@ -1108,7 +1112,8 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": true
+  "manual": true,
+  "pos": 6
  },
  {
   "id": "829a8364-e6fe-4927-bd36-63adad9827a2",
@@ -1227,7 +1232,8 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "pos": 8
  },
  {
   "id": "86116901-8bce-46e7-8cc9-0ae66b01b7ea",
@@ -1261,7 +1267,8 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "pos": 10
  },
  {
   "id": "f5ab227b-3472-449a-9eb2-420b4ebc676b",
@@ -1278,7 +1285,8 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": true
+  "manual": true,
+  "pos": 2
  },
  {
   "id": "3524dc76-5bc4-48e1-b7be-2d98484fd0f5",
@@ -1295,7 +1303,8 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": true
+  "manual": true,
+  "pos": 1
  },
  {
   "id": "5f23955c-1917-4f8f-9d5e-921084ac3f86",
@@ -1329,7 +1338,8 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "pos": 9
  },
  {
   "id": "8df4b704-15d8-4376-85ad-1b8515cfb609",
@@ -1465,7 +1475,8 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "pos": 3
  },
  {
   "id": "2ff1e3fd-870c-40d6-a344-786f097604e7",
@@ -2230,7 +2241,7 @@
   "price": 135000,
   "category": "Бараклар",
   "iikoGroup": "Барак",
-  "photo": "images/637bfe5249ea0ec2.jpg",
+  "photo": "images/681bbcea6f1c435db1525c9ef73b3d55.jpg",
   "desc": null,
   "popular": false,
   "new": false,
@@ -5837,7 +5848,8 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "pos": 4
  },
  {
   "id": "bf5991c3-5f1e-4dc0-b298-63ba8cad1692",
@@ -5925,7 +5937,8 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "pos": 5
  },
  {
   "id": "faf9f61c-f3a2-49ee-b699-703eff8f0617",
@@ -6072,7 +6085,7 @@
   "nRu": "Тарвуз сок 1 литр",
   "nEn": "Тарвуз сок 1 литр",
   "price": 20000,
-  "category": "Бариста",
+  "category": "Tabiiy sharbatlar",
   "iikoGroup": "Табий шарбат",
   "photo": "images/b0a4a5f8a0adbad7.jpg",
   "desc": null,
@@ -6080,7 +6093,8 @@
   "new": false,
   "available": false,
   "manual": true,
-  "categoryManual": true
+  "categoryManual": true,
+  "nameManual": false
  },
  {
   "id": "b2595e3f-9817-4eb3-99bf-1a9b34ee3c98",
@@ -6227,7 +6241,7 @@
   "nRu": "Олма сок (СТАКАН)",
   "nEn": "Олма сок (СТАКАН)",
   "price": 30000,
-  "category": "Бариста",
+  "category": "Tabiiy sharbatlar",
   "iikoGroup": "Табий шарбат",
   "photo": "images/ac4c9385d66040dc8ce43d1d5a1ef001.jpg",
   "desc": null,
@@ -6235,7 +6249,8 @@
   "new": false,
   "available": true,
   "manual": true,
-  "categoryManual": true
+  "categoryManual": true,
+  "nameManual": false
  },
  {
   "id": "2be5bff8-f548-427e-bf83-30f96b10e28e",
@@ -8043,14 +8058,16 @@
   "nRu": "Турк пахлаваси",
   "nEn": "Турк пахлаваси",
   "price": 29000,
-  "category": "Бариста",
+  "category": "Shirinliklar",
   "iikoGroup": "Бариста дисерт",
   "photo": "images/17885305f30542dca1aa30fd7070baa1.jpg",
   "desc": null,
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "nameManual": false,
+  "categoryManual": true
  },
  {
   "id": "57261713-5214-4a90-b4a1-d6f6b89bd2c2",
