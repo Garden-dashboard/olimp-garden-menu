@@ -385,7 +385,7 @@
   "price": 28000,
   "category": "1-taomlar",
   "iikoGroup": "1-таом",
-  "photo": "images/b76467058d571b54.jpg",
+  "photo": "images/535ad91fb948483bb032a0e7f30f714a.jpg",
   "desc": null,
   "popular": false,
   "new": false,
@@ -504,7 +504,7 @@
   "price": 60000,
   "category": "Бариста",
   "iikoGroup": "Табий шарбат",
-  "photo": "images/6be1808788518452.jpg",
+  "photo": "images/6e14576804524c9abb15e90458c56d8e.jpg",
   "desc": null,
   "popular": false,
   "new": false,
@@ -1976,7 +1976,8 @@
   "popular": false,
   "new": false,
   "available": false,
-  "manual": false
+  "manual": false,
+  "skip": true
  },
  {
   "id": "4aeb1c28-dd34-4ce0-821a-791611b6589d",
@@ -1993,7 +1994,8 @@
   "popular": false,
   "new": false,
   "available": false,
-  "manual": false
+  "manual": false,
+  "skip": true
  },
  {
   "id": "d69f225f-e415-4415-8a2e-fae1d00f8734",
@@ -2010,7 +2012,8 @@
   "popular": false,
   "new": false,
   "available": false,
-  "manual": false
+  "manual": false,
+  "skip": true
  },
  {
   "id": "14054361-30d6-412f-aab2-2b6c29bcfe05",
@@ -2090,7 +2093,7 @@
   "price": 40000,
   "category": "1-taomlar",
   "iikoGroup": "2-таом",
-  "photo": "images/d013fa9786a403eb.jpg",
+  "photo": "images/84d71307722f4e80a042f9ece70a4a4d.jpg",
   "desc": "Qovurilgan lag'monning boy ta'mi — to'yimli va mazali, kuchli ishtaha uchun.",
   "popular": false,
   "new": false,
@@ -2967,7 +2970,7 @@
   "price": 27000,
   "category": "1-taomlar",
   "iikoGroup": "1-таом",
-  "photo": "images/4c2b5a95918a2a39.jpg",
+  "photo": "images/512254c76dc64fee8023544d69b87071.jpg",
   "desc": null,
   "popular": false,
   "new": false,
@@ -2984,7 +2987,7 @@
   "price": 35000,
   "category": "1-taomlar",
   "iikoGroup": "1-таом",
-  "photo": "images/8c6e49e691f8ebfd.jpg",
+  "photo": "images/bceaf973bd5646339cadab2fea92e1d5.jpg",
   "desc": null,
   "popular": false,
   "new": false,
@@ -3240,7 +3243,7 @@
   "price": 45000,
   "category": "1-taomlar",
   "iikoGroup": "2-таом",
-  "photo": "images/9648bba830924332.jpg",
+  "photo": "images/656ecaba9c86455f83b624976cdde0ef.jpg",
   "desc": "Mangalda pishirilgan sershira lula kabob — go'sht ixlosmandlari uchun klassik tanlov.",
   "popular": false,
   "new": false,
@@ -3349,7 +3352,8 @@
   "popular": false,
   "new": false,
   "available": false,
-  "manual": false
+  "manual": false,
+  "skip": true
  },
  {
   "id": "346c9e60-d441-49f1-8b44-30e2ddc9cf0d",
@@ -3672,7 +3676,8 @@
   "popular": false,
   "new": false,
   "available": false,
-  "manual": false
+  "manual": false,
+  "skip": true
  },
  {
   "id": "5dc504c3-3d2f-4e9f-bb26-1c671330d006",
@@ -4059,7 +4064,7 @@
   "price": 12000,
   "category": "Salat",
   "iikoGroup": "Салёоный салатлар",
-  "photo": "images/c38702335fff07c9.jpg",
+  "photo": "images/93ef610c6fca4d83aa99f8d983caeae3.jpg",
   "desc": "Xushbo'y va qarsildoq — go'sht taomlariga ajoyib hamroh.",
   "popular": false,
   "new": false,
@@ -4076,11 +4081,11 @@
   "price": 10000,
   "category": "Salat",
   "iikoGroup": "Салёоный салатлар",
-  "photo": null,
+  "photo": "images/c80b9bbad6f3471b8f777e0fc0a22fd0.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
+  "available": true,
   "manual": false
  },
  {
@@ -4218,7 +4223,8 @@
   "popular": false,
   "new": false,
   "available": false,
-  "manual": false
+  "manual": false,
+  "skip": true
  },
  {
   "id": "2314352c-276a-4f2a-a557-71ff1f8a1010",
@@ -6055,7 +6061,8 @@
   "popular": false,
   "new": false,
   "available": false,
-  "manual": false
+  "manual": false,
+  "skip": true
  },
  {
   "id": "02c84132-8b1f-4dbf-8e91-5941143772f5",
@@ -6071,7 +6078,7 @@
   "desc": null,
   "popular": false,
   "new": false,
-  "available": true,
+  "available": false,
   "manual": true,
   "categoryManual": true
  },
@@ -6222,7 +6229,7 @@
   "price": 30000,
   "category": "Бариста",
   "iikoGroup": "Табий шарбат",
-  "photo": "images/fb14f138d3a55785.jpg",
+  "photo": "images/ac4c9385d66040dc8ce43d1d5a1ef001.jpg",
   "desc": null,
   "popular": false,
   "new": false,
@@ -6296,7 +6303,8 @@
   "popular": false,
   "new": false,
   "available": false,
-  "manual": false
+  "manual": false,
+  "skip": true
  },
  {
   "id": "2fded5d6-2b4a-40af-a388-4ea586f8d527",
@@ -6313,7 +6321,8 @@
   "popular": false,
   "new": false,
   "available": false,
-  "manual": false
+  "manual": false,
+  "skip": true
  },
  {
   "id": "de1499c6-adc0-4409-a4ed-effbb7b1e7e2",
@@ -7392,7 +7401,8 @@
   "popular": false,
   "new": false,
   "available": false,
-  "manual": false
+  "manual": false,
+  "skip": true
  },
  {
   "id": "4266dffa-c2e2-47d9-b0f0-6bfcf457219e",
@@ -8035,11 +8045,11 @@
   "price": 29000,
   "category": "Бариста",
   "iikoGroup": "Бариста дисерт",
-  "photo": null,
+  "photo": "images/17885305f30542dca1aa30fd7070baa1.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
+  "available": true,
   "manual": false
  },
  {
