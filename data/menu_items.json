@@ -15,7 +15,9 @@
   "new": false,
   "available": true,
   "manual": false,
-  "nameManual": true
+  "nameManual": true,
+  "dRu": "Насыщенный вкус жареного мяса — просто, но никогда не надоедает.",
+  "dEn": "Rich flavour of pan-fried meat — simple, but never gets old."
  },
  {
   "id": "ac3f4bb0-f04d-4475-a4cc-34b1f6415a67",
@@ -84,7 +86,9 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "dRu": "Рыба на решётке — хрустящая снаружи, сочная и нежная внутри.",
+  "dEn": "Grilled over the fire — crisp outside, juicy and tender inside."
  },
  {
   "id": "451a1cf9-197b-4bbc-ae81-cec5711fd125",
@@ -635,7 +639,9 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": true
+  "manual": true,
+  "dRu": "Средний объём — удобный выбор на любой случай.",
+  "dEn": "Medium size — a handy choice for any occasion."
  },
  {
   "id": "708b7c9a-52d9-411b-99ae-dd684497f7d4",
@@ -669,7 +675,9 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "dRu": "Средний объём — удобный выбор на любой случай.",
+  "dEn": "Medium size — a handy choice for any occasion."
  },
  {
   "id": "3e163337-d323-4690-8ae3-fb2f74387cbf",
@@ -1148,7 +1156,9 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "dRu": "Лёгкий барак с зеленью — особенно вкусен горячим.",
+  "dEn": "Light dumplings filled with fresh herbs — best served hot."
  },
  {
   "id": "33bfe71b-7099-4efd-9a98-ff6445787f12",
@@ -1165,7 +1175,9 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "dRu": "Мягкий барак с картофельной начинкой — простой вкус, от которого не устаёшь.",
+  "dEn": "Soft dumplings with potato filling — simple comfort you never tire of."
  },
  {
   "id": "c916abe9-d077-4d3b-b08c-ae6ed358bf82",
@@ -1269,7 +1281,9 @@
   "new": false,
   "available": true,
   "manual": false,
-  "pos": 10
+  "pos": 10,
+  "dRu": "Круглый хлеб традиционной выпечки — вкуснее всего горячим.",
+  "dEn": "Round bread baked the traditional way — at its best straight from the oven."
  },
  {
   "id": "f5ab227b-3472-449a-9eb2-420b4ebc676b",
@@ -1340,7 +1354,9 @@
   "new": false,
   "available": true,
   "manual": false,
-  "pos": 9
+  "pos": 9,
+  "dRu": "Круглый хлеб традиционной выпечки — вкуснее всего горячим.",
+  "dEn": "Round bread baked the traditional way — at its best straight from the oven."
  },
  {
   "id": "8df4b704-15d8-4376-85ad-1b8515cfb609",
@@ -1562,7 +1578,9 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "dRu": "Лёгкая сладость ананаса и прохладный вкус — особенно хорош в жаркий день.",
+  "dEn": "Light sweetness of pineapple and a cool finish — perfect on a hot day."
  },
  {
   "id": "0df8475e-d610-42db-a409-32574c06f3ad",
@@ -1835,7 +1853,9 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "dRu": "Прохладный и приятный — вкусное дополнение к вашему столу.",
+  "dEn": "Cool and refreshing — a tasty addition to your table."
  },
  {
   "id": "ff9a677f-9a9d-4339-b721-01df6fd34a28",
@@ -2111,7 +2131,9 @@
   "new": false,
   "available": true,
   "manual": false,
-  "categoryManual": true
+  "categoryManual": true,
+  "dRu": "Насыщенный вкус жареного лагмана — сытно и вкусно, для хорошего аппетита.",
+  "dEn": "Rich stir-fried lagman — hearty and satisfying for a strong appetite."
  },
  {
   "id": "9954d2fe-7ef8-48fa-89cc-296070790262",
@@ -2196,7 +2218,9 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "dRu": "Натуральная сладость тыквы внутри — мягкий и вкусный барак.",
+  "dEn": "Natural sweetness of pumpkin inside — soft, flavourful dumplings."
  },
  {
   "id": "94159193-6c57-4f9a-9609-4b7fad30581e",
@@ -2230,7 +2254,9 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "dRu": "Хрустящая корочка, мягкая начинка — отличный выбор для любителей барака.",
+  "dEn": "Crisp shell, soft filling — a treat for dumpling lovers."
  },
  {
   "id": "e8534fd5-cae0-4e55-94c6-d0b485ec4c68",
@@ -2316,7 +2342,9 @@
   "new": false,
   "available": true,
   "manual": false,
-  "categoryManual": true
+  "categoryManual": true,
+  "dRu": "Горячий чай — хороший спутник любой беседы.",
+  "dEn": "Hot tea — the right companion for a long conversation."
  },
  {
   "id": "ef8581a6-63e7-4529-a1d9-8c49389e1b7f",
@@ -2386,7 +2414,9 @@
   "new": false,
   "available": true,
   "manual": false,
-  "categoryManual": true
+  "categoryManual": true,
+  "dRu": "Тропическая сладость манго в нежности чизкейка — одного кусочка будет мало.",
+  "dEn": "Tropical mango in a silky cheesecake — one slice is never enough."
  },
  {
   "id": "11e5586b-f155-47b3-b8f2-87a378df7024",
@@ -2544,7 +2574,9 @@
   "new": false,
   "available": true,
   "manual": false,
-  "categoryManual": true
+  "categoryManual": true,
+  "dRu": "Чизкейк с насыщенным фисташковым вкусом — настоящее удовольствие для сладкоежек.",
+  "dEn": "Cheesecake rich with pistachio — a real treat for dessert lovers."
  },
  {
   "id": "963008e6-e211-4bbe-9889-ab9cfc6f0800",
@@ -2766,7 +2798,9 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "dRu": "С натуральной сладостью тыквы — новый опыт для любителей мантов.",
+  "dEn": "With the natural sweetness of pumpkin — a new take on manti."
  },
  {
   "id": "235db084-b928-470d-93eb-060d817d8b20",
@@ -2834,7 +2868,9 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": true
+  "manual": true,
+  "dRu": "Средний объём — удобный выбор на любой случай.",
+  "dEn": "Medium size — a handy choice for any occasion."
  },
  {
   "id": "36a1721f-dd4d-4583-87dc-5923bf42f487",
@@ -3038,7 +3074,9 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "dRu": "Фирменное куриное блюдо Olimp Garden — сочное и вкусное.",
+  "dEn": "Olimp Garden's signature chicken — juicy and full of flavour."
  },
  {
   "id": "bf3d4882-7c38-4aff-8356-274eac2ea0cc",
@@ -3055,7 +3093,9 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "dRu": "Холодная и сладкая дыня — лучшее завершение жаркого дня.",
+  "dEn": "Chilled sweet melon — the best end to a hot day."
  },
  {
   "id": "147c7937-725d-4a66-889d-ccc74b89f4b0",
@@ -3261,7 +3301,9 @@
   "new": false,
   "available": true,
   "manual": false,
-  "categoryManual": true
+  "categoryManual": true,
+  "dRu": "Сочный люля-кебаб с мангала — классика для любителей мяса.",
+  "dEn": "Juicy lula kebab from the grill — a classic for meat lovers."
  },
  {
   "id": "ec322629-2805-4fe7-8e96-1cc9b5b79abd",
@@ -3518,7 +3560,9 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "dRu": "Особое предложение Olimp Garden — для особых дней и дорогих гостей.",
+  "dEn": "Olimp Garden's special offer — made for special days and honoured guests."
  },
  {
   "id": "6f7f6b87-7a00-4ac6-8124-a50485843db2",
@@ -4081,7 +4125,9 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "dRu": "Ароматные и хрустящие — прекрасное дополнение к мясным блюдам.",
+  "dEn": "Fragrant and crunchy — a perfect partner for meat dishes."
  },
  {
   "id": "07e809dd-b323-4114-bd29-8ca49b9243e7",
@@ -4149,7 +4195,9 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "dRu": "Насыщенный вкус баклажана в классическом исполнении — просто и незабываемо.",
+  "dEn": "Rich eggplant flavour done the classic way — simple and memorable."
  },
  {
   "id": "0eb4c0bd-45cc-41de-ad66-26d4fd0531bf",
@@ -4218,7 +4266,9 @@
   "new": false,
   "available": true,
   "manual": false,
-  "categoryManual": true
+  "categoryManual": true,
+  "dRu": "Хрустящий и горячий — вкусное дополнение к любому блюду.",
+  "dEn": "Crisp and hot — a tasty side for any dish."
  },
  {
   "id": "e8cfedbc-752c-472a-940c-ce1ed485baf8",
@@ -4270,7 +4320,9 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "dRu": "С натуральной сладостью тыквы — подаётся горячей, прямо из тандыра.",
+  "dEn": "Filled with sweet pumpkin — served hot, straight from the tandoor."
  },
  {
   "id": "cdd277d7-023d-4c18-bf94-a312d739c118",
@@ -4287,7 +4339,9 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "dRu": "Салат «Гулшан» — изящный и яркий, украшение любого стола.",
+  "dEn": "Gulshan salad — as elegant and colourful as its name suggests."
  },
  {
   "id": "3a0c4df7-832c-43ad-a442-c3aefc01fe03",
@@ -4338,7 +4392,9 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "dRu": "Приготовлен с насыщенным грибным вкусом — кто попробовал, заказывает снова.",
+  "dEn": "Rich with mushrooms — those who try it order it again."
  },
  {
   "id": "3488cd90-2148-4784-a16a-91fe376eaa1c",
@@ -4493,7 +4549,9 @@
   "new": false,
   "available": true,
   "manual": false,
-  "categoryManual": true
+  "categoryManual": true,
+  "dRu": "Насыщенный вкус мяса, приготовленного особым способом — для настоящих мясоедов.",
+  "dEn": "Deep meat flavour from a special preparation — for true meat lovers."
  },
  {
   "id": "de3fff07-f310-4b6e-99ac-d664d21fe439",
@@ -4731,7 +4789,9 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "dRu": "Разные виды мяса с мангала — подаётся горячим, с дымком.",
+  "dEn": "An assortment of grilled meats — served hot, straight off the coals."
  },
  {
   "id": "dbfb305d-a4a8-4ee5-aa50-6beb066a6221",
@@ -4833,7 +4893,9 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "dRu": "Особое ассорти из лучших блюд шефа — лучшее предложение Garden.",
+  "dEn": "A special platter of the chef's finest — Garden's very best."
  },
  {
   "id": "f5098cb0-b94d-4fdc-aeec-e5fec7e21e50",
@@ -5004,7 +5066,9 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "dRu": "Классическая самса из тандыра — вкуснее всего горячей.",
+  "dEn": "Classic tandoor somsa — at its best while still hot."
  },
  {
   "id": "6624fa5f-2c42-497e-9f2b-59c712ee8d26",
@@ -5038,7 +5102,9 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "dRu": "Знаменитое национальное блюдо из мяса и теста — просто, сытно и вкусно.",
+  "dEn": "A famous national dish of meat and noodles — simple, filling and tasty."
  },
  {
   "id": "1dda0350-539b-48d1-8dbb-92e731a40ba2",
@@ -5090,7 +5156,9 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "dRu": "Фирменный салат Olimp Garden — только у нас, только с этим вкусом.",
+  "dEn": "Olimp Garden's signature salad — only here, only this taste."
  },
  {
   "id": "bb4f95e1-e120-4f92-83c1-176247ded2e6",
@@ -5124,7 +5192,9 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "dRu": "Слой за слоем, радующая глаз классика — в каждом слое новый вкус.",
+  "dEn": "Layer upon layer of a beloved classic — a new taste in every one."
  },
  {
   "id": "8c36e49b-4469-4f51-b435-821250ca90dc",
@@ -5294,7 +5364,9 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "dRu": "Классическая самса с ароматом тандыра — всегда горячая и вкусная.",
+  "dEn": "Classic somsa with the scent of the tandoor — always hot, always good."
  },
  {
   "id": "25e0230d-958c-4ae4-b74f-c7e7a02e9ba3",
@@ -5362,7 +5434,9 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "dRu": "Всемирно известный «Цезарь» — приготовленный в фирменном стиле Garden.",
+  "dEn": "The world-famous Caesar — made the Garden way."
  },
  {
   "id": "80cbc7e8-71cf-41e5-8804-69c8b8fc6468",
@@ -5396,7 +5470,9 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "dRu": "Приготовлен с восточным вкусом — насыщенно и сытно.",
+  "dEn": "Made with an Eastern touch — rich and satisfying."
  },
  {
   "id": "607f8550-c1c0-4e2d-9bbf-2fea9ed36881",
@@ -5570,7 +5646,9 @@
   "new": false,
   "available": true,
   "manual": false,
-  "categoryManual": true
+  "categoryManual": true,
+  "dRu": "Приготовлено по национальному рецепту — насыщенно и сытно, запоминается надолго.",
+  "dEn": "Made to a traditional recipe — rich, filling and hard to forget."
  },
  {
   "id": "d071b4a0-8324-45c2-b956-4fa27d38cdbf",
@@ -6024,7 +6102,9 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "dRu": "Классический шашлык с ароматом мангала — любимец мясоедов.",
+  "dEn": "Classic shashlik with the aroma of the grill — a meat lover's favourite."
  },
  {
   "id": "f948f4ea-d4cf-404d-9925-e2f13642df77",
@@ -6058,7 +6138,9 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "dRu": "Традиционный барак с яичной начинкой — простой и сытный выбор на завтрак или обед.",
+  "dEn": "Traditional dumplings with egg filling — a simple, filling choice for breakfast or lunch."
  },
  {
   "id": "fbf0e540-2bef-4441-883e-35b42115c329",
@@ -6372,7 +6454,9 @@
   "popular": true,
   "new": true,
   "available": true,
-  "manual": false
+  "manual": false,
+  "dRu": "Специально подобрано для дружеской компании — щедро и вкусно, голодным никто не останется.",
+  "dEn": "Put together for a table of friends — generous and tasty, nobody leaves hungry."
  },
  {
   "id": "760fabc5-7c6c-4614-aa5d-d3555bf4f9c3",
@@ -7280,7 +7364,9 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "dRu": "Лёгкий и необычный — стоит попробовать тем, кто ищет новый вкус.",
+  "dEn": "Light and unusual — worth a try if you are after something new."
  },
  {
   "id": "500a0cf2-975e-49ea-a97e-48491a671dfe",
@@ -7486,7 +7572,9 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "dRu": "С фисташковым вкусом — изысканный и незабываемый десерт.",
+  "dEn": "With pistachio — a refined dessert you will remember."
  },
  {
   "id": "37ee4c0c-e892-4843-a4c2-8ad4c271bf15",
@@ -7588,7 +7676,9 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "dRu": "Хрустящая снаружи, нежная внутри — классика для любителей рыбы.",
+  "dEn": "Crisp outside, tender inside — a classic for fish lovers."
  },
  {
   "id": "787ec934-36b5-46ff-be71-3b28b6d6d111",
@@ -7605,7 +7695,9 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "dRu": "Фирменный бургер Olimp Garden — сочный и сытный, попробуете раз — вернётесь снова.",
+  "dEn": "Olimp Garden's own burger — juicy and filling; one bite and you will be back."
  },
  {
   "id": "8ce82c40-f707-4936-9d9e-04caed678d89",
