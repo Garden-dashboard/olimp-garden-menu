@@ -8229,5 +8229,22 @@
   "new": false,
   "available": false,
   "manual": false
+ },
+ {
+  "id": "19af4b87-a66f-42ed-b1fd-929e2fc29cd5",
+  "num": "24301",
+  "name": "Nomi ?",
+  "nUz": "Nomi ?",
+  "nRu": "Nomi ?",
+  "nEn": "Nomi ?",
+  "price": 174000,
+  "category": "Сетлар",
+  "iikoGroup": "Гарден Сет",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
  }
 ]
