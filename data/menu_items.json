@@ -7121,11 +7121,11 @@
   "price": 55000,
   "category": "Salat",
   "iikoGroup": "Сояли салатлар",
-  "photo": null,
+  "photo": "images/a47a513c67574f2b8ab167d444d1b790.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
+  "available": true,
   "manual": false
  },
  {
