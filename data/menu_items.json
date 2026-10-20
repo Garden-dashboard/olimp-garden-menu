@@ -8261,7 +8261,7 @@
   "desc": null,
   "popular": false,
   "new": false,
-  "available": true,
+  "available": false,
   "manual": false,
   "nameManual": false,
   "categoryManual": true
@@ -8280,7 +8280,7 @@
   "desc": null,
   "popular": false,
   "new": false,
-  "available": true,
+  "available": false,
   "manual": false,
   "nameManual": false,
   "categoryManual": true
