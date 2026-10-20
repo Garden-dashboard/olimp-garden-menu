@@ -8246,5 +8246,43 @@
   "new": false,
   "available": false,
   "manual": false
+ },
+ {
+  "id": "2c6eab39-c109-4a00-b4df-bc7f0a34a019",
+  "num": "24303",
+  "name": "Запичоний курица 1 порц",
+  "nUz": "Запичоний курица 1 порц",
+  "nRu": "Запичоний курица 1 порц",
+  "nEn": "Запичоний курица 1 порц",
+  "price": 65000,
+  "category": "Sushi",
+  "iikoGroup": "Суши",
+  "photo": "images/e8dd2f3af14448c3ab769e668544c8e1.jpg",
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": true,
+  "manual": false,
+  "nameManual": false,
+  "categoryManual": true
+ },
+ {
+  "id": "19d86ade-f986-4782-9fe0-14aaac9aee60",
+  "num": "24305",
+  "name": "Филадельфия с угрем 1 порц",
+  "nUz": "Филадельфия с угрем 1 порц",
+  "nRu": "Филадельфия с угрем 1 порц",
+  "nEn": "Филадельфия с угрем 1 порц",
+  "price": 95000,
+  "category": "Sushi",
+  "iikoGroup": "Суши",
+  "photo": "images/5e948be37c3a4068a062e7fcac1f78cc.jpg",
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": true,
+  "manual": false,
+  "nameManual": false,
+  "categoryManual": true
  }
 ]
