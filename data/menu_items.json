@@ -5729,12 +5729,13 @@
   "price": 230000,
   "category": "Mevalar",
   "iikoGroup": "Фрукты",
-  "photo": "images/e5777543b2abef98.jpg",
+  "photo": "images/fcffcc3e2c34449fa9c750075a2512fb.jpg",
   "desc": null,
   "popular": false,
   "new": false,
   "available": true,
-  "manual": true
+  "manual": true,
+  "nameManual": true
  },
  {
   "id": "b3c8856e-7dee-4c37-93d4-74aa69e356a7",
@@ -7654,12 +7655,13 @@
   "price": 150000,
   "category": "Mevalar",
   "iikoGroup": "Фрукты",
-  "photo": "images/023fa6c36f7c4a72bb6ed68f24294ae1.jpg",
+  "photo": "images/757add3721074dd291b96960e21c4885.jpg",
   "desc": null,
   "popular": false,
   "new": false,
   "available": true,
-  "manual": true
+  "manual": true,
+  "nameManual": true
  },
  {
   "id": "070dca3e-56ba-4e1e-9b1c-0fbb0a67f710",
