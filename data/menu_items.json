@@ -4370,12 +4370,13 @@
   "price": 55000,
   "category": "Salat",
   "iikoGroup": "Сояли салатлар",
-  "photo": "images/857c9ccfd2a900f0.jpg",
+  "photo": "images/bd306e95d62e4ca58575b2047cabaa11.jpg",
   "desc": null,
   "popular": false,
   "new": true,
   "available": true,
-  "manual": false
+  "manual": false,
+  "nameManual": true
  },
  {
   "id": "05d96fd4-1004-455b-9429-fec52758b468",
@@ -5151,14 +5152,15 @@
   "price": 63000,
   "category": "Salat",
   "iikoGroup": "Маянез салатлар",
-  "photo": "images/d246a2ad4aab2124.jpg",
+  "photo": "images/d16d143f127b425a88c08452a877b6e3.jpg",
   "desc": "Olimp Gardenning o'ziga xos imzoli salati — faqat bizda, faqat shu ta'mda.",
   "popular": false,
   "new": false,
   "available": true,
   "manual": false,
   "dRu": "Фирменный салат Olimp Garden — только у нас, только с этим вкусом.",
-  "dEn": "Olimp Garden's signature salad — only here, only this taste."
+  "dEn": "Olimp Garden's signature salad — only here, only this taste.",
+  "nameManual": true
  },
  {
   "id": "bb4f95e1-e120-4f92-83c1-176247ded2e6",
@@ -7122,12 +7124,13 @@
   "price": 55000,
   "category": "Salat",
   "iikoGroup": "Сояли салатлар",
-  "photo": "images/a47a513c67574f2b8ab167d444d1b790.jpg",
+  "photo": "images/892dd9f870ce4f7b89b31a668d7667bd.jpg",
   "desc": null,
   "popular": false,
   "new": false,
   "available": true,
-  "manual": false
+  "manual": false,
+  "nameManual": false
  },
  {
   "id": "78148465-252f-4246-ba9c-1a281b06ee87",
