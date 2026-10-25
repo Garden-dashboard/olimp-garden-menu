@@ -8306,5 +8306,22 @@
   "new": false,
   "available": false,
   "manual": false
+ },
+ {
+  "id": "15eced1b-96c7-4029-9589-98336510c22d",
+  "num": "24326",
+  "name": "Баликни Ковуриб бериш 1кг",
+  "nUz": "Баликни Ковуриб бериш 1кг",
+  "nRu": "Баликни Ковуриб бериш 1кг",
+  "nEn": "Баликни Ковуриб бериш 1кг",
+  "price": 15000,
+  "category": "Балик таомлар",
+  "iikoGroup": "Баликлар",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
  }
 ]
