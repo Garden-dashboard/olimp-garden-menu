@@ -8357,5 +8357,22 @@
   "new": false,
   "available": false,
   "manual": false
+ },
+ {
+  "id": "d488b6bf-851d-487d-ac17-100735b27410",
+  "num": "24329",
+  "name": "Сетка кебеб",
+  "nUz": "Сетка кебеб",
+  "nRu": "Сетка кебеб",
+  "nEn": "Сетка кебеб",
+  "price": 129000,
+  "category": "2-taomlar",
+  "iikoGroup": "Стейк",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
  }
 ]
