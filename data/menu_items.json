@@ -1953,12 +1953,13 @@
   "price": 45000,
   "category": "Salat",
   "iikoGroup": "Маянез салатлар",
-  "photo": "images/20b5eeb41a265d53.jpg",
+  "photo": "images/92d2841e01484e1a974eae1ac025ce7f.jpg",
   "desc": null,
   "popular": false,
   "new": false,
   "available": true,
-  "manual": true
+  "manual": true,
+  "nameManual": true
  },
  {
   "id": "66870e27-c895-4546-940d-8c3c9ffa3b8b",
@@ -2533,13 +2534,14 @@
   "price": 75000,
   "category": "Shirinliklar",
   "iikoGroup": "Бариста дисерт",
-  "photo": "images/04caedf82a51e550.jpg",
+  "photo": "images/246056460b67463aa3e4734aca04585c.jpg",
   "desc": null,
   "popular": false,
   "new": false,
   "available": true,
   "manual": true,
-  "categoryManual": true
+  "categoryManual": true,
+  "nameManual": true
  },
  {
   "id": "c16c4031-ac71-456c-96df-4666d27b364d",
@@ -4354,12 +4356,13 @@
   "price": 48000,
   "category": "Salat",
   "iikoGroup": "Сояли салатлар",
-  "photo": "images/24aa84fab3b13370.jpg",
+  "photo": "images/58dfb546a4a74ed2bab87cf25ea6aca9.jpg",
   "desc": null,
   "popular": false,
   "new": false,
   "available": true,
-  "manual": true
+  "manual": true,
+  "nameManual": true
  },
  {
   "id": "3f04c6c6-82d9-4c70-89f8-502d7a21330c",
