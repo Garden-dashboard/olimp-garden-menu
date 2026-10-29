@@ -8379,5 +8379,22 @@
   "new": false,
   "available": false,
   "manual": false
+ },
+ {
+  "id": "3f7be3d4-8dc1-4f9a-812b-f10ef0af334e",
+  "num": "24340",
+  "name": "Микс сок (Ананас Апелсин) 1 графин",
+  "nUz": "Микс сок (Ананас Апелсин) 1 графин",
+  "nRu": "Микс сок (Ананас Апелсин) 1 графин",
+  "nEn": "Микс сок (Ананас Апелсин) 1 графин",
+  "price": 200000,
+  "category": "Assorti taomlar",
+  "iikoGroup": "Табиий шарбат",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
  }
 ]
