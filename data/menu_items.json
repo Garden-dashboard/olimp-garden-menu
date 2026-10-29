@@ -8396,5 +8396,39 @@
   "new": false,
   "available": false,
   "manual": false
+ },
+ {
+  "id": "ae3738f0-a15b-41ac-ab74-7d5f4c9f5b77",
+  "num": "24342",
+  "name": "Чипс 50 гр",
+  "nUz": "Чипс 50 гр",
+  "nRu": "Чипс 50 гр",
+  "nEn": "Чипс 50 гр",
+  "price": 20000,
+  "category": "Salat",
+  "iikoGroup": "Дисерт салат",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
+ },
+ {
+  "id": "42caec9d-be92-475d-9e7a-72bbc0b9b899",
+  "num": "24343",
+  "name": "Курт 50 гр",
+  "nUz": "Курт 50 гр",
+  "nRu": "Курт 50 гр",
+  "nEn": "Курт 50 гр",
+  "price": 5000,
+  "category": "Salat",
+  "iikoGroup": "Дисерт салат",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
  }
 ]
