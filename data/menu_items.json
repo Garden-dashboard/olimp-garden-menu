@@ -15,9 +15,9 @@
   "new": false,
   "available": true,
   "manual": false,
-  "nameManual": true,
   "dRu": "Насыщенный вкус жареного мяса — просто, но никогда не надоедает.",
-  "dEn": "Rich flavour of pan-fried meat — simple, but never gets old."
+  "dEn": "Rich flavour of pan-fried meat — simple, but never gets old.",
+  "nameManual": true
  },
  {
   "id": "ac3f4bb0-f04d-4475-a4cc-34b1f6415a67",
