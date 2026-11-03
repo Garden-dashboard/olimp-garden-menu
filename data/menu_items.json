@@ -8430,5 +8430,22 @@
   "new": false,
   "available": false,
   "manual": false
+ },
+ {
+  "id": "16ef6e61-2201-4423-a1e9-4a2699b5dd1c",
+  "num": "24354",
+  "name": "Табий шарбат ассорти 3x",
+  "nUz": "Табий шарбат ассорти 3x",
+  "nRu": "Табий шарбат ассорти 3x",
+  "nEn": "Табий шарбат ассорти 3x",
+  "price": 130000,
+  "category": "Assorti taomlar",
+  "iikoGroup": "Табиий шарбат",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
  }
 ]
