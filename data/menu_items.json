@@ -8447,5 +8447,22 @@
   "new": false,
   "available": false,
   "manual": false
+ },
+ {
+  "id": "ff68f0b6-3669-4ba5-a08d-ad87a8cc7002",
+  "num": "24366",
+  "name": "Мини микс ассорти",
+  "nUz": "Мини микс ассорти",
+  "nRu": "Мини микс ассорти",
+  "nEn": "Мини микс ассорти",
+  "price": 297000,
+  "category": "Assorti taomlar",
+  "iikoGroup": "Ассорти на мангале",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
  }
 ]
