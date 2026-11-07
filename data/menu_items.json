@@ -8464,5 +8464,22 @@
   "new": false,
   "available": false,
   "manual": false
+ },
+ {
+  "id": "e35636d8-72f0-440f-949d-c57cd14ae8ca",
+  "num": "24383",
+  "name": "Грибной крем суп 1 порц",
+  "nUz": "Грибной крем суп 1 порц",
+  "nRu": "Грибной крем суп 1 порц",
+  "nEn": "Грибной крем суп 1 порц",
+  "price": 65000,
+  "category": "1-taomlar",
+  "iikoGroup": "1-таом",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
  }
 ]
