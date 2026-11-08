@@ -4777,7 +4777,8 @@
   "popular": false,
   "new": false,
   "available": true,
-  "manual": true
+  "manual": true,
+  "hiddenNoIiko": true
  },
  {
   "id": "df07ca2d-c04e-4395-af31-f4ff61336c84",
@@ -8475,6 +8476,23 @@
   "price": 65000,
   "category": "1-taomlar",
   "iikoGroup": "1-таом",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
+ },
+ {
+  "id": "7ffe59aa-9bee-4e7c-8ffb-b5a4cc766960",
+  "num": "24387",
+  "name": "0,5 Шашлик ассорти",
+  "nUz": "0,5 Шашлик ассорти",
+  "nRu": "0,5 Шашлик ассорти",
+  "nEn": "0,5 Шашлик ассорти",
+  "price": 260000,
+  "category": "Assorti taomlar",
+  "iikoGroup": "Ассорти на мангале",
   "photo": null,
   "desc": null,
   "popular": false,
