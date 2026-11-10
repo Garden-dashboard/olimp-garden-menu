@@ -8082,9 +8082,10 @@
   "photo": "images/7fdf1bda669548d8991498ae9619abbd.jpg",
   "desc": null,
   "popular": false,
-  "new": false,
+  "new": true,
   "available": true,
-  "manual": false
+  "manual": false,
+  "nameManual": true
  },
  {
   "id": "9211952e-9802-4a3b-99b5-d8790a80268d",
@@ -8251,12 +8252,13 @@
   "price": 174000,
   "category": "Сетлар",
   "iikoGroup": "Гарден Сет",
-  "photo": null,
+  "photo": "images/1df7fd118b86452c86949ba7b54866a8.jpg",
   "desc": null,
   "popular": false,
-  "new": false,
-  "available": false,
-  "manual": false
+  "new": true,
+  "available": true,
+  "manual": false,
+  "nameManual": false
  },
  {
   "id": "2c6eab39-c109-4a00-b4df-bc7f0a34a019",
