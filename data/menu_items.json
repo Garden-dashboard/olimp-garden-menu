@@ -8501,5 +8501,22 @@
   "new": false,
   "available": false,
   "manual": false
+ },
+ {
+  "id": "38652d71-71af-4973-8211-782dd2b7d6af",
+  "num": "24403",
+  "name": "Кийик ути чай",
+  "nUz": "Кийик ути чай",
+  "nRu": "Кийик ути чай",
+  "nEn": "Кийик ути чай",
+  "price": 7000,
+  "category": "Ichimlik",
+  "iikoGroup": "Фруктовый чай",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
  }
 ]
