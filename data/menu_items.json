@@ -8518,5 +8518,22 @@
   "new": false,
   "available": false,
   "manual": false
+ },
+ {
+  "id": "c136ff6a-3b20-456b-b9aa-5cc63cb6b3ff",
+  "num": "23673",
+  "name": "Жуйан курдик",
+  "nUz": "Жуйан курдик",
+  "nRu": "Жуйан курдик",
+  "nEn": "Жуйан курдик",
+  "price": 497000,
+  "category": "Assorti taomlar",
+  "iikoGroup": "Ассорти блюда",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
  }
 ]
