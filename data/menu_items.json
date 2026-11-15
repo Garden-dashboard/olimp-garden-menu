@@ -2198,12 +2198,13 @@
   "price": 220000,
   "category": "2-taomlar",
   "iikoGroup": "2-таом",
-  "photo": "images/bccebc734777406d.jpg",
+  "photo": "images/c0d77c98fbdb4ec0bd7615c28117b131.jpg",
   "desc": null,
   "popular": false,
   "new": false,
   "available": true,
-  "manual": true
+  "manual": true,
+  "nameManual": true
  },
  {
   "id": "1b0bd001-f58d-46e1-81a1-22bfdce82a5a",
@@ -8478,12 +8479,13 @@
   "price": 65000,
   "category": "1-taomlar",
   "iikoGroup": "1-таом",
-  "photo": null,
+  "photo": "images/c51f5bf582cf4be0a8c034df748d1178.jpg",
   "desc": null,
   "popular": false,
   "new": false,
-  "available": false,
-  "manual": false
+  "available": true,
+  "manual": false,
+  "nameManual": false
  },
  {
   "id": "7ffe59aa-9bee-4e7c-8ffb-b5a4cc766960",
