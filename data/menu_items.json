@@ -8537,5 +8537,22 @@
   "new": false,
   "available": false,
   "manual": false
+ },
+ {
+  "id": "c13bd4b4-1ee1-4653-a572-06fd6ad0db3e",
+  "num": "24428",
+  "name": "Жасмин чай",
+  "nUz": "Жасмин чай",
+  "nRu": "Жасмин чай",
+  "nEn": "Жасмин чай",
+  "price": 5000,
+  "category": "Ichimlik",
+  "iikoGroup": "Фруктовый чай",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
  }
 ]
