@@ -8554,5 +8554,22 @@
   "new": false,
   "available": false,
   "manual": false
+ },
+ {
+  "id": "6093be32-4d77-460c-a7d8-ae361215e480",
+  "num": "24429",
+  "name": "Кухиный крилишка (250 гр)",
+  "nUz": "Кухиный крилишка (250 гр)",
+  "nRu": "Кухиный крилишка (250 гр)",
+  "nEn": "Кухиный крилишка (250 гр)",
+  "price": 52000,
+  "category": "2-taomlar",
+  "iikoGroup": "2-таом",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
  }
 ]
