@@ -8588,5 +8588,22 @@
   "new": false,
   "available": false,
   "manual": false
+ },
+ {
+  "id": "9c366f9f-2c23-410f-ada9-a495c5700633",
+  "num": "24444",
+  "name": "Питцца Маргарита",
+  "nUz": "Питцца Маргарита",
+  "nRu": "Питцца Маргарита",
+  "nEn": "Питцца Маргарита",
+  "price": 40000,
+  "category": "Assorti taomlar",
+  "iikoGroup": "Питца",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
  }
 ]
