@@ -8571,5 +8571,22 @@
   "new": false,
   "available": false,
   "manual": false
+ },
+ {
+  "id": "6f468137-ec99-4633-bb4a-ea096310c4ad",
+  "num": "24435",
+  "name": "Вафли 1 порц",
+  "nUz": "Вафли 1 порц",
+  "nRu": "Вафли 1 порц",
+  "nEn": "Вафли 1 порц",
+  "price": 20000,
+  "category": "Бариста",
+  "iikoGroup": "Бариста дисерт",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
  }
 ]
