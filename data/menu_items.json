@@ -8639,5 +8639,22 @@
   "new": false,
   "available": false,
   "manual": false
+ },
+ {
+  "id": "8faa21fd-e30f-4dd2-abf3-52cbb38f86e2",
+  "num": "24454",
+  "name": "Тошкент сув баночный 1шт",
+  "nUz": "Тошкент сув баночный 1шт",
+  "nRu": "Тошкент сув баночный 1шт",
+  "nEn": "Тошкент сув баночный 1шт",
+  "price": 10000,
+  "category": "Ichimlik",
+  "iikoGroup": "Напитка",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
  }
 ]
