@@ -8599,12 +8599,13 @@
   "price": 45000,
   "category": "Assorti taomlar",
   "iikoGroup": "Питца",
-  "photo": null,
+  "photo": "images/5520f25730814a6d88e3cf0b0a4f7343.jpg",
   "desc": null,
   "popular": false,
-  "new": false,
-  "available": false,
-  "manual": false
+  "new": true,
+  "available": true,
+  "manual": false,
+  "nameManual": false
  },
  {
   "id": "4b3992c1-e657-49fd-bfc8-019c5f2e768a",
@@ -8616,12 +8617,13 @@
   "price": 65000,
   "category": "Assorti taomlar",
   "iikoGroup": "Питца",
-  "photo": null,
+  "photo": "images/cb715fa7042c48eab9acaebf47da45f6.jpg",
   "desc": null,
   "popular": false,
-  "new": false,
-  "available": false,
-  "manual": false
+  "new": true,
+  "available": true,
+  "manual": false,
+  "nameManual": false
  },
  {
   "id": "f6753c04-66e3-4996-8caf-3905ffebbcb0",
@@ -8684,11 +8686,12 @@
   "price": 60000,
   "category": "Assorti taomlar",
   "iikoGroup": "Питца",
-  "photo": null,
+  "photo": "images/60de2b2a55d0432a9fb468c024647bd2.jpg",
   "desc": null,
   "popular": false,
-  "new": false,
-  "available": false,
-  "manual": false
+  "new": true,
+  "available": true,
+  "manual": false,
+  "nameManual": false
  }
 ]
