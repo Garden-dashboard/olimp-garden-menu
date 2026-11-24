@@ -6,7 +6,7 @@
 // to'g'ri javoblari saqlanadi, xotira to'lsa jim o'tiladi (oldin kesh
 // cheksiz kattalashib, planshet xotirasini yeb qo'yardi).
 
-const CACHE = 'olimp-garden-menu-v2';
+const CACHE = 'olimp-garden-menu-v3';
 const MAX_ENTRIES = 500;          // shundan oshsa eng eskisi o'chiriladi
 const TRIM_EVERY = 25;            // har 25 yozuvdan keyin bir marta tekshiriladi
 
@@ -74,6 +74,10 @@ self.addEventListener('fetch', (event) => {
   let sameOrigin = false;
   try{ sameOrigin = new URL(req.url).origin === self.location.origin; }catch(e){}
   if (!sameOrigin) return;
+
+  // v3 (2026-11-24): video va qisman (Range) so'rovlarga aralashmaymiz — brauzer o'zi to'g'ridan-to'g'ri
+  // serverdan bo'lak-bo'lak oladi. Aks holda ba'zi Android'larda muhit videosi umuman ochilmasdi.
+  if (req.headers.has('range') || /\.(mp4|webm|mov)(\?|$)/i.test(req.url)) return;
 
   event.respondWith(
     fetch(req)
