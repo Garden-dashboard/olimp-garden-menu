@@ -8744,5 +8744,22 @@
   "new": false,
   "available": false,
   "manual": false
+ },
+ {
+  "id": "31bbdab3-7f09-45fd-b8fe-4bb3b7f03646",
+  "num": "24479",
+  "name": "Палов 35 кг",
+  "nUz": "Палов 35 кг",
+  "nRu": "Палов 35 кг",
+  "nEn": "Палов 35 кг",
+  "price": 250000,
+  "category": "2-taomlar",
+  "iikoGroup": "2-таом",
+  "photo": null,
+  "desc": null,
+  "popular": false,
+  "new": false,
+  "available": false,
+  "manual": false
  }
 ]
